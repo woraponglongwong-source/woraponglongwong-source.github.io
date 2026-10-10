@@ -251,3 +251,16 @@ footer .contact a:hover { color: var(--gold-hi); }
   .ea-logo { width: 120px; height: 120px; }
   .ea-list { grid-template-columns: 1fr; }
 }
+
+/* EA videos (vertical reels) */
+.vids { margin-top: 56px; }
+.vid-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 300px)); gap: 26px; }
+.vid { margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
+.vid video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; background: #000; }
+.vid figcaption { padding: 14px 16px 16px; display: grid; gap: 6px; }
+.vid figcaption b { font-size: 16px; }
+.vid figcaption span { font-size: 14px; color: var(--muted); }
+.vid figcaption a { font-size: 14px; color: var(--gold-hi); font-weight: 600; text-decoration: none; }
+@media (max-width: 700px) {
+  .vid-grid { grid-template-columns: 1fr; max-width: 340px; margin-inline: auto; }
+}

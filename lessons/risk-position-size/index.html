@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Risk and position size · GoldLab</title>
+<meta name="description" content="Risk 1–2% per trade, place stops behind levels and size the lot from the stop.">
+<meta property="og:title" content="Risk and position size · GoldLab">
+<meta property="og:description" content="Risk 1–2% per trade, place stops behind levels and size the lot from the stop.">
+<meta property="og:image" content="../../assets/logo.png">
+<meta name="theme-color" content="#070d1a">
+<link rel="alternate" hreflang="en" href="https://woraponglongwong-source.github.io/lessons/risk-position-size/">
+<link rel="alternate" hreflang="th" href="https://woraponglongwong-source.github.io/th/lessons/risk-position-size/">
+<link rel="alternate" hreflang="vi" href="https://woraponglongwong-source.github.io/vi/lessons/risk-position-size/">
+<link rel="alternate" hreflang="id" href="https://woraponglongwong-source.github.io/id/lessons/risk-position-size/">
+<link rel="alternate" hreflang="es" href="https://woraponglongwong-source.github.io/es/lessons/risk-position-size/">
+<link rel="alternate" hreflang="x-default" href="https://woraponglongwong-source.github.io/lessons/risk-position-size/">
+<link rel="icon" href="../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../#levels">Today's levels</a>
+      <a href="../../#lessons">Lessons</a>
+      <a href="../../#method">Our method</a>
+      <a href="../../#risk">Risk</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../lessons/risk-position-size/" selected>English</option><option value="../../th/lessons/risk-position-size/">ไทย</option><option value="../../vi/lessons/risk-position-size/">Tiếng Việt</option><option value="../../id/lessons/risk-position-size/">Bahasa Indonesia</option><option value="../../es/lessons/risk-position-size/">Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../">GoldLab</a> <span>/</span> <a href="../../#lessons">Lessons</a></nav>
+    <header class="article-head">
+      <div class="kicker">Lesson 2 of 4 · 2 min read</div>
+      <h1>Risk and position size</h1>
+      <p class="lead">Risk 1–2% per trade, place stops behind levels and size the lot from the stop.</p>
+    </header>
+    <article class="article">
+<p class="intro">Most trading accounts are not destroyed by bad analysis but by a few trades that were simply too big. Position sizing is the one part of trading you fully control, so it is where you should start.</p>
+
+<h2>Risk a small, fixed percentage</h2>
+<p>Decide in advance how much of your account you are willing to lose on a single trade. A common rule is <strong>1–2%</strong>. On a $1,000 account, 1% is $10. That amount stays the same whether the setup looks perfect or not.</p>
+
+<h2>Place the stop first</h2>
+<p>Your stop-loss goes where the trade idea is proven wrong, usually just beyond the level you are trading from, plus a small buffer for the spread. Never move the stop closer just to make the position bigger.</p>
+
+<h2>Then calculate the lot size</h2>
+<pre class="formula">Lot size = Money at risk ÷ (Stop distance in $ × Value of $1 move per lot)</pre>
+<p>On most brokers one standard lot of XAUUSD is 100 ounces, so a $1 move in price is worth <strong>$100 per lot</strong>. Always check the contract size in your own broker's specification.</p>
+<div class="callout"><strong>Example.</strong> Account $1,000, risk 1% = $10. You buy at 4,205 with a stop at 4,200, a $5 distance. Lot size = 10 ÷ (5 × 100) = <strong>0.02 lots</strong>. If the stop is hit, you lose about $10, not more.</div>
+
+<h2>Reward-to-risk and win rate</h2>
+<p>The reward-to-risk ratio (R:R) compares your target distance with your stop distance. The higher it is, the less often you need to be right just to break even:</p>
+<table>
+<thead><tr><th>R:R</th><th>Win rate needed to break even</th></tr></thead>
+<tbody>
+<tr><td>1 : 1</td><td>50%</td></tr>
+<tr><td>1 : 1.5</td><td>40%</td></tr>
+<tr><td>1 : 2</td><td>33%</td></tr>
+<tr><td>1 : 3</td><td>25%</td></tr>
+</tbody>
+</table>
+<p>Many traders skip any setup below <strong>1 : 1.5</strong>. Costs such as spread and commission push the real break-even rate slightly higher than the table.</p>
+
+<h2>Why losses hurt more than they look</h2>
+<table>
+<thead><tr><th>Loss</th><th>Gain needed to recover</th></tr></thead>
+<tbody>
+<tr><td>10%</td><td>11%</td></tr>
+<tr><td>20%</td><td>25%</td></tr>
+<tr><td>50%</td><td>100%</td></tr>
+</tbody>
+</table>
+
+<div class="callout warn"><strong>Leverage cuts both ways.</strong> High leverage lets you open a large position with little margin, but losses are calculated on the full position size. Size every trade from your stop and your risk amount, never from the leverage your broker offers.</div>
+
+<h2>Key takeaways</h2>
+<ul class="takeaways">
+<li>Fix your risk per trade (1–2%) before you look for entries.</li>
+<li>Stop first, lot size second, never the other way round.</li>
+<li>Only take trades where the reward is worth the risk.</li>
+</ul>
+
+    </article>
+    <div class="risk mini">
+      <div class="ico">!</div>
+      <p>Educational content only, not investment advice. Trading gold and CFDs carries a high risk of losing money.</p>
+    </div>
+    <nav class="pager">
+      <a class="prev" href="../pivot-points/"><small>Previous lesson</small><b>Pivot points explained</b></a>
+      <a class="next" href="../candlesticks/"><small>Next lesson</small><b>Reading candlesticks</b></a>
+    </nav>
+  </div>
+</main>
+
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../lessons/risk-position-size/" aria-current="page">English</a> <a href="../../th/lessons/risk-position-size/">ไทย</a> <a href="../../vi/lessons/risk-position-size/">Tiếng Việt</a> <a href="../../id/lessons/risk-position-size/">Bahasa Indonesia</a> <a href="../../es/lessons/risk-position-size/">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <p>GoldLab provides educational content only and is not a licensed investment adviser. Market data may be delayed or inaccurate.</p>
+    <p>© 2026 GoldLab. All rights reserved.</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+</body>
+</html>

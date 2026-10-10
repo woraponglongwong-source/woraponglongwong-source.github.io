@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Risiko dan ukuran posisi · GoldLab</title>
+<meta name="description" content="Risiko 1–2% per transaksi, pasang stop di balik level dan hitung lot dari jarak stop.">
+<meta property="og:title" content="Risiko dan ukuran posisi · GoldLab">
+<meta property="og:description" content="Risiko 1–2% per transaksi, pasang stop di balik level dan hitung lot dari jarak stop.">
+<meta property="og:image" content="../../../assets/logo.png">
+<meta name="theme-color" content="#070d1a">
+<link rel="alternate" hreflang="en" href="https://woraponglongwong-source.github.io/lessons/risk-position-size/">
+<link rel="alternate" hreflang="th" href="https://woraponglongwong-source.github.io/th/lessons/risk-position-size/">
+<link rel="alternate" hreflang="vi" href="https://woraponglongwong-source.github.io/vi/lessons/risk-position-size/">
+<link rel="alternate" hreflang="id" href="https://woraponglongwong-source.github.io/id/lessons/risk-position-size/">
+<link rel="alternate" hreflang="es" href="https://woraponglongwong-source.github.io/es/lessons/risk-position-size/">
+<link rel="alternate" hreflang="x-default" href="https://woraponglongwong-source.github.io/lessons/risk-position-size/">
+<link rel="icon" href="../../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../../id/"><img src="../../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../../id/#levels">Level hari ini</a>
+      <a href="../../../id/#lessons">Pelajaran</a>
+      <a href="../../../id/#method">Metode kami</a>
+      <a href="../../../id/#risk">Risiko</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../../lessons/risk-position-size/">English</option><option value="../../../th/lessons/risk-position-size/">ไทย</option><option value="../../../vi/lessons/risk-position-size/">Tiếng Việt</option><option value="../../../id/lessons/risk-position-size/" selected>Bahasa Indonesia</option><option value="../../../es/lessons/risk-position-size/">Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../../id/">GoldLab</a> <span>/</span> <a href="../../../id/#lessons">Pelajaran</a></nav>
+    <header class="article-head">
+      <div class="kicker">Pelajaran 2 dari 4 · 2 menit baca</div>
+      <h1>Risiko dan ukuran posisi</h1>
+      <p class="lead">Risiko 1–2% per transaksi, pasang stop di balik level dan hitung lot dari jarak stop.</p>
+    </header>
+    <article class="article">
+<p class="intro">Sebagian besar akun trading hancur bukan karena analisis yang buruk, melainkan karena beberapa transaksi yang ukurannya terlalu besar. Position sizing adalah satu-satunya bagian trading yang sepenuhnya bisa Anda kendalikan, jadi dari sinilah Anda sebaiknya memulai.</p>
+
+<h2>Risikokan persentase kecil yang tetap</h2>
+<p>Tentukan sejak awal berapa bagian akun yang siap Anda relakan hilang dalam satu transaksi. Aturan yang umum adalah <strong>1–2%</strong>. Pada akun $1,000, 1% berarti $10. Jumlah ini tetap sama, entah setup-nya terlihat sempurna atau tidak.</p>
+
+<h2>Tentukan stop lebih dulu</h2>
+<p>Stop loss Anda ditempatkan di titik di mana ide trading terbukti salah, biasanya sedikit di luar level yang menjadi dasar transaksi, ditambah sedikit buffer untuk spread. Jangan pernah mendekatkan stop hanya agar posisi bisa lebih besar.</p>
+
+<h2>Lalu hitung ukuran lot</h2>
+<pre class="formula">Ukuran lot = Dana yang dipertaruhkan ÷ (Jarak stop dalam $ × Nilai pergerakan $1 per lot)</pre>
+<p>Di kebanyakan broker, satu lot standar XAUUSD adalah 100 ons, sehingga pergerakan harga $1 bernilai <strong>$100 per lot</strong>. Selalu periksa ukuran kontrak di spesifikasi broker Anda sendiri.</p>
+<div class="callout"><strong>Contoh.</strong> Akun $1,000, risiko 1% = $10. Anda buy di 4,205 dengan stop di 4,200, jaraknya $5. Ukuran lot = 10 ÷ (5 × 100) = <strong>0.02 lot</strong>. Jika stop tersentuh, Anda kehilangan sekitar $10, tidak lebih.</div>
+
+<h2>Reward-to-risk dan win rate</h2>
+<p>Rasio reward-to-risk (R:R) membandingkan jarak target dengan jarak stop Anda. Semakin tinggi rasionya, semakin jarang Anda perlu benar hanya untuk mencapai impas:</p>
+<table>
+<thead><tr><th>R:R</th><th>Win rate yang dibutuhkan untuk impas</th></tr></thead>
+<tbody>
+<tr><td>1 : 1</td><td>50%</td></tr>
+<tr><td>1 : 1.5</td><td>40%</td></tr>
+<tr><td>1 : 2</td><td>33%</td></tr>
+<tr><td>1 : 3</td><td>25%</td></tr>
+</tbody>
+</table>
+<p>Banyak trader melewatkan setup apa pun di bawah <strong>1 : 1.5</strong>. Biaya seperti spread dan komisi membuat tingkat impas yang sebenarnya sedikit lebih tinggi daripada angka di tabel.</p>
+
+<h2>Mengapa kerugian lebih menyakitkan daripada kelihatannya</h2>
+<table>
+<thead><tr><th>Kerugian</th><th>Keuntungan yang dibutuhkan untuk pulih</th></tr></thead>
+<tbody>
+<tr><td>10%</td><td>11%</td></tr>
+<tr><td>20%</td><td>25%</td></tr>
+<tr><td>50%</td><td>100%</td></tr>
+</tbody>
+</table>
+
+<div class="callout warn"><strong>Leverage adalah pedang bermata dua.</strong> Leverage tinggi memungkinkan Anda membuka posisi besar dengan margin kecil, tetapi kerugian dihitung dari ukuran posisi penuh. Tentukan ukuran setiap transaksi berdasarkan stop dan jumlah risiko Anda, jangan pernah berdasarkan leverage yang ditawarkan broker.</div>
+
+<h2>Poin penting</h2>
+<ul class="takeaways">
+<li>Tetapkan risiko per transaksi (1–2%) sebelum mencari entry.</li>
+<li>Stop dulu, ukuran lot kemudian, jangan pernah sebaliknya.</li>
+<li>Hanya ambil transaksi yang reward-nya sepadan dengan risikonya.</li>
+</ul>
+
+    </article>
+    <div class="risk mini">
+      <div class="ico">!</div>
+      <p>Hanya konten edukasi, bukan saran investasi. Trading emas dan CFD memiliki risiko tinggi kehilangan uang.</p>
+    </div>
+    <nav class="pager">
+      <a class="prev" href="../pivot-points/"><small>Pelajaran sebelumnya</small><b>Memahami pivot point</b></a>
+      <a class="next" href="../candlesticks/"><small>Pelajaran berikutnya</small><b>Membaca candlestick</b></a>
+    </nav>
+  </div>
+</main>
+
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../../id/"><img src="../../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../../lessons/risk-position-size/">English</a> <a href="../../../th/lessons/risk-position-size/">ไทย</a> <a href="../../../vi/lessons/risk-position-size/">Tiếng Việt</a> <a href="../../../id/lessons/risk-position-size/" aria-current="page">Bahasa Indonesia</a> <a href="../../../es/lessons/risk-position-size/">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <p>GoldLab hanya menyediakan konten edukasi dan bukan penasihat investasi berlisensi. Data pasar bisa tertunda atau tidak akurat.</p>
+    <p>© 2026 GoldLab. Hak cipta dilindungi.</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rủi ro và khối lượng lệnh · GoldLab</title>
+<meta name="description" content="Rủi ro 1–2% mỗi lệnh, đặt cắt lỗ sau mức giá và tính khối lượng từ khoảng cắt lỗ.">
+<meta property="og:title" content="Rủi ro và khối lượng lệnh · GoldLab">
+<meta property="og:description" content="Rủi ro 1–2% mỗi lệnh, đặt cắt lỗ sau mức giá và tính khối lượng từ khoảng cắt lỗ.">
+<meta property="og:image" content="../../../assets/logo.png">
+<meta name="theme-color" content="#070d1a">
+<link rel="alternate" hreflang="en" href="https://woraponglongwong-source.github.io/lessons/risk-position-size/">
+<link rel="alternate" hreflang="th" href="https://woraponglongwong-source.github.io/th/lessons/risk-position-size/">
+<link rel="alternate" hreflang="vi" href="https://woraponglongwong-source.github.io/vi/lessons/risk-position-size/">
+<link rel="alternate" hreflang="id" href="https://woraponglongwong-source.github.io/id/lessons/risk-position-size/">
+<link rel="alternate" hreflang="es" href="https://woraponglongwong-source.github.io/es/lessons/risk-position-size/">
+<link rel="alternate" hreflang="x-default" href="https://woraponglongwong-source.github.io/lessons/risk-position-size/">
+<link rel="icon" href="../../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../../vi/"><img src="../../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../../vi/#levels">Mức giá hôm nay</a>
+      <a href="../../../vi/#lessons">Bài học</a>
+      <a href="../../../vi/#method">Phương pháp</a>
+      <a href="../../../vi/#risk">Rủi ro</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../../lessons/risk-position-size/">English</option><option value="../../../th/lessons/risk-position-size/">ไทย</option><option value="../../../vi/lessons/risk-position-size/" selected>Tiếng Việt</option><option value="../../../id/lessons/risk-position-size/">Bahasa Indonesia</option><option value="../../../es/lessons/risk-position-size/">Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../../vi/">GoldLab</a> <span>/</span> <a href="../../../vi/#lessons">Bài học</a></nav>
+    <header class="article-head">
+      <div class="kicker">Bài 2 / 4 · 2 phút đọc</div>
+      <h1>Rủi ro và khối lượng lệnh</h1>
+      <p class="lead">Rủi ro 1–2% mỗi lệnh, đặt cắt lỗ sau mức giá và tính khối lượng từ khoảng cắt lỗ.</p>
+    </header>
+    <article class="article">
+<p class="intro">Phần lớn tài khoản giao dịch không bị cháy vì phân tích sai, mà vì một vài lệnh đơn giản là quá lớn. Quản lý khối lượng lệnh là phần duy nhất trong giao dịch mà bạn hoàn toàn kiểm soát được, vì vậy đó là nơi bạn nên bắt đầu.</p>
+
+<h2>Chỉ rủi ro một tỷ lệ phần trăm nhỏ và cố định</h2>
+<p>Hãy quyết định trước bạn chấp nhận mất bao nhiêu phần tài khoản cho một lệnh. Quy tắc phổ biến là <strong>1–2%</strong>. Với tài khoản $1,000, 1% là $10. Con số này giữ nguyên dù setup trông hoàn hảo hay không.</p>
+
+<h2>Đặt stop-loss trước</h2>
+<p>Điểm cắt lỗ (stop-loss) đặt tại nơi ý tưởng giao dịch được chứng minh là sai, thường nằm ngay bên ngoài mức giá bạn đang giao dịch, cộng thêm một khoảng đệm nhỏ cho spread. Đừng bao giờ kéo stop lại gần hơn chỉ để vào lệnh lớn hơn.</p>
+
+<h2>Sau đó mới tính khối lượng lệnh (lot)</h2>
+<pre class="formula">Khối lượng (lot) = Số tiền chấp nhận rủi ro ÷ (Khoảng cách stop tính bằng $ × Giá trị mỗi $1 biến động trên 1 lot)</pre>
+<p>Ở hầu hết các sàn, một lot tiêu chuẩn XAUUSD là 100 ounce, nên mỗi $1 giá biến động có giá trị <strong>$100 mỗi lot</strong>. Luôn kiểm tra kích thước hợp đồng trong thông số kỹ thuật của sàn bạn đang dùng.</p>
+<div class="callout"><strong>Ví dụ.</strong> Tài khoản $1,000, rủi ro 1% = $10. Bạn mua ở 4,205 với stop tại 4,200, khoảng cách $5. Khối lượng = 10 ÷ (5 × 100) = <strong>0.02 lot</strong>. Nếu chạm stop, bạn mất khoảng $10, không hơn.</div>
+
+<h2>Tỷ lệ lợi nhuận/rủi ro và tỷ lệ thắng</h2>
+<p>Tỷ lệ lợi nhuận/rủi ro (R:R) so sánh khoảng cách đến mục tiêu chốt lời với khoảng cách đến stop. Tỷ lệ này càng cao, bạn càng ít cần phải đúng để hòa vốn:</p>
+<table>
+<thead><tr><th>R:R</th><th>Tỷ lệ thắng cần thiết để hòa vốn</th></tr></thead>
+<tbody>
+<tr><td>1 : 1</td><td>50%</td></tr>
+<tr><td>1 : 1.5</td><td>40%</td></tr>
+<tr><td>1 : 2</td><td>33%</td></tr>
+<tr><td>1 : 3</td><td>25%</td></tr>
+</tbody>
+</table>
+<p>Nhiều trader bỏ qua mọi setup có tỷ lệ dưới <strong>1 : 1.5</strong>. Các chi phí như spread và phí hoa hồng khiến tỷ lệ hòa vốn thực tế cao hơn bảng trên một chút.</p>
+
+<h2>Vì sao thua lỗ gây hại nhiều hơn vẻ bề ngoài</h2>
+<table>
+<thead><tr><th>Mức lỗ</th><th>Mức lãi cần để gỡ lại</th></tr></thead>
+<tbody>
+<tr><td>10%</td><td>11%</td></tr>
+<tr><td>20%</td><td>25%</td></tr>
+<tr><td>50%</td><td>100%</td></tr>
+</tbody>
+</table>
+
+<div class="callout warn"><strong>Đòn bẩy là con dao hai lưỡi.</strong> Đòn bẩy cao cho phép bạn mở vị thế lớn với ít ký quỹ, nhưng thua lỗ được tính trên toàn bộ khối lượng vị thế. Hãy tính khối lượng mỗi lệnh dựa trên stop và số tiền rủi ro của bạn, đừng bao giờ dựa trên mức đòn bẩy sàn cung cấp.</div>
+
+<h2>Điểm chính cần nhớ</h2>
+<ul class="takeaways">
+<li>Cố định mức rủi ro mỗi lệnh (1–2%) trước khi tìm điểm vào lệnh.</li>
+<li>Stop trước, khối lượng lệnh sau, không bao giờ làm ngược lại.</li>
+<li>Chỉ vào những lệnh mà lợi nhuận tiềm năng xứng đáng với rủi ro.</li>
+</ul>
+
+    </article>
+    <div class="risk mini">
+      <div class="ico">!</div>
+      <p>Nội dung chỉ mang tính giáo dục, không phải lời khuyên đầu tư. Giao dịch vàng và CFD có rủi ro mất tiền cao.</p>
+    </div>
+    <nav class="pager">
+      <a class="prev" href="../pivot-points/"><small>Bài trước</small><b>Điểm pivot là gì</b></a>
+      <a class="next" href="../candlesticks/"><small>Bài tiếp theo</small><b>Đọc nến cơ bản</b></a>
+    </nav>
+  </div>
+</main>
+
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../../vi/"><img src="../../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../../lessons/risk-position-size/">English</a> <a href="../../../th/lessons/risk-position-size/">ไทย</a> <a href="../../../vi/lessons/risk-position-size/" aria-current="page">Tiếng Việt</a> <a href="../../../id/lessons/risk-position-size/">Bahasa Indonesia</a> <a href="../../../es/lessons/risk-position-size/">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <p>GoldLab chỉ cung cấp nội dung giáo dục và không phải là cố vấn đầu tư được cấp phép. Dữ liệu thị trường có thể bị trễ hoặc không chính xác.</p>
+    <p>© 2026 GoldLab. Bảo lưu mọi quyền.</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+</body>
+</html>

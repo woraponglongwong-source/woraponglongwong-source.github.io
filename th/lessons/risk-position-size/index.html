@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ความเสี่ยงและขนาดไม้ · GoldLab</title>
+<meta name="description" content="เสี่ยงไม่เกิน 1–2% ต่อไม้ วาง SL หลังระดับราคา และคำนวณล็อตจากระยะ SL">
+<meta property="og:title" content="ความเสี่ยงและขนาดไม้ · GoldLab">
+<meta property="og:description" content="เสี่ยงไม่เกิน 1–2% ต่อไม้ วาง SL หลังระดับราคา และคำนวณล็อตจากระยะ SL">
+<meta property="og:image" content="../../../assets/logo.png">
+<meta name="theme-color" content="#070d1a">
+<link rel="alternate" hreflang="en" href="https://woraponglongwong-source.github.io/lessons/risk-position-size/">
+<link rel="alternate" hreflang="th" href="https://woraponglongwong-source.github.io/th/lessons/risk-position-size/">
+<link rel="alternate" hreflang="vi" href="https://woraponglongwong-source.github.io/vi/lessons/risk-position-size/">
+<link rel="alternate" hreflang="id" href="https://woraponglongwong-source.github.io/id/lessons/risk-position-size/">
+<link rel="alternate" hreflang="es" href="https://woraponglongwong-source.github.io/es/lessons/risk-position-size/">
+<link rel="alternate" hreflang="x-default" href="https://woraponglongwong-source.github.io/lessons/risk-position-size/">
+<link rel="icon" href="../../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../../th/"><img src="../../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../../th/#levels">ระดับราคาวันนี้</a>
+      <a href="../../../th/#lessons">บทเรียน</a>
+      <a href="../../../th/#method">วิธีของเรา</a>
+      <a href="../../../th/#risk">ความเสี่ยง</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../../lessons/risk-position-size/">English</option><option value="../../../th/lessons/risk-position-size/" selected>ไทย</option><option value="../../../vi/lessons/risk-position-size/">Tiếng Việt</option><option value="../../../id/lessons/risk-position-size/">Bahasa Indonesia</option><option value="../../../es/lessons/risk-position-size/">Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../../th/">GoldLab</a> <span>/</span> <a href="../../../th/#lessons">บทเรียน</a></nav>
+    <header class="article-head">
+      <div class="kicker">บทที่ 2 จาก 4 · 2 นาทีในการอ่าน</div>
+      <h1>ความเสี่ยงและขนาดไม้</h1>
+      <p class="lead">เสี่ยงไม่เกิน 1–2% ต่อไม้ วาง SL หลังระดับราคา และคำนวณล็อตจากระยะ SL</p>
+    </header>
+    <article class="article">
+<p class="intro">พอร์ตเทรดส่วนใหญ่ไม่ได้พังเพราะวิเคราะห์ผิด แต่พังเพราะออร์เดอร์ไม่กี่ไม้ที่ใหญ่เกินไป การกำหนดขนาดสถานะเป็นส่วนเดียวของการเทรดที่คุณควบคุมได้เต็มที่ จึงเป็นจุดที่ควรเริ่มต้น</p>
+
+<h2>เสี่ยงเป็นเปอร์เซ็นต์คงที่และน้อยๆ</h2>
+<p>กำหนดไว้ล่วงหน้าว่ายอมขาดทุนได้เท่าไรของพอร์ตต่อการเทรดหนึ่งไม้ กฎที่นิยมใช้คือ <strong>1–2%</strong> ถ้าพอร์ต $1,000 ความเสี่ยง 1% คือ $10 ตัวเลขนี้ต้องคงเดิม ไม่ว่าจังหวะเข้าจะดูสวยแค่ไหนก็ตาม</p>
+
+<h2>วางจุดตัดขาดทุนก่อน</h2>
+<p>จุดตัดขาดทุน (SL) ควรอยู่ตรงจุดที่พิสูจน์ว่าไอเดียการเทรดนั้นผิด โดยทั่วไปคือเลยระดับที่คุณใช้เข้าเทรดออกไปเล็กน้อย บวกเผื่อสเปรดอีกนิด อย่าขยับ SL ให้ใกล้ขึ้นเพียงเพื่อจะเปิดสถานะให้ใหญ่ขึ้น</p>
+
+<h2>แล้วจึงคำนวณขนาด lot</h2>
+<pre class="formula">ขนาด lot = เงินที่ยอมเสี่ยง ÷ (ระยะ SL เป็น $ × มูลค่าเมื่อราคาขยับ $1 ต่อ 1 lot)</pre>
+<p>โบรกเกอร์ส่วนใหญ่กำหนดให้ XAUUSD 1 standard lot เท่ากับ 100 ออนซ์ ราคาขยับ $1 จึงมีมูลค่า <strong>$100 ต่อ lot</strong> ควรตรวจสอบขนาดสัญญา (contract size) ในสเปกของโบรกเกอร์ที่คุณใช้เสมอ</p>
+<div class="callout"><strong>ตัวอย่าง</strong> พอร์ต $1,000 เสี่ยง 1% = $10 คุณซื้อที่ 4,205 วาง SL ที่ 4,200 ระยะห่าง $5 ขนาด lot = 10 ÷ (5 × 100) = <strong>0.02 lot</strong> ถ้าโดน SL คุณจะขาดทุนประมาณ $10 ไม่มากกว่านั้น</div>
+
+<h2>อัตราผลตอบแทนต่อความเสี่ยงและอัตราชนะ</h2>
+<p>อัตราผลตอบแทนต่อความเสี่ยง (R:R) คือการเทียบระยะเป้าหมายทำกำไรกับระยะ SL ยิ่งค่านี้สูง คุณก็ยิ่งไม่จำเป็นต้องถูกบ่อยเพื่อให้เท่าทุน:</p>
+<table>
+<thead><tr><th>R:R</th><th>อัตราชนะขั้นต่ำเพื่อเท่าทุน</th></tr></thead>
+<tbody>
+<tr><td>1 : 1</td><td>50%</td></tr>
+<tr><td>1 : 1.5</td><td>40%</td></tr>
+<tr><td>1 : 2</td><td>33%</td></tr>
+<tr><td>1 : 3</td><td>25%</td></tr>
+</tbody>
+</table>
+<p>เทรดเดอร์จำนวนมากข้ามทุกจังหวะที่ R:R ต่ำกว่า <strong>1 : 1.5</strong> นอกจากนี้ต้นทุนอย่างสเปรดและค่าคอมมิชชันจะทำให้อัตราชนะที่ต้องใช้เพื่อเท่าทุนจริงสูงกว่าในตารางเล็กน้อย</p>
+
+<h2>ทำไมการขาดทุนถึงเจ็บกว่าที่เห็น</h2>
+<table>
+<thead><tr><th>ขาดทุน</th><th>กำไรที่ต้องทำเพื่อกลับมาเท่าเดิม</th></tr></thead>
+<tbody>
+<tr><td>10%</td><td>11%</td></tr>
+<tr><td>20%</td><td>25%</td></tr>
+<tr><td>50%</td><td>100%</td></tr>
+</tbody>
+</table>
+
+<div class="callout warn"><strong>เลเวอเรจเป็นดาบสองคม</strong> เลเวอเรจสูงทำให้เปิดสถานะใหญ่ได้ด้วยมาร์จิ้นน้อย แต่ผลขาดทุนคิดจากขนาดสถานะทั้งหมด จงกำหนดขนาดทุกออร์เดอร์จาก SL และจำนวนเงินที่ยอมเสี่ยง ไม่ใช่จากเลเวอเรจที่โบรกเกอร์ให้มา</div>
+
+<h2>สรุปประเด็นสำคัญ</h2>
+<ul class="takeaways">
+<li>กำหนดความเสี่ยงต่อไม้ (1–2%) ให้ชัดก่อนเริ่มหาจุดเข้า</li>
+<li>วาง SL ก่อน แล้วค่อยคำนวณขนาด lot ห้ามทำกลับกัน</li>
+<li>เข้าเทรดเฉพาะเมื่อผลตอบแทนคุ้มกับความเสี่ยง</li>
+</ul>
+
+    </article>
+    <div class="risk mini">
+      <div class="ico">!</div>
+      <p>เนื้อหาเพื่อการศึกษาเท่านั้น ไม่ใช่คำแนะนำการลงทุน การเทรดทองคำและ CFD มีความเสี่ยงสูงที่จะสูญเสียเงิน</p>
+    </div>
+    <nav class="pager">
+      <a class="prev" href="../pivot-points/"><small>บทก่อนหน้า</small><b>Pivot Point คืออะไร</b></a>
+      <a class="next" href="../candlesticks/"><small>บทถัดไป</small><b>อ่านแท่งเทียนเบื้องต้น</b></a>
+    </nav>
+  </div>
+</main>
+
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../../th/"><img src="../../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../../lessons/risk-position-size/">English</a> <a href="../../../th/lessons/risk-position-size/" aria-current="page">ไทย</a> <a href="../../../vi/lessons/risk-position-size/">Tiếng Việt</a> <a href="../../../id/lessons/risk-position-size/">Bahasa Indonesia</a> <a href="../../../es/lessons/risk-position-size/">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <p>GoldLab ให้ข้อมูลเพื่อการศึกษาเท่านั้น และไม่ใช่ที่ปรึกษาการลงทุนที่ได้รับใบอนุญาต ข้อมูลตลาดอาจล่าช้าหรือคลาดเคลื่อน</p>
+    <p>© 2026 GoldLab. สงวนลิขสิทธิ์</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+</body>
+</html>

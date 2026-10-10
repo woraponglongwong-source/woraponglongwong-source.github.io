@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xu hướng với EMA 50/200 · GoldLab</title>
+<meta name="description" content="Bộ lọc đơn giản giúp bạn giao dịch thuận theo thị trường.">
+<meta property="og:title" content="Xu hướng với EMA 50/200 · GoldLab">
+<meta property="og:description" content="Bộ lọc đơn giản giúp bạn giao dịch thuận theo thị trường.">
+<meta property="og:image" content="../../../assets/logo.png">
+<meta name="theme-color" content="#070d1a">
+<link rel="alternate" hreflang="en" href="https://woraponglongwong-source.github.io/lessons/trend-ema/">
+<link rel="alternate" hreflang="th" href="https://woraponglongwong-source.github.io/th/lessons/trend-ema/">
+<link rel="alternate" hreflang="vi" href="https://woraponglongwong-source.github.io/vi/lessons/trend-ema/">
+<link rel="alternate" hreflang="id" href="https://woraponglongwong-source.github.io/id/lessons/trend-ema/">
+<link rel="alternate" hreflang="es" href="https://woraponglongwong-source.github.io/es/lessons/trend-ema/">
+<link rel="alternate" hreflang="x-default" href="https://woraponglongwong-source.github.io/lessons/trend-ema/">
+<link rel="icon" href="../../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../../vi/"><img src="../../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../../vi/#levels">Mức giá hôm nay</a>
+      <a href="../../../vi/#lessons">Bài học</a>
+      <a href="../../../vi/#method">Phương pháp</a>
+      <a href="../../../vi/#risk">Rủi ro</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../../lessons/trend-ema/">English</option><option value="../../../th/lessons/trend-ema/">ไทย</option><option value="../../../vi/lessons/trend-ema/" selected>Tiếng Việt</option><option value="../../../id/lessons/trend-ema/">Bahasa Indonesia</option><option value="../../../es/lessons/trend-ema/">Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../../vi/">GoldLab</a> <span>/</span> <a href="../../../vi/#lessons">Bài học</a></nav>
+    <header class="article-head">
+      <div class="kicker">Bài 4 / 4 · 2 phút đọc</div>
+      <h1>Xu hướng với EMA 50/200</h1>
+      <p class="lead">Bộ lọc đơn giản giúp bạn giao dịch thuận theo thị trường.</p>
+    </header>
+    <article class="article">
+<p class="intro">Giao dịch thuận theo xu hướng là một trong những cách đơn giản nhất để cải thiện xác suất thắng. Chỉ cần hai đường trung bình động là đủ để biết xu hướng đó đang đi theo hướng nào.</p>
+
+<h2>EMA là gì</h2>
+<p>Đường trung bình động hàm mũ (EMA) là giá trung bình qua một số cây nến, trong đó các cây nến gần đây được gán trọng số lớn hơn. <strong>EMA 50</strong> theo sát xu hướng ngắn hạn; <strong>EMA 200</strong> thể hiện xu hướng dài hạn hơn. Trên biểu đồ H1 của chúng tôi, đó tương ứng với khoảng hai ngày gần nhất và tám ngày giao dịch gần nhất.</p>
+
+<h2>Ba trạng thái chúng tôi sử dụng</h2>
+<table>
+<thead><tr><th>Trạng thái</th><th>Điều kiện</th><th>Gợi ý</th></tr></thead>
+<tbody>
+<tr><td>Xu hướng tăng</td><td>Giá nằm trên cả hai đường EMA, và EMA 50 nằm trên EMA 200</td><td>Tìm cơ hội mua tại hỗ trợ</td></tr>
+<tr><td>Xu hướng giảm</td><td>Giá nằm dưới cả hai đường EMA, và EMA 50 nằm dưới EMA 200</td><td>Tìm cơ hội bán tại kháng cự</td></tr>
+<tr><td>Đi ngang</td><td>Mọi trường hợp còn lại</td><td>Giảm khối lượng hoặc chờ đợi</td></tr>
+</tbody>
+</table>
+
+<h2>Dùng làm bộ lọc, không phải tín hiệu vào lệnh</h2>
+<p>Trạng thái EMA không cho bạn biết khi nào vào lệnh. Nó cho bạn biết <strong>nên nhìn về phía nào</strong>. Hãy kết hợp với các bài học khác:</p>
+<ol>
+<li>Kiểm tra trạng thái xu hướng.</li>
+<li>Đánh dấu các mức pivot ở phía thuận xu hướng (PP và S1 trong xu hướng tăng, PP và R1 trong xu hướng giảm).</li>
+<li>Chờ một cây nến xác nhận tại mức giá đó.</li>
+<li>Đặt stop bên ngoài mức giá và tính khối lượng lệnh dựa trên stop đó.</li>
+<li>Kiểm tra tỷ lệ lợi nhuận/rủi ro tối thiểu là 1 : 1.5.</li>
+</ol>
+
+<div class="callout"><strong>Đường trung bình động có độ trễ.</strong> Chúng được tính từ giá trong quá khứ, nên chỉ xác nhận xu hướng sau khi xu hướng đã bắt đầu và vẫn chỉ theo hướng cũ một thời gian sau khi xu hướng kết thúc. Trong vùng đi ngang, giá sẽ cắt qua lại các đường này. Đó là lý do "đi ngang" là một câu trả lời hợp lệ và thường là thời điểm thích hợp để không làm gì cả.</div>
+
+<h2>Những sai lầm thường gặp</h2>
+<ul>
+<li>Vào lệnh chỉ vì giá cắt qua một đường EMA.</li>
+<li>Chống lại một xu hướng rõ ràng vì giá "trông có vẻ quá cao".</li>
+<li>Thay đổi thông số EMA sau mỗi lệnh thua.</li>
+</ul>
+
+<h2>Điểm chính cần nhớ</h2>
+<ul class="takeaways">
+<li>EMA 50/200 cho bạn biết nên ưu tiên phía nào của thị trường.</li>
+<li>Đi ngang là tín hiệu để chậm lại.</li>
+<li>Xu hướng, mức giá, cây nến, rủi ro: theo đúng thứ tự đó.</li>
+</ul>
+
+    </article>
+    <div class="risk mini">
+      <div class="ico">!</div>
+      <p>Nội dung chỉ mang tính giáo dục, không phải lời khuyên đầu tư. Giao dịch vàng và CFD có rủi ro mất tiền cao.</p>
+    </div>
+    <nav class="pager">
+      <a class="prev" href="../candlesticks/"><small>Bài trước</small><b>Đọc nến cơ bản</b></a>
+      
+    </nav>
+  </div>
+</main>
+
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../../vi/"><img src="../../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../../lessons/trend-ema/">English</a> <a href="../../../th/lessons/trend-ema/">ไทย</a> <a href="../../../vi/lessons/trend-ema/" aria-current="page">Tiếng Việt</a> <a href="../../../id/lessons/trend-ema/">Bahasa Indonesia</a> <a href="../../../es/lessons/trend-ema/">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <p>GoldLab chỉ cung cấp nội dung giáo dục và không phải là cố vấn đầu tư được cấp phép. Dữ liệu thị trường có thể bị trễ hoặc không chính xác.</p>
+    <p>© 2026 GoldLab. Bảo lưu mọi quyền.</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+</body>
+</html>

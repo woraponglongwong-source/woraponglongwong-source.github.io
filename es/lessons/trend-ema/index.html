@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tendencia con EMA 50/200 · GoldLab</title>
+<meta name="description" content="Un filtro sencillo para operar a favor del mercado, no en contra.">
+<meta property="og:title" content="Tendencia con EMA 50/200 · GoldLab">
+<meta property="og:description" content="Un filtro sencillo para operar a favor del mercado, no en contra.">
+<meta property="og:image" content="../../../assets/logo.png">
+<meta name="theme-color" content="#070d1a">
+<link rel="alternate" hreflang="en" href="https://woraponglongwong-source.github.io/lessons/trend-ema/">
+<link rel="alternate" hreflang="th" href="https://woraponglongwong-source.github.io/th/lessons/trend-ema/">
+<link rel="alternate" hreflang="vi" href="https://woraponglongwong-source.github.io/vi/lessons/trend-ema/">
+<link rel="alternate" hreflang="id" href="https://woraponglongwong-source.github.io/id/lessons/trend-ema/">
+<link rel="alternate" hreflang="es" href="https://woraponglongwong-source.github.io/es/lessons/trend-ema/">
+<link rel="alternate" hreflang="x-default" href="https://woraponglongwong-source.github.io/lessons/trend-ema/">
+<link rel="icon" href="../../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../../es/"><img src="../../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../../es/#levels">Niveles de hoy</a>
+      <a href="../../../es/#lessons">Lecciones</a>
+      <a href="../../../es/#method">Nuestro método</a>
+      <a href="../../../es/#risk">Riesgo</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../../lessons/trend-ema/">English</option><option value="../../../th/lessons/trend-ema/">ไทย</option><option value="../../../vi/lessons/trend-ema/">Tiếng Việt</option><option value="../../../id/lessons/trend-ema/">Bahasa Indonesia</option><option value="../../../es/lessons/trend-ema/" selected>Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../../es/">GoldLab</a> <span>/</span> <a href="../../../es/#lessons">Lecciones</a></nav>
+    <header class="article-head">
+      <div class="kicker">Lección 4 de 4 · 2 min de lectura</div>
+      <h1>Tendencia con EMA 50/200</h1>
+      <p class="lead">Un filtro sencillo para operar a favor del mercado, no en contra.</p>
+    </header>
+    <article class="article">
+<p class="intro">Operar a favor de la tendencia es una de las formas más sencillas de mejorar tus probabilidades. Dos medias móviles bastan para saber cuál es esa dirección.</p>
+
+<h2>Qué es una EMA</h2>
+<p>Una media móvil exponencial (EMA) es el precio promedio de un número de velas, dando más peso a las velas recientes. La <strong>EMA 50</strong> sigue la tendencia de corto plazo; la <strong>EMA 200</strong> muestra la de largo plazo. En nuestro gráfico H1, eso equivale aproximadamente a los últimos dos días y a los últimos ocho días de negociación.</p>
+
+<h2>Los tres estados que usamos</h2>
+<table>
+<thead><tr><th>Estado</th><th>Condición</th><th>Qué sugiere</th></tr></thead>
+<tbody>
+<tr><td>Tendencia alcista</td><td>Precio por encima de ambas EMA, y EMA 50 por encima de EMA 200</td><td>Busca compras en soporte</td></tr>
+<tr><td>Tendencia bajista</td><td>Precio por debajo de ambas EMA, y EMA 50 por debajo de EMA 200</td><td>Busca ventas en resistencia</td></tr>
+<tr><td>Lateral</td><td>Cualquier otro caso</td><td>Reduce el tamaño o espera</td></tr>
+</tbody>
+</table>
+
+<h2>Úsala como filtro, no como gatillo</h2>
+<p>El estado de las EMA no te dice cuándo entrar. Te dice <strong>de qué lado mirar</strong>. Combínalo con las demás lecciones:</p>
+<ol>
+<li>Comprueba el estado de la tendencia.</li>
+<li>Marca los niveles pivote del lado de la tendencia (PP y S1 en tendencia alcista, PP y R1 en tendencia bajista).</li>
+<li>Espera una vela de confirmación en el nivel.</li>
+<li>Coloca el stop más allá del nivel y calcula el tamaño de la posición a partir de él.</li>
+<li>Comprueba que la relación beneficio-riesgo sea de al menos 1 : 1.5.</li>
+</ol>
+
+<div class="callout"><strong>Las medias móviles van con retraso.</strong> Se construyen a partir de precios pasados, así que confirman una tendencia después de que ha comenzado y siguen apuntando en la dirección anterior durante un tiempo después de que termina. En un rango, el precio las cruzará de un lado a otro. Por eso "lateral" es una respuesta válida y, a menudo, el momento adecuado para no hacer nada.</div>
+
+<h2>Errores comunes</h2>
+<ul>
+<li>Entrar solo porque el precio cruzó una EMA.</li>
+<li>Pelear contra una tendencia clara porque el precio "parece demasiado alto".</li>
+<li>Cambiar la configuración de las EMA después de cada operación perdedora.</li>
+</ul>
+
+<h2>Puntos clave</h2>
+<ul class="takeaways">
+<li>Las EMA 50/200 te indican qué lado del mercado favorecer.</li>
+<li>Lateral es una señal para bajar el ritmo.</li>
+<li>Tendencia, nivel, vela, riesgo: en ese orden.</li>
+</ul>
+
+    </article>
+    <div class="risk mini">
+      <div class="ico">!</div>
+      <p>Contenido solo educativo, no es asesoramiento de inversión. Operar con oro y CFD conlleva un alto riesgo de perder dinero.</p>
+    </div>
+    <nav class="pager">
+      <a class="prev" href="../candlesticks/"><small>Lección anterior</small><b>Lectura de velas</b></a>
+      
+    </nav>
+  </div>
+</main>
+
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../../es/"><img src="../../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../../lessons/trend-ema/">English</a> <a href="../../../th/lessons/trend-ema/">ไทย</a> <a href="../../../vi/lessons/trend-ema/">Tiếng Việt</a> <a href="../../../id/lessons/trend-ema/">Bahasa Indonesia</a> <a href="../../../es/lessons/trend-ema/" aria-current="page">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <p>GoldLab ofrece contenido exclusivamente educativo y no es un asesor de inversiones autorizado. Los datos de mercado pueden tener retraso o errores.</p>
+    <p>© 2026 GoldLab. Todos los derechos reservados.</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+</body>
+</html>

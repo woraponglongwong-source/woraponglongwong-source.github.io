@@ -264,3 +264,20 @@ footer .contact a:hover { color: var(--gold-hi); }
 @media (max-width: 700px) {
   .vid-grid { grid-template-columns: 1fr; max-width: 340px; margin-inline: auto; }
 }
+
+/* EA product grid (3 products) */
+.ea-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.ea-item { position: relative; display: flex; flex-direction: column; gap: 12px; padding: 26px 24px;
+  border-radius: 20px; border: 1px solid var(--line); background: var(--panel); }
+.ea-item:first-child { border-color: rgba(232,184,74,.45);
+  background: radial-gradient(circle at 0% 0%, rgba(232,184,74,.12), transparent 55%), var(--panel); }
+.ea-item h3 { margin: 4px 0 0; font-size: 20px; }
+.ea-item .ea-sub { font-size: 15px; margin: 0; }
+.ea-item .ea-list { grid-template-columns: 1fr; margin: 0; gap: 8px; }
+.ea-item .ea-list li { font-size: 14.5px; }
+.ea-item .ea-price { margin-top: auto; }
+.ea-item .btn { align-self: flex-start; }
+.ea-ico { width: 96px; height: 96px; border-radius: 16px; box-shadow: 0 14px 34px -16px rgba(0,0,0,.8); }
+.ea-badge { position: absolute; top: 18px; right: 18px; font-size: 12px; font-weight: 800; letter-spacing: .5px;
+  color: #1a1205; background: linear-gradient(180deg, var(--gold-hi), var(--gold)); padding: 4px 10px; border-radius: 999px; }
+@media (max-width: 960px) { .ea-grid { grid-template-columns: 1fr; max-width: 520px; } }

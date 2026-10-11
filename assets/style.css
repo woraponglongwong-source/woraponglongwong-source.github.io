@@ -281,3 +281,23 @@ footer .contact a:hover { color: var(--gold-hi); }
 .ea-badge { position: absolute; top: 18px; right: 18px; font-size: 12px; font-weight: 800; letter-spacing: .5px;
   color: #1a1205; background: linear-gradient(180deg, var(--gold-hi), var(--gold)); padding: 4px 10px; border-radius: 999px; }
 @media (max-width: 960px) { .ea-grid { grid-template-columns: 1fr; max-width: 520px; } }
+
+/* English pages: EA overview + lot calculator */
+.narrow { max-width: 760px; }
+.ea-more { margin: 10px 0 0; font-size: 14.5px; }
+.ea-more a { color: var(--gold-hi); font-weight: 600; text-decoration: none; }
+.note-small { font-size: 13.5px; color: var(--muted); margin-top: 28px; }
+.calc { margin: 0 0 36px; }
+.calc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 18px; }
+.calc-grid label { display: grid; gap: 6px; font-size: 14px; color: var(--muted); font-weight: 600; }
+.calc-grid input { font: 600 17px/1.2 var(--mono); color: var(--text); background: var(--bg); border: 1px solid var(--line);
+  border-radius: 10px; padding: 11px 12px; width: 100%; box-sizing: border-box; }
+.calc-grid input:focus { outline: none; border-color: var(--gold); }
+.calc-out { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 22px; }
+.calc-out div { background: var(--gold-soft); border: 1px solid rgba(232,184,74,.3); border-radius: 12px; padding: 12px 14px; }
+.calc-out small { display: block; font-size: 12.5px; color: var(--muted); }
+.calc-out b { font: 700 18px/1.3 var(--mono); color: var(--gold-hi); }
+.calc-out div:first-child b { font-size: 24px; }
+.calc-warn { color: var(--red); font-size: 14px; margin: 12px 0 0; min-height: 1em; }
+.lesson-page .ea-grid { margin: 8px 0 36px; }
+@media (max-width: 760px) { .calc-grid { grid-template-columns: 1fr; } .calc-out { grid-template-columns: 1fr 1fr; } }

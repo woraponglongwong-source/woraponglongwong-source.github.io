@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gold Lot Size Calculator (XAUUSD) · GoldLab</title>
+<meta name="description" content="Free XAUUSD lot size calculator: enter balance, risk % and stop-loss to get the right lot size for a gold trade.">
+<meta property="og:title" content="Gold Lot Size Calculator (XAUUSD) · GoldLab">
+<meta property="og:description" content="Free XAUUSD lot size calculator: enter balance, risk % and stop-loss to get the right lot size for a gold trade.">
+<meta property="og:image" content="https://goldlab.trade/assets/logo.png">
+<meta property="og:url" content="https://goldlab.trade/tools/gold-lot-size-calculator/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GoldLab">
+<link rel="canonical" href="https://goldlab.trade/tools/gold-lot-size-calculator/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Gold Lot Size Calculator (XAUUSD)", "description": "Free XAUUSD lot size calculator: enter balance, risk % and stop-loss to get the right lot size for a gold trade.", "inLanguage": "en", "url": "https://goldlab.trade/tools/gold-lot-size-calculator/", "image": "https://goldlab.trade/assets/logo.png", "author": {"@type": "Organization", "name": "GoldLab", "url": "https://goldlab.trade/"}, "publisher": {"@type": "Organization", "name": "GoldLab", "logo": {"@type": "ImageObject", "url": "https://goldlab.trade/assets/logo.png"}}}</script>
+<meta name="theme-color" content="#070d1a">
+<meta name="google-site-verification" content="AoyS69iYM0KUBS375ShKPWs4FY5b3LdPtCelTJK63AM" />
+<link rel="alternate" hreflang="en" href="https://goldlab.trade/tools/gold-lot-size-calculator/">
+<link rel="alternate" hreflang="x-default" href="https://goldlab.trade/tools/gold-lot-size-calculator/">
+<link rel="icon" href="../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../#levels">Today's levels</a>
+      <a href="../../#lessons">Lessons</a>
+      <a href="../../#ea" class="nav-ea">Our EA</a>
+      <a href="../../#method">Our method</a>
+      <a href="../../#risk">Risk</a>
+      <a href="../../tools/gold-lot-size-calculator/">Lot calculator</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../tools/gold-lot-size-calculator/" selected>English</option><option value="../../th/">ไทย</option><option value="../../vi/">Tiếng Việt</option><option value="../../id/">Bahasa Indonesia</option><option value="../../es/">Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../">GoldLab</a> <span>/</span> <span>Tools</span></nav>
+    <div class="article-head">
+      <div class="kicker">Free tool · XAUUSD</div>
+      <h1>Gold Lot Size Calculator</h1>
+      <p class="lead">Work out the right lot size for a gold (XAUUSD) trade from your account size, the risk you accept and your stop-loss. Runs in your browser, nothing is sent anywhere.</p>
+    </div>
+
+    <div class="calc panel">
+      <div class="calc-grid">
+        <label>Account balance (USD)<input id="bal" type="number" min="0" step="any" value="1000"></label>
+        <label>Risk per trade (%)<input id="risk" type="number" min="0" step="0.1" value="1"></label>
+        <label>Entry price<input id="entry" type="number" min="0" step="any" value="2650.00"></label>
+        <label>Stop-loss price<input id="sl" type="number" min="0" step="any" value="2640.00"></label>
+        <label>Contract size (oz per 1.00 lot)<input id="cs" type="number" min="1" step="1" value="100"></label>
+        <label>Lot step<input id="step" type="number" min="0.001" step="0.001" value="0.01"></label>
+      </div>
+      <div class="calc-out">
+        <div><small>Lot size</small><b id="o_lot">-</b></div>
+        <div><small>Money at risk</small><b id="o_risk">-</b></div>
+        <div><small>Stop-loss distance</small><b id="o_dist">-</b></div>
+        <div><small>Value of a 1 USD move</small><b id="o_move">-</b></div>
+      </div>
+      <p class="calc-warn" id="o_warn"></p>
+    </div>
+
+    <article class="article">
+      <h2>How it works</h2>
+      <p>Most brokers quote gold as XAUUSD with a contract size of 100 troy ounces per 1.00 lot. That means a 1.00 USD move in the gold price changes a 1.00 lot position by 100 USD, and a 0.01 lot position by 1 USD.</p>
+      <ol>
+        <li><b>Money at risk</b> = balance × risk %. With 1,000 USD and 1% risk you accept losing 10 USD if the stop-loss is hit.</li>
+        <li><b>Loss per 1.00 lot</b> = stop-loss distance × contract size. A 10 USD stop on 100 oz = 1,000 USD per lot.</li>
+        <li><b>Lot size</b> = money at risk ÷ loss per lot, rounded <em>down</em> to your broker's lot step: 10 ÷ 1,000 = 0.01 lot.</li>
+      </ol>
+      <h2>Tips</h2>
+      <ul>
+        <li>Check the contract size in your platform: in MetaTrader 5, right-click XAUUSD in Market Watch → Specification. Some brokers use 10 or 1 oz.</li>
+        <li>If the result is below your broker's minimum lot, even the smallest position would risk more than you chose. Use a tighter stop-loss only if your setup allows it, otherwise skip the trade.</li>
+        <li>Spread and slippage add to the real loss, especially around news. Keep a buffer.</li>
+        <li>Most professional traders risk 0.5–2% per trade. See our lesson on <a href="../../lessons/risk-position-size/">risk and position size</a>.</li>
+      </ul>
+      <div class="callout">
+        <b>Want this done automatically?</b> All <a href="../../gold-ea/">GoldLab gold EAs</a> size every trade from a risk % and a fixed stop-loss.
+      </div>
+      <p class="note-small">For education only, not investment advice. Trading gold and CFDs is high risk and you can lose your capital.</p>
+    </article>
+  </div>
+</main>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var f = function (n, d) { return n.toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d }); };
+  function calc() {
+    var bal = +$("bal").value, risk = +$("risk").value, e = +$("entry").value, s = +$("sl").value,
+        cs = +$("cs").value, step = +$("step").value || 0.01;
+    var dist = Math.abs(e - s), riskMoney = bal * risk / 100, perLot = dist * cs, warn = "";
+    if (!(bal > 0 && risk > 0 && dist > 0 && cs > 0)) {
+      ["o_lot", "o_risk", "o_dist", "o_move"].forEach(function (k) { $(k).textContent = "-"; });
+      $("o_warn").textContent = "Enter a balance, a risk % and two different prices.";
+      return;
+    }
+    var raw = riskMoney / perLot, lot = Math.floor(raw / step + 1e-9) * step;
+    var dec = step < 0.01 ? 3 : 2;
+    if (lot < step) { warn = "The risk is too small for even " + f(step, dec) + " lot on this stop-loss. Use a closer stop-loss, a higher risk % or skip the trade."; lot = 0; }
+    $("o_lot").textContent = f(lot, dec) + " lot";
+    $("o_risk").textContent = f(lot * perLot, 2) + " USD" + (lot ? " (target " + f(riskMoney, 2) + ")" : "");
+    $("o_dist").textContent = f(dist, 2) + " USD";
+    $("o_move").textContent = f(lot * cs, 2) + " USD";
+    $("o_warn").textContent = warn;
+  }
+  ["bal", "risk", "entry", "sl", "cs", "step"].forEach(function (k) { $(k).addEventListener("input", calc); });
+  calc();
+})();
+</script>
+
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../tools/gold-lot-size-calculator/" aria-current="page">English</a> <a href="../../th/">ไทย</a> <a href="../../vi/">Tiếng Việt</a> <a href="../../id/">Bahasa Indonesia</a> <a href="../../es/">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <p>GoldLab provides educational content only and is not a licensed investment adviser. Market data may be delayed or inaccurate.</p>
+    <p>© 2026 GoldLab. All rights reserved.</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+</body>
+</html>

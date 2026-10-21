@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Margin Calculator for Gold (XAUUSD) &amp; Forex · GoldLab</title>
+<meta name="description" content="Free margin calculator for XAUUSD and forex: required margin, notional value and margin level for any lot size and leverage.">
+<meta property="og:title" content="Margin Calculator for Gold (XAUUSD) &amp; Forex · GoldLab">
+<meta property="og:description" content="Free margin calculator for XAUUSD and forex: required margin, notional value and margin level for any lot size and leverage.">
+<meta property="og:image" content="https://goldlab.trade/assets/og/tool-margin-calculator.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://goldlab.trade/tools/margin-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GoldLab">
+<link rel="canonical" href="https://goldlab.trade/tools/margin-calculator/">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Margin Calculator for Gold (XAUUSD) & Forex", "url": "https://goldlab.trade/tools/margin-calculator/", "description": "Free margin calculator for XAUUSD and forex: required margin, notional value and margin level for any lot size and leverage.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "GoldLab", "url": "https://goldlab.trade/"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much margin do I need for 1 lot of gold?", "acceptedAnswer": {"@type": "Answer", "text": "Lots × 100 oz × price ÷ leverage. At 4,200 that is 4,200 USD with 1:100 leverage, 840 USD with 1:500 and 21,000 USD with 1:20."}}, {"@type": "Question", "name": "How much margin for 0.01 lot of XAUUSD?", "acceptedAnswer": {"@type": "Answer", "text": "At a price of 4,200 a 0.01 lot position is worth 4,200 USD, so it needs 42 USD at 1:100 or 8.40 USD at 1:500."}}, {"@type": "Question", "name": "Does higher leverage increase my risk?", "acceptedAnswer": {"@type": "Answer", "text": "Leverage only changes the margin held. The money you can lose is set by the lot size and the stop-loss distance, but high leverage makes it easy to open positions that are too large."}}, {"@type": "Question", "name": "Why is my broker's margin for gold different?", "acceptedAnswer": {"@type": "Answer", "text": "Many brokers use a separate leverage for metals, a fixed margin per lot, or a margin that changes with position size and around weekends and news. Check the symbol specification in your platform."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GoldLab", "item": "https://goldlab.trade/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://goldlab.trade/tools/"}, {"@type": "ListItem", "position": 3, "name": "Margin calculator", "item": "https://goldlab.trade/tools/margin-calculator/"}]}]</script>
+<meta name="theme-color" content="#070d1a">
+<meta name="google-site-verification" content="AoyS69iYM0KUBS375ShKPWs4FY5b3LdPtCelTJK63AM" />
+<link rel="alternate" hreflang="en" href="https://goldlab.trade/tools/margin-calculator/">
+<link rel="alternate" hreflang="x-default" href="https://goldlab.trade/tools/margin-calculator/">
+<link rel="icon" href="../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt="GoldLab logo" width="40" height="40"><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../#levels">Today's levels</a>
+      <a href="../../#lessons">Lessons</a>
+      <a href="../../tools/">Tools</a>
+      <a href="../../ea/" class="nav-ea">EAs</a>
+      <a href="../../learn/">Learn</a>
+      <a href="../../buy/" class="nav-ea">Buy</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../tools/margin-calculator/" selected>English</option><option value="../../th/">ไทย</option><option value="../../vi/">Tiếng Việt</option><option value="../../id/">Bahasa Indonesia</option><option value="../../es/">Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../">GoldLab</a> <span>/</span> <a href="../../tools/">Tools</a> <span>/</span> <span>Margin calculator</span></nav>
+    <div class="article-head">
+      <div class="kicker">Free tool · XAUUSD · Forex</div>
+      <h1>Margin Calculator for Gold &amp; Forex</h1>
+      <p class="lead">How much margin does a trade need? Enter the instrument, lot size and leverage to get the required margin in USD, the position's notional value and your margin level after opening it. For XAUUSD and the main forex pairs.</p>
+    </div>
+
+    <div class="calc panel">
+      <div class="calc-grid">
+        <label>Instrument<select id="sym">
+          <option value="XAUUSD">XAUUSD (gold)</option>
+          <option value="XAGUSD">XAGUSD (silver)</option>
+          <option value="EURUSD">EURUSD</option>
+          <option value="GBPUSD">GBPUSD</option>
+          <option value="USDJPY">USDJPY</option>
+          <option value="USDCHF">USDCHF</option>
+          <option value="EURJPY">EURJPY</option>
+          <option value="custom">Custom</option>
+        </select></label>
+        <label>Lot size<input id="lot" type="number" min="0" step="0.01" value="1"></label>
+        <label>Price<input id="price" type="number" min="0" step="any" value="4200"></label>
+        <label>Contract size (units per 1.00 lot)<input id="cs" type="number" min="0" step="any" value="100"></label>
+        <label>Leverage (1 : X)<input id="lev" type="number" min="1" step="1" value="100"></label>
+        <label><span id="convLabel">USD value of 1 unit of base</span><input id="conv" type="number" min="0" step="any" value="4200"></label>
+        <label>Account equity (USD, optional)<input id="eq" type="number" min="0" step="any" value="10000"></label>
+      </div>
+      <div class="calc-out">
+        <div><small>Required margin</small><b id="o_m">-</b></div>
+        <div><small>Notional value</small><b id="o_n">-</b></div>
+        <div><small>Margin level after opening</small><b id="o_ml">-</b></div>
+        <div><small>Free margin left</small><b id="o_fm">-</b></div>
+      </div>
+      <p class="calc-warn" id="o_warn"></p>
+    </div>
+
+    <article class="article">
+      <h2>How margin is calculated</h2>
+      <pre class="formula">Margin = Lots × Contract size × Price (in USD) ÷ Leverage</pre>
+      <p>For gold the contract is usually 100 oz, so at a price of 4,200 one lot is worth 420,000 USD (the <em>notional value</em>). With 1:100 leverage the broker holds 420,000 ÷ 100 = <strong>4,200 USD</strong> as margin. For pairs where USD is the base currency (USDJPY, USDCHF) the notional is simply lots × 100,000 USD, so price does not matter.</p>
+      <table>
+        <thead><tr><th>XAUUSD at 4,200</th><th>1:20</th><th>1:100</th><th>1:500</th></tr></thead>
+        <tbody>
+          <tr><td>1.00 lot</td><td>$21,000</td><td>$4,200</td><td>$840</td></tr>
+          <tr><td>0.10 lot</td><td>$2,100</td><td>$420</td><td>$84</td></tr>
+          <tr><td>0.01 lot</td><td>$210</td><td>$42</td><td>$8.40</td></tr>
+        </tbody>
+      </table>
+      <p>Brokers often apply a different, lower maximum leverage to metals than to forex, and regulators cap retail leverage in some regions (for example 1:20 on gold in the EU). Use the leverage your broker shows for the XAUUSD symbol, not just the account leverage. Details: <a href="../../learn/margin-for-1-lot-gold/">how much margin for 1 lot of gold</a>.</p>
+
+      <h2>Margin level, margin call and stop out</h2>
+      <pre class="formula">Margin level % = Equity ÷ Used margin × 100</pre>
+      <p>If equity is 10,000 USD and the trade uses 4,200 USD, the margin level is 238%. When losses push it down to the broker's margin-call level (often 100%) you cannot open new trades; at the stop-out level (often 20–50%) positions are closed automatically. Levels vary by broker.</p>
+
+      <h2>Worked examples</h2>
+      <div class="callout"><strong>Gold, small account.</strong> 0.05 lot XAUUSD at 4,200 with 1:200 leverage: 0.05 × 100 × 4,200 ÷ 200 = <strong>105 USD</strong> margin.</div>
+      <div class="callout"><strong>EURUSD.</strong> 1 lot at 1.0800 with 1:30: 100,000 × 1.08 ÷ 30 = <strong>3,600 USD</strong>.</div>
+      <div class="callout"><strong>USDJPY.</strong> 0.50 lot with 1:100: 0.5 × 100,000 ÷ 100 = <strong>500 USD</strong> (USD is the base currency).</div>
+      <div class="callout warn"><strong>Margin is not risk.</strong> Low margin only means the broker lets you open a large position. What you can lose depends on lot size × stop distance - size every trade with the <a href="../../tools/gold-lot-size-calculator/">XAUUSD lot size calculator</a> and check its dollar value with the <a href="../../tools/xauusd-pip-value-calculator/">pip value calculator</a>.</div>
+      <p>All <a href="../../ea/">GoldLab EAs</a> check free margin before every order and reduce the lot if it is not enough - see for example the <a href="../../ea/turtle-channel/">Turtle trading EA</a>, which sizes each unit from ATR.</p>
+
+      <section class="faq">
+        <h2>FAQ</h2>
+        <h3>How much margin do I need for 1 lot of gold?</h3>
+        <p>Lots × 100 oz × price ÷ leverage. At 4,200 that is 4,200 USD with 1:100 leverage, 840 USD with 1:500 and 21,000 USD with 1:20.</p>
+        <h3>How much margin for 0.01 lot of XAUUSD?</h3>
+        <p>At a price of 4,200 a 0.01 lot position is worth 4,200 USD, so it needs 42 USD at 1:100 or 8.40 USD at 1:500.</p>
+        <h3>Does higher leverage increase my risk?</h3>
+        <p>Leverage only changes the margin held. The money you can lose is set by the lot size and the stop-loss distance, but high leverage makes it easy to open positions that are too large.</p>
+        <h3>Why is my broker's margin for gold different?</h3>
+        <p>Many brokers use a separate leverage for metals, a fixed margin per lot, or a margin that changes with position size and around weekends and news. Check the symbol specification in your platform.</p>
+      </section>
+      <p class="note-small">For education only, not investment advice. Margin rules vary by broker and regulator. Trading gold and CFDs is high risk and you can lose your capital.</p>
+    </article>
+  </div>
+</main>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var f = function (n, d) { return n.toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d }); };
+  // [contract, price, mode, label, rate]; mode q = quote USD (base value = price), b = base USD (base value = 1), x = cross (base value = user rate)
+  var P = { XAUUSD: [100, 4200, "q"], XAGUSD: [5000, 50, "q"], EURUSD: [100000, 1.08, "q"], GBPUSD: [100000, 1.27, "q"],
+            USDJPY: [100000, 150, "b"], USDCHF: [100000, 0.88, "b"], EURJPY: [100000, 162, "x", "EURUSD rate (USD value of 1 EUR)", 1.08] };
+  var mode = "q";
+  function preset() {
+    var p = P[$("sym").value];
+    if (!p) { mode = "x"; $("convLabel").textContent = "USD value of 1 unit of base"; $("conv").disabled = false; calc(); return; }
+    $("cs").value = p[0]; $("price").value = p[1]; mode = p[2];
+    if (mode === "x") { $("convLabel").textContent = p[3]; $("conv").value = p[4]; $("conv").disabled = false; }
+    else { $("convLabel").textContent = "USD value of 1 unit of base (automatic)"; $("conv").disabled = true; }
+    calc();
+  }
+  function calc() {
+    var lot = +$("lot").value, price = +$("price").value, cs = +$("cs").value, lev = +$("lev").value, eq = +$("eq").value;
+    var base = mode === "q" ? price : mode === "b" ? 1 : +$("conv").value;
+    if (mode !== "x") $("conv").value = base;
+    if (!(lot > 0 && cs > 0 && lev > 0 && base > 0)) {
+      ["o_m", "o_n", "o_ml", "o_fm"].forEach(function (k) { $(k).textContent = "-"; });
+      $("o_warn").textContent = "Enter a lot size, price, contract size and leverage.";
+      return;
+    }
+    var notional = lot * cs * base, m = notional / lev;
+    $("o_m").textContent = f(m, 2) + " USD";
+    $("o_n").textContent = f(notional, 2) + " USD";
+    $("o_ml").textContent = eq > 0 ? f(eq / m * 100, 0) + "%" : "-";
+    $("o_fm").textContent = eq > 0 ? f(eq - m, 2) + " USD" : "-";
+    $("o_warn").textContent = eq > 0 && m > eq ? "Not enough equity: this position needs more margin than the account has." : "";
+  }
+  $("sym").addEventListener("change", preset);
+  ["lot", "price", "cs", "lev", "conv", "eq"].forEach(function (k) { $(k).addEventListener("input", calc); });
+  preset();
+})();
+</script>
+
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../tools/margin-calculator/" aria-current="page">English</a> <a href="../../th/">ไทย</a> <a href="../../vi/">Tiếng Việt</a> <a href="../../id/">Bahasa Indonesia</a> <a href="../../es/">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <nav class="popular"><a href="../../tools/gold-lot-size-calculator/">XAUUSD lot size calculator</a><a href="../../tools/xauusd-pip-value-calculator/">Pip value calculator</a><a href="../../tools/margin-calculator/">Margin calculator</a><a href="../../tools/risk-reward-calculator/">Risk reward calculator</a><a href="../../ea/">MT5 gold EAs</a><a href="../../learn/">Gold trading guides</a><a href="../../#method">Our method</a><a href="../../#risk">Risk</a></nav>
+    <nav class="legal"><a href="../../buy/">Buy</a><a href="../../contact/">Contact</a><a href="../../terms/">Terms</a><a href="../../refund/">Refunds</a><a href="../../privacy/">Privacy</a></nav>
+    <p>GoldLab provides educational content only and is not a licensed investment adviser. Market data may be delayed or inaccurate.</p>
+    <p>© 2026 GoldLab. All rights reserved.</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+</body>
+</html>

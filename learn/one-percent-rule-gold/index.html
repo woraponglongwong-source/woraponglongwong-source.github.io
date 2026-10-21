@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 1% Risk Rule: Gold Trading Examples · GoldLab</title>
+<meta name="description" content="Risk per trade explained: the 1% rule with XAUUSD examples for $500, $1,000 and $10,000 accounts, loss streak math and daily loss limits.">
+<meta property="og:title" content="The 1% Risk Rule: Gold Trading Examples · GoldLab">
+<meta property="og:description" content="Risk per trade explained: the 1% rule with XAUUSD examples for $500, $1,000 and $10,000 accounts, loss streak math and daily loss limits.">
+<meta property="og:image" content="https://goldlab.trade/assets/og/learn-one-percent-rule-gold.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://goldlab.trade/learn/one-percent-rule-gold/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GoldLab">
+<link rel="canonical" href="https://goldlab.trade/learn/one-percent-rule-gold/">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Risk Per Trade: the 1% Rule with Gold Examples", "description": "Risk per trade explained: the 1% rule with XAUUSD examples for $500, $1,000 and $10,000 accounts, loss streak math and daily loss limits.", "inLanguage": "en", "url": "https://goldlab.trade/learn/one-percent-rule-gold/", "image": "https://goldlab.trade/assets/og/learn-one-percent-rule-gold.jpg", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "mainEntityOfPage": "https://goldlab.trade/learn/one-percent-rule-gold/", "author": {"@type": "Organization", "name": "GoldLab", "url": "https://goldlab.trade/"}, "publisher": {"@type": "Organization", "name": "GoldLab", "logo": {"@type": "ImageObject", "url": "https://goldlab.trade/assets/logo.png"}}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I calculate a 1% risk lot size on gold?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply your balance by 1% to get the money at risk, then divide by the stop distance in dollars times 100 for a standard XAUUSD contract. Round the result down to your broker's lot step."}}, {"@type": "Question", "name": "Can I use the 1% rule with a 500 dollar account?", "acceptedAnswer": {"@type": "Answer", "text": "Only with stops of about 5 dollars or less, because 0.01 lot already risks 1 USD per dollar of gold movement. With wider stops you would need a cent or micro account, or accept a higher risk knowingly."}}, {"@type": "Question", "name": "Is 1% risk per trade too conservative?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on your experience, strategy and how many positions you hold at once. Many traders find it a sensible balance between growth and survival during losing streaks."}}, {"@type": "Question", "name": "Does the 1% rule guarantee I will not lose money?", "acceptedAnswer": {"@type": "Answer", "text": "No. It limits the size of each loss but cannot make a strategy profitable, and slippage or gaps can cause losses larger than planned."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GoldLab", "item": "https://goldlab.trade/"}, {"@type": "ListItem", "position": 2, "name": "Learn", "item": "https://goldlab.trade/learn/"}, {"@type": "ListItem", "position": 3, "name": "Risk Per Trade: the 1% Rule with Gold Examples", "item": "https://goldlab.trade/learn/one-percent-rule-gold/"}]}]</script>
+<meta name="theme-color" content="#070d1a">
+<meta name="google-site-verification" content="AoyS69iYM0KUBS375ShKPWs4FY5b3LdPtCelTJK63AM" />
+<link rel="alternate" hreflang="en" href="https://goldlab.trade/learn/one-percent-rule-gold/">
+<link rel="alternate" hreflang="x-default" href="https://goldlab.trade/learn/one-percent-rule-gold/">
+<link rel="icon" href="../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt="GoldLab logo" width="40" height="40"><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../#levels">Today's levels</a>
+      <a href="../../#lessons">Lessons</a>
+      <a href="../../tools/">Tools</a>
+      <a href="../../ea/" class="nav-ea">EAs</a>
+      <a href="../../learn/">Learn</a>
+      <a href="../../buy/" class="nav-ea">Buy</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../learn/one-percent-rule-gold/" selected>English</option><option value="../../th/">ไทย</option><option value="../../vi/">Tiếng Việt</option><option value="../../id/">Bahasa Indonesia</option><option value="../../es/">Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../">GoldLab</a> <span>/</span> <a href="../../learn/">Learn</a></nav>
+    <header class="article-head">
+      <div class="kicker">Guide · 7 min read · Updated 2026-10-21</div>
+      <h1>Risk Per Trade: the 1% Rule with Gold Examples</h1>
+      <p class="lead">Risk per trade explained: the 1% rule with XAUUSD examples for $500, $1,000 and $10,000 accounts, loss streak math and daily loss limits.</p>
+    </header>
+    <article class="article">
+<p class="intro">The 1% risk rule is one of the most widely used guidelines in trading: on any single trade, you risk losing no more than 1% of your account balance. It does not tell you where to buy or sell, and it does not make a strategy profitable. What it does is control the damage from losing trades, which every trader has. This guide explains risk per trade on gold, shows how to turn 1% into a lot size on XAUUSD, and works through examples for small and larger accounts.</p>
+
+<h2>What the 1% rule actually means</h2>
+<p>Risk is the amount you lose if your stop loss is hit. If your balance is 10,000 USD, 1% is 100 USD. The rule says the distance to your stop multiplied by your position size should produce a loss of about 100 USD, not more. It does not mean you put 1% of your money into the trade, and it has nothing to do with margin. Margin is a deposit; risk is the loss at the stop. The article on <a href="../../learn/margin-for-1-lot-gold/">margin for 1 lot of gold</a> explains that difference in detail.</p>
+
+<h2>The lot size formula for XAUUSD</h2>
+<p>On a standard gold contract of 100 ounces per 1.00 lot, every 1-dollar move in price is worth 100 USD per lot, or 1 USD per 0.01 lot. That gives a simple formula:</p>
+
+<pre class="formula">Lot = (balance × risk %) ÷ (stop distance in $ × 100)</pre>
+
+<p>The stop distance is measured in dollars of gold price, for example 4,200.00 to 4,190.00 is a 10-dollar stop. Always round the result <strong>down</strong> to your broker's lot step so the real risk stays at or under your limit. Contract sizes differ between brokers and account types, so confirm yours in the MT5 symbol specification. The <a href="../../tools/gold-lot-size-calculator/">gold lot size calculator</a> does this arithmetic for you, and <a href="../../learn/xauusd-pip-value/">XAUUSD pip value</a> explains the dollar-per-move figures.</p>
+
+<h2>Examples for three account sizes</h2>
+<p>All examples assume a 100-ounce contract, a 0.01 minimum lot, and an example gold price around 4,200.</p>
+
+<table><thead><tr><th>Balance</th><th>1% risk</th><th>Stop distance</th><th>Calculated lot</th><th>Usable lot</th><th>Real risk</th></tr></thead><tbody>
+<tr><td>500 USD</td><td>5 USD</td><td>$5</td><td>0.01</td><td>0.01</td><td>5 USD (1%)</td></tr>
+<tr><td>500 USD</td><td>5 USD</td><td>$10</td><td>0.005</td><td>none</td><td>0.01 lot would risk 10 USD (2%)</td></tr>
+<tr><td>1,000 USD</td><td>10 USD</td><td>$5</td><td>0.02</td><td>0.02</td><td>10 USD (1%)</td></tr>
+<tr><td>1,000 USD</td><td>10 USD</td><td>$10</td><td>0.01</td><td>0.01</td><td>10 USD (1%)</td></tr>
+<tr><td>1,000 USD</td><td>10 USD</td><td>$20</td><td>0.005</td><td>none</td><td>0.01 lot would risk 20 USD (2%)</td></tr>
+<tr><td>10,000 USD</td><td>100 USD</td><td>$10</td><td>0.10</td><td>0.10</td><td>100 USD (1%)</td></tr>
+<tr><td>10,000 USD</td><td>100 USD</td><td>$20</td><td>0.05</td><td>0.05</td><td>100 USD (1%)</td></tr>
+<tr><td>10,000 USD</td><td>100 USD</td><td>$25</td><td>0.04</td><td>0.04</td><td>100 USD (1%)</td></tr>
+</tbody></table>
+
+<div class="callout"><strong>Example.</strong> A trader with 500 USD wants to buy gold at 4,200 with a stop at 4,190, a 10-dollar stop. One percent is 5 USD. The formula gives 5 ÷ (10 × 100) = 0.005 lot, which is below the 0.01 minimum. Trading 0.01 lot would risk 10 USD, which is 2% of the account. The rule-consistent choices are to skip the trade, find a setup with a stop of 5 dollars or less that still makes technical sense, or accept 2% knowingly as a deliberate exception, not by accident.</div>
+
+<h2>The minimum lot problem on small accounts</h2>
+<p>Gold moves a lot in dollar terms. A normal intraday stop can easily be 5 to 20 dollars, and the smallest standard position, 0.01 lot, risks 1 USD per dollar of movement. That means an account below about 1,000 USD often cannot follow a strict 1% rule with typical gold stops. Tightening the stop just to fit the lot size is a trap: a stop placed inside normal market noise gets hit more often. A stop should come from the chart, for example with <a href="../../learn/gold-stop-loss-atr/">an ATR-based stop</a>, and the lot size should follow it. Some brokers offer cent or micro accounts with smaller contracts, which can solve the problem; otherwise, fewer but better-fitting trades are the honest answer.</p>
+
+<h2>Why small risk matters: losing streaks</h2>
+<p>Any strategy will have runs of consecutive losses. The table shows what 10 losses in a row do to an account at different risk levels, with each loss calculated on the current balance.</p>
+
+<table><thead><tr><th>Risk per trade</th><th>Balance left after 10 losses</th><th>Drawdown</th><th>Gain needed to recover</th></tr></thead><tbody>
+<tr><td>0.5%</td><td>95.1%</td><td>4.9%</td><td>5.1%</td></tr>
+<tr><td>1%</td><td>90.4%</td><td>9.6%</td><td>10.6%</td></tr>
+<tr><td>2%</td><td>81.7%</td><td>18.3%</td><td>22.4%</td></tr>
+<tr><td>5%</td><td>59.9%</td><td>40.1%</td><td>67.0%</td></tr>
+</tbody></table>
+
+<pre class="formula">Balance after n losses = (1 − risk)^n
+Gain to recover = 1 ÷ remaining balance − 1</pre>
+
+<p>The recovery column is the key. Losses and gains are not symmetrical: after losing 40% you need about 67% just to get back to the start. At 1% per trade, a ten-trade losing streak is painful but recoverable. At 5% it can change how you trade for months.</p>
+
+<h2>Daily loss limits</h2>
+<p>The 1% rule controls a single trade. A daily loss limit controls a bad day, which is when traders are most likely to break their own rules. A common approach is to stop trading for the day after losing 2% to 3% of the account, which at 1% per trade means two or three losing trades. This stops one emotional session from turning into a large drawdown. Automated systems can enforce it without discussion; every GoldLab EA, for example the <a href="../../ea/turtle-channel/">Turtle Channel EA</a>, combines a stop loss on each trade, risk-percent sizing and a daily loss limit, with no martingale or grid.</p>
+
+<h2>When 0.5% or 2% may fit better</h2>
+<p>One percent is a starting point, not a law. A lower figure such as 0.5% suits traders who are new, testing a strategy on a live account for the first time, running several correlated positions at once, or trading through volatile news periods. Some experienced traders with a long, tested record and a small number of trades per month use up to 2%. Going much higher shortens the number of losses your account can absorb. If you hold two gold trades at once, remember they usually move together, so 1% on each is closer to 2% of real exposure.</p>
+
+<div class="callout warn"><strong>The rule only works if the stop is real.</strong> Moving a stop further away after entry, removing it, or adding to a losing position quietly breaks the 1% rule even if the original lot size was correct. Slippage and weekend gaps can also make a loss larger than planned, which is another reason to keep risk modest.</div>
+
+<p>Once your risk is fixed, the <a href="../../tools/risk-reward-calculator/">risk-reward calculator</a> helps you compare it against your target. For a structured course on the topic, see the lesson on <a href="../../lessons/risk-position-size/">risk and position size</a>.</p>
+
+<h2>Key takeaways</h2>
+<ul class="takeaways">
+<li>The 1% rule limits the loss at your stop to 1% of the account; it is about risk, not margin.</li>
+<li>For XAUUSD on a 100-ounce contract, lot = (balance × risk %) ÷ (stop in $ × 100), rounded down.</li>
+<li>On small accounts even 0.01 lot can exceed 1%; skip the trade or choose a setup with a valid tighter stop rather than forcing it.</li>
+<li>Ten losses at 1% leave about 90.4% of the account; at 5% only about 59.9%.</li>
+<li>A daily loss limit protects against bad sessions, and 0.5% or 2% can fit different situations.</li>
+</ul>
+
+<section class="faq">
+<h2>FAQ</h2>
+<h3>How do I calculate a 1% risk lot size on gold?</h3>
+<p>Multiply your balance by 1% to get the money at risk, then divide by the stop distance in dollars times 100 for a standard XAUUSD contract. Round the result down to your broker's lot step.</p>
+<h3>Can I use the 1% rule with a 500 dollar account?</h3>
+<p>Only with stops of about 5 dollars or less, because 0.01 lot already risks 1 USD per dollar of gold movement. With wider stops you would need a cent or micro account, or accept a higher risk knowingly.</p>
+<h3>Is 1% risk per trade too conservative?</h3>
+<p>It depends on your experience, strategy and how many positions you hold at once. Many traders find it a sensible balance between growth and survival during losing streaks.</p>
+<h3>Does the 1% rule guarantee I will not lose money?</h3>
+<p>No. It limits the size of each loss but cannot make a strategy profitable, and slippage or gaps can cause losses larger than planned.</p>
+</section>
+
+<p class="note-small">For education only, not investment advice. Trading gold and CFDs is high risk and you can lose your capital.</p>
+
+    </article>
+    <nav class="pager"><a class="next" href="../../learn/xauusd-pip-value/"><small>Next guide</small><b>XAUUSD Pip Value Explained</b></a></nav>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../learn/one-percent-rule-gold/" aria-current="page">English</a> <a href="../../th/">ไทย</a> <a href="../../vi/">Tiếng Việt</a> <a href="../../id/">Bahasa Indonesia</a> <a href="../../es/">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <nav class="popular"><a href="../../tools/gold-lot-size-calculator/">XAUUSD lot size calculator</a><a href="../../tools/xauusd-pip-value-calculator/">Pip value calculator</a><a href="../../tools/margin-calculator/">Margin calculator</a><a href="../../tools/risk-reward-calculator/">Risk reward calculator</a><a href="../../ea/">MT5 gold EAs</a><a href="../../learn/">Gold trading guides</a><a href="../../#method">Our method</a><a href="../../#risk">Risk</a></nav>
+    <nav class="legal"><a href="../../buy/">Buy</a><a href="../../contact/">Contact</a><a href="../../terms/">Terms</a><a href="../../refund/">Refunds</a><a href="../../privacy/">Privacy</a></nav>
+    <p>GoldLab provides educational content only and is not a licensed investment adviser. Market data may be delayed or inaccurate.</p>
+    <p>© 2026 GoldLab. All rights reserved.</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>London Breakout EA for MT5 (XAUUSD) · GoldLab</title>
+<meta name="description" content="London breakout EA for MT5: trades the Asian-range breakout on gold at the London open, stop at the range, 2R target, risk-% lots. $99 one-time.">
+<meta property="og:title" content="London Breakout EA for MT5 (XAUUSD) · GoldLab">
+<meta property="og:description" content="London breakout EA for MT5: trades the Asian-range breakout on gold at the London open, stop at the range, 2R target, risk-% lots. $99 one-time.">
+<meta property="og:image" content="https://goldlab.trade/assets/ea-london-breakout-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://goldlab.trade/ea/london-breakout/">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="GoldLab">
+<meta property="product:price:amount" content="99.00">
+<meta property="product:price:currency" content="USD">
+<link rel="canonical" href="https://goldlab.trade/ea/london-breakout/">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Product", "name": "GoldLab London Breakout", "description": "London breakout EA for MT5: trades the Asian-range breakout on gold at the London open, stop at the range, 2R target, risk-% lots. $99 one-time.", "image": ["https://goldlab.trade/assets/ea-london-breakout-1.jpg", "https://goldlab.trade/assets/ea-london-breakout-2.webp"], "brand": {"@type": "Brand", "name": "GoldLab"}, "category": "Trading software / MetaTrader 5 Expert Advisor", "sku": "goldlab-london-breakout", "url": "https://goldlab.trade/ea/london-breakout/", "offers": {"@type": "Offer", "price": "99.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.mql5.com/en/market/product/202809", "seller": {"@type": "Organization", "name": "GoldLab"}}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What time does the London breakout EA trade?", "acceptedAnswer": {"@type": "Answer", "text": "By default it builds the range from 00:00 to 07:00 server time, opens new trades only between 07:00 and 12:00 and closes any open trade at 20:00. All hours are inputs, so you can match them to your broker's time zone."}}, {"@type": "Question", "name": "Is there a free demo?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every MQL5 Market product has a free demo that runs in the MetaTrader 5 Strategy Tester, so you can test it on your broker's own data before buying."}}, {"@type": "Question", "name": "Does it use martingale, grid or averaging down?", "acceptedAnswer": {"@type": "Answer", "text": "No. Every position is opened with a stop-loss, the lot size comes from your risk % (or a fixed lot), and there is a daily loss limit."}}, {"@type": "Question", "name": "Which broker and account do I need?", "acceptedAnswer": {"@type": "Answer", "text": "Any MetaTrader 5 broker that offers XAUUSD, on a hedging or netting account. A low-spread account and a VPS for 24/5 operation are recommended."}}, {"@type": "Question", "name": "Can this EA guarantee profits?", "acceptedAnswer": {"@type": "Answer", "text": "No. No trading system wins every trade, and backtest or past results do not guarantee future results. Start on a demo account with the default risk."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GoldLab", "item": "https://goldlab.trade/"}, {"@type": "ListItem", "position": 2, "name": "EAs", "item": "https://goldlab.trade/ea/"}, {"@type": "ListItem", "position": 3, "name": "GoldLab London Breakout", "item": "https://goldlab.trade/ea/london-breakout/"}]}]</script>
+<meta name="theme-color" content="#070d1a">
+<meta name="google-site-verification" content="AoyS69iYM0KUBS375ShKPWs4FY5b3LdPtCelTJK63AM" />
+<link rel="alternate" hreflang="en" href="https://goldlab.trade/ea/london-breakout/">
+<link rel="alternate" hreflang="x-default" href="https://goldlab.trade/ea/london-breakout/">
+<link rel="icon" href="../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt="GoldLab logo" width="40" height="40"><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../#levels">Today's levels</a>
+      <a href="../../#lessons">Lessons</a>
+      <a href="../../tools/">Tools</a>
+      <a href="../../ea/" class="nav-ea">EAs</a>
+      <a href="../../learn/">Learn</a>
+      <a href="../../buy/" class="nav-ea">Buy</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../ea/london-breakout/" selected>English</option><option value="../../th/">ไทย</option><option value="../../vi/">Tiếng Việt</option><option value="../../id/">Bahasa Indonesia</option><option value="../../es/">Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../">GoldLab</a> <span>/</span> <a href="../../ea/">EAs</a> <span>/</span> <span>GoldLab London Breakout</span></nav>
+    <header class="article-head">
+      <div class="kicker">MetaTrader 5 · XAUUSD · Breakout EAs</div>
+      <h1>London Breakout EA for MT5</h1>
+      <p class="lead">GoldLab London Breakout is a London breakout EA for MT5 that marks the Asian session range on XAUUSD and trades the first clean break of it after the London open - one trade per side per day, a stop-loss on every order and an exit before the session ends.</p>
+    </header>
+    <picture><source srcset="../../assets/ea-london-breakout-1.webp" type="image/webp"><img class="ea-hero" src="../../assets/ea-london-breakout-1.jpg" alt="GoldLab London Breakout - london breakout ea mt5" width="1200" height="675" fetchpriority="high"></picture>
+    <div class="ea-buybox panel">
+      <img src="../../assets/ea-london-breakout.webp" alt="GoldLab London Breakout logo" width="88" height="88" loading="lazy">
+      <div class="grow"><div class="ea-price"><b>$99</b><span>One-time purchase · no subscription · free demo on MQL5</span></div></div>
+      <a class="btn btn-gold" href="https://www.mql5.com/en/market/product/202809" target="_blank" rel="noopener">Buy on MQL5 Market →</a>
+    </div>
+    <ul class="ea-facts">
+      <li><b>MetaTrader 5</b>Expert Advisor (.ex5)</li>
+      <li><b>Range measured on M15 (any chart timeframe)</b>Recommended timeframe</li>
+      <li><b>Breakout EAs</b>Trading style</li>
+      <li><b>Stop-loss on every trade</b>No martingale, no grid</li>
+    </ul>
+    <article class="article">
+<p>GoldLab London Breakout is a fully automated Expert Advisor for MetaTrader 5. It is designed for XAUUSD (gold) and also runs on other symbols such as EURUSD.</p>
+<h2>How it trades</h2>
+<ol><li><strong>Builds the Asian range</strong> - the highest high and lowest low between the <em>Range start hour</em> and <em>Range end hour</em> (server time, default 00:00-07:00), measured on M15 bars.</li><li><strong>Filters the range</strong> - the range must be between a minimum and maximum size relative to the Daily ATR, so dead-quiet and already-exploded sessions are skipped.</li><li><strong>Trades the breakout at the London open</strong> - between the range end and the <em>No new entries</em> hour (default 07:00-12:00), a buy opens when price breaks above the range high plus a small buffer, a sell when it breaks below the range low.</li><li><strong>One trade per side per day</strong> - at most one buy and one sell breakout per day, and only one position at a time. Late breakouts (price already far beyond the level) are skipped.</li><li><strong>Stop-loss</strong> on the other side of the range (or an ATR-based stop, selectable). <strong>Take-profit</strong> at a multiple of the risk (default 2R). Optional break-even at 1R.</li><li><strong>Session-end exit</strong> - any open trade is closed at the <em>Close hour</em> (default 20:00 server time).</li></ol>
+<h2>Risk management (built in)</h2>
+<ul><li>Every trade is opened with a stop-loss. There is no martingale, no grid and no averaging down.</li><li>Position size from <strong>risk % of balance</strong> (default 1%) or a <strong>fixed lot</strong>; lots are normalised to the broker's min / max / step and reduced if free margin is not enough.</li><li><strong>Daily loss limit</strong>: no new trades for the rest of the day once equity is down the set % from the day-start balance.</li><li><strong>Max spread filter</strong>, optional <strong>trading-hours filter</strong>, and no orders while the market is closed or trading on the symbol is disabled.</li><li>Stop-loss / take-profit are always placed outside the broker's stops and freeze levels.</li><li>Works on hedging and netting accounts (on netting accounts it opens only when the symbol has no position).</li></ul>
+<h2>Inputs and default settings</h2>
+<div class="table-wrap"><table><thead><tr><th>Input</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td>Range start hour</td><td>0</td><td>Asian range start (server time)</td></tr><tr><td>Range end hour</td><td>7</td><td>Asian range end = London open (server time)</td></tr><tr><td>Range timeframe</td><td>M15</td><td>Bars used to measure the range</td></tr><tr><td>No new entries from hour</td><td>12</td><td>End of the breakout window</td></tr><tr><td>Close hour</td><td>20</td><td>Close open trades at this hour (-1 = off)</td></tr><tr><td>Breakout buffer (points)</td><td>5</td><td>Distance beyond the range required for a breakout</td></tr><tr><td>Max chase (range widths)</td><td>0.5</td><td>Skip a breakout if price is already this far beyond the level</td></tr><tr><td>Min / Max range (x Daily ATR)</td><td>0.10 / 1.50</td><td>Range size filter (0 = off)</td></tr><tr><td>Stop-loss placement</td><td>Other side of range</td><td>Or ATR multiple from entry</td></tr><tr><td>ATR period</td><td>14</td><td>H1 ATR for stops, D1 ATR for the range filter</td></tr><tr><td>Stop-loss ATR x</td><td>1.5</td><td>Used in ATR stop mode</td></tr><tr><td>Take-profit (R)</td><td>2.0</td><td>Target as a multiple of the stop distance</td></tr><tr><td>Break-even at (R)</td><td>1.0</td><td>Move stop to entry at this profit (0 = off)</td></tr><tr><td>Risk per trade (%)</td><td>1.0</td><td>Risk as % of balance, used when Fixed lot = 0</td></tr><tr><td>Fixed lot</td><td>0.0</td><td>Fixed lot size (0 = use Risk %)</td></tr><tr><td>Maximum lot</td><td>10.0</td><td>Upper cap per trade</td></tr><tr><td>Use minimum lot if risk lot is too small</td><td>true</td><td>On small accounts trade the broker minimum instead of skipping</td></tr><tr><td>Magic number</td><td>20271001</td><td>Change it to run several copies on one account</td></tr><tr><td>Daily loss limit (%)</td><td>3.0</td><td>Stop opening trades for the day at this loss (0 = off)</td></tr><tr><td>Max spread (points)</td><td>60</td><td>2-digit gold / 4-digit FX scale (100 = 1.00 USD on gold); 0 = off</td></tr><tr><td>Restrict to trading hours</td><td>false</td><td>Optional start / end hour (server time) for new entries</td></tr><tr><td>Max slippage (points)</td><td>30</td><td>Same scale as spread</td></tr><tr><td>Show info panel</td><td>false</td><td>Optional status panel on the chart</td></tr></tbody></table></div>
+<h2>Recommended setup</h2>
+<ul><li><strong>Symbol / timeframe:</strong> XAUUSD (designed for gold), also major FX pairs such as EURUSD / GBPUSD. Attach to any timeframe chart (M15 or H1 recommended for viewing) - the range is always measured on the Range timeframe input.</li><li><strong>Account:</strong> any (hedging or netting), any deposit that allows the broker's minimum lot with a sensible risk %.</li><li><strong>VPS:</strong> recommended for uninterrupted operation.</li></ul>
+<h2>Honest notes</h2>
+<ul><li>No trading system can guarantee profit. Past performance, in the tester or live, does not guarantee future results.</li><li>Always test the EA in the MetaTrader 5 Strategy Tester and then on a <strong>demo account</strong> before using real money, with your broker's own data and spread.</li><li>Session hours are in your broker's <strong>server time</strong> - check your broker's time zone and adjust the hour inputs if needed.</li><li>Start with a low risk % and use money you can afford to lose.</li></ul>
+      <figure><img src="../../assets/ea-london-breakout-2.webp" alt="How GoldLab London Breakout trades - illustration" width="1200" height="675" loading="lazy" decoding="async"><figcaption>How it trades (illustration, not real trading results).</figcaption></figure>
+      <figure><img src="../../assets/ea-london-breakout-3.webp" alt="GoldLab London Breakout risk management features" width="1200" height="675" loading="lazy" decoding="async"><figcaption>Built-in risk management.</figcaption></figure>
+      <h2>Plan your risk before you run it</h2>
+      <ul>
+        <li>Check the lot the EA will use for your balance and stop with the <a href="../../tools/gold-lot-size-calculator/">XAUUSD lot size calculator</a> and the <a href="../../tools/margin-calculator/">margin calculator</a>.</li>
+        <li>Compare targets and stops with the <a href="../../tools/risk-reward-calculator/">risk reward calculator</a>.</li>
+        <li><a href="../../learn/london-breakout-gold/">London Breakout Strategy for Gold, Explained</a></li><li><a href="../../learn/gold-stop-loss-atr/">How to Set a Stop Loss on Gold (ATR Method)</a></li>
+      </ul>
+      <div class="callout"><strong>Similar breakout eas:</strong> <a href="../../ea/ny-opening-range/">GoldLab NY Opening Range</a> · <a href="../../ea/bollinger-squeeze/">GoldLab Bollinger Squeeze</a> · <a href="../../ea/turtle-channel/">GoldLab Turtle Channel</a> · <a href="../../ea/">all 13 GoldLab EAs</a></div>
+      <section class="faq">
+        <h2>FAQ</h2>
+        <h3>What time does the London breakout EA trade?</h3>
+        <p>By default it builds the range from 00:00 to 07:00 server time, opens new trades only between 07:00 and 12:00 and closes any open trade at 20:00. All hours are inputs, so you can match them to your broker&#x27;s time zone.</p>
+        <h3>Is there a free demo?</h3>
+        <p>Yes. Every MQL5 Market product has a free demo that runs in the MetaTrader 5 Strategy Tester, so you can test it on your broker&#x27;s own data before buying.</p>
+        <h3>Does it use martingale, grid or averaging down?</h3>
+        <p>No. Every position is opened with a stop-loss, the lot size comes from your risk % (or a fixed lot), and there is a daily loss limit.</p>
+        <h3>Which broker and account do I need?</h3>
+        <p>Any MetaTrader 5 broker that offers XAUUSD, on a hedging or netting account. A low-spread account and a VPS for 24/5 operation are recommended.</p>
+        <h3>Can this EA guarantee profits?</h3>
+        <p>No. No trading system wins every trade, and backtest or past results do not guarantee future results. Start on a demo account with the default risk.</p>
+      </section>
+      <p class="note-small">Trading gold, forex and CFDs is high risk and you can lose your capital. This page is for information only and is not investment advice. Illustrations are not trading results.</p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../ea/london-breakout/" aria-current="page">English</a> <a href="../../th/">ไทย</a> <a href="../../vi/">Tiếng Việt</a> <a href="../../id/">Bahasa Indonesia</a> <a href="../../es/">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <nav class="popular"><a href="../../tools/gold-lot-size-calculator/">XAUUSD lot size calculator</a><a href="../../tools/xauusd-pip-value-calculator/">Pip value calculator</a><a href="../../tools/margin-calculator/">Margin calculator</a><a href="../../tools/risk-reward-calculator/">Risk reward calculator</a><a href="../../ea/">MT5 gold EAs</a><a href="../../learn/">Gold trading guides</a><a href="../../#method">Our method</a><a href="../../#risk">Risk</a></nav>
+    <nav class="legal"><a href="../../buy/">Buy</a><a href="../../contact/">Contact</a><a href="../../terms/">Terms</a><a href="../../refund/">Refunds</a><a href="../../privacy/">Privacy</a></nav>
+    <p>GoldLab provides educational content only and is not a licensed investment adviser. Market data may be delayed or inaccurate.</p>
+    <p>© 2026 GoldLab. All rights reserved.</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+</body>
+</html>

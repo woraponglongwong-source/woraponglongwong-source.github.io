@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Set a Stop Loss on Gold (ATR Method) · GoldLab</title>
+<meta name="description" content="How to set a stop loss on gold with ATR: choose the multiplier, add a structure and spread buffer, then size the position. Worked XAUUSD examples.">
+<meta property="og:title" content="How to Set a Stop Loss on Gold (ATR Method) · GoldLab">
+<meta property="og:description" content="How to set a stop loss on gold with ATR: choose the multiplier, add a structure and spread buffer, then size the position. Worked XAUUSD examples.">
+<meta property="og:image" content="https://goldlab.trade/assets/og/learn-gold-stop-loss-atr.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://goldlab.trade/learn/gold-stop-loss-atr/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GoldLab">
+<link rel="canonical" href="https://goldlab.trade/learn/gold-stop-loss-atr/">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "How to Set a Stop Loss on Gold (ATR Method)", "description": "How to set a stop loss on gold with ATR: choose the multiplier, add a structure and spread buffer, then size the position. Worked XAUUSD examples.", "inLanguage": "en", "url": "https://goldlab.trade/learn/gold-stop-loss-atr/", "image": "https://goldlab.trade/assets/og/learn-gold-stop-loss-atr.jpg", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "mainEntityOfPage": "https://goldlab.trade/learn/gold-stop-loss-atr/", "author": {"@type": "Organization", "name": "GoldLab", "url": "https://goldlab.trade/"}, "publisher": {"@type": "Organization", "name": "GoldLab", "logo": {"@type": "ImageObject", "url": "https://goldlab.trade/assets/logo.png"}}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What ATR setting is best for gold?", "acceptedAnswer": {"@type": "Answer", "text": "The default 14-period ATR is the most common choice and a reasonable start. Use the ATR from the same timeframe you trade on."}}, {"@type": "Question", "name": "Is 1.5 times ATR a good stop for XAUUSD?", "acceptedAnswer": {"@type": "Answer", "text": "It is a common starting point on H1, but no multiplier suits every strategy. Test it on your own rules and adjust for your timeframe."}}, {"@type": "Question", "name": "Should my stop loss be a fixed dollar amount?", "acceptedAnswer": {"@type": "Answer", "text": "Your money risk can be fixed, but the stop distance should usually adapt to volatility. Keep the dollar risk constant by changing the lot size instead."}}, {"@type": "Question", "name": "Does a stop loss always close at my exact price?", "acceptedAnswer": {"@type": "Answer", "text": "No. During fast moves or gaps the order can be filled at a worse price, which is called slippage."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GoldLab", "item": "https://goldlab.trade/"}, {"@type": "ListItem", "position": 2, "name": "Learn", "item": "https://goldlab.trade/learn/"}, {"@type": "ListItem", "position": 3, "name": "How to Set a Stop Loss on Gold (ATR Method)", "item": "https://goldlab.trade/learn/gold-stop-loss-atr/"}]}]</script>
+<meta name="theme-color" content="#070d1a">
+<meta name="google-site-verification" content="AoyS69iYM0KUBS375ShKPWs4FY5b3LdPtCelTJK63AM" />
+<link rel="alternate" hreflang="en" href="https://goldlab.trade/learn/gold-stop-loss-atr/">
+<link rel="alternate" hreflang="x-default" href="https://goldlab.trade/learn/gold-stop-loss-atr/">
+<link rel="icon" href="../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt="GoldLab logo" width="40" height="40"><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../#levels">Today's levels</a>
+      <a href="../../#lessons">Lessons</a>
+      <a href="../../tools/">Tools</a>
+      <a href="../../ea/" class="nav-ea">EAs</a>
+      <a href="../../learn/">Learn</a>
+      <a href="../../buy/" class="nav-ea">Buy</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../learn/gold-stop-loss-atr/" selected>English</option><option value="../../th/">ไทย</option><option value="../../vi/">Tiếng Việt</option><option value="../../id/">Bahasa Indonesia</option><option value="../../es/">Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../">GoldLab</a> <span>/</span> <a href="../../learn/">Learn</a></nav>
+    <header class="article-head">
+      <div class="kicker">Guide · 7 min read · Updated 2026-10-21</div>
+      <h1>How to Set a Stop Loss on Gold (ATR Method)</h1>
+      <p class="lead">How to set a stop loss on gold with ATR: choose the multiplier, add a structure and spread buffer, then size the position. Worked XAUUSD examples.</p>
+    </header>
+    <article class="article">
+<p class="intro">Knowing how to set a stop loss on gold is mostly about one idea: the stop should fit how far the market normally moves, not how much money you would like to lose. Gold can travel several dollars in minutes, so a stop that works on a quiet day can be hit by ordinary noise on a busy one. An ATR stop loss on gold solves this by measuring recent volatility and placing the stop a sensible multiple of it away. This guide explains the method with a worked example and common mistakes.</p>
+
+<h2>What ATR measures</h2>
+<p>The Average True Range was introduced by J. Welles Wilder in 1978. For each bar, the <strong>true range</strong> is the largest of three values:</p>
+<ul>
+<li>the current high minus the current low,</li>
+<li>the current high minus the previous close (as an absolute value),</li>
+<li>the current low minus the previous close (as an absolute value).</li>
+</ul>
+<p>Including the previous close means gaps and sharp opens are counted. ATR is then a smoothed average of the true range, usually over <strong>14 periods</strong>, using Wilder's own smoothing. In MT5 you add it from Insert, Indicators, Oscillators, Average True Range. The reading is in price units, so an H1 ATR of 8.0 on XAUUSD means the typical hourly bar recently covered about $8.</p>
+<pre class="formula">True range = max(High − Low, |High − Previous close|, |Low − Previous close|)
+ATR(14) = Wilder-smoothed average of the last 14 true ranges</pre>
+<p>ATR says nothing about direction, only how big recent moves have been.</p>
+
+<h2>Why fixed-dollar stops fail on gold</h2>
+<p>A rule like "always use a $5 stop" sounds disciplined, but gold's volatility changes a lot. During a quiet Asian session an hourly bar might cover $3; around a major US data release the same timeframe can cover $20 or more. A fixed $5 stop is wide in the first case and inside normal noise in the second.</p>
+<p>An ATR-based stop expands when the market is volatile and contracts when it is calm. Because you then size the position from the stop (see below), your money risk stays constant while the stop distance adapts.</p>
+
+<h2>Choosing a multiplier</h2>
+<p>The stop distance is ATR multiplied by a factor. There is no correct number, but these ranges are common starting points:</p>
+<table>
+<thead><tr><th>Timeframe</th><th>Typical multiplier</th><th>Reason</th></tr></thead>
+<tbody>
+<tr><td>M5 to M15</td><td>1.5× to 2.0×</td><td>Short bars are noisy and spread is a large share of the range</td></tr>
+<tr><td>H1</td><td>1.5×</td><td>A common middle ground for intraday swings</td></tr>
+<tr><td>H4 to D1</td><td>1.0× to 1.5×</td><td>Each bar already contains a lot of movement, so the raw ATR is large</td></tr>
+</tbody>
+</table>
+<p>Test any multiplier on your own strategy and data before relying on it.</p>
+
+<h2>Combine ATR with structure</h2>
+<p>ATR tells you how far; market structure tells you where. A practical approach:</p>
+<ol>
+<li>Find the level that would prove the trade idea wrong, usually the recent swing low for a buy or swing high for a sell.</li>
+<li>Place the stop beyond that level, plus a buffer of part of the ATR (for example 0.5× ATR).</li>
+<li>Check the total distance. If it is far larger than your usual 1× to 2× ATR, the setup may not be worth taking at your risk level.</li>
+</ol>
+
+<h2>Do not forget the spread</h2>
+<p>MT5 charts show the bid price. A buy position is closed at the bid, so a buy stop is triggered by the line you see. A sell position is closed at the ask, which sits above the chart by the spread. A sell stop placed exactly on a visible swing high can be triggered even though the bid never reached it. For sell stops, add the typical spread to your buffer. Spreads on gold vary by broker and widen around news and at the daily rollover, so check what yours actually shows.</p>
+
+<h2>Size the position from the stop</h2>
+<p>Once the stop distance is fixed, the lot size follows. On a 100 oz contract, each $1 of stop distance costs $100 per 1.00 lot.</p>
+<pre class="formula">Lot size = risk amount ÷ (stop distance in $ × contract size)</pre>
+<div class="callout"><strong>Example.</strong> Gold trades near 4,200 (an example price). H1 ATR(14) reads 8.0. With a 1.5× multiplier the stop distance is 1.5 × 8.0 = 12.0. Your balance is 5,000 USD and you risk 1%, which is 50 USD. Lot size = 50 ÷ (12.0 × 100) = 50 ÷ 1,200 = 0.0417. Round down to 0.04 lot. Actual risk at 0.04 lot = 0.04 × 100 × 12.0 = 48 USD, just under your limit.</div>
+<div class="callout"><strong>Example with structure.</strong> You buy at 4,200.00 and the recent swing low is 4,192.00, which is 8.0 below. Adding 0.5× ATR (4.0) puts the stop at 4,188.00, a distance of 12.0. In this case structure and the 1.5× ATR rule agree, so the same 0.04 lot applies.</div>
+<p>Always round down, never up, so rounding cannot push you over your risk limit. The <a href="../../tools/gold-lot-size-calculator/">gold lot size calculator</a> does this step for you, and the <a href="../../learn/one-percent-rule-gold/">one percent rule for gold</a> explains why risking a small, fixed share of the account matters. Your broker's contract size may not be 100 oz; see <a href="../../learn/xauusd-pip-value/">XAUUSD pip value explained</a> for how to check.</p>
+
+<h2>Setting a target with the same unit</h2>
+<p>ATR also helps you judge whether a target is realistic. A 12.0 stop with a 24.0 target is a 1:2 risk-reward ratio, and 24.0 is three H1 ATRs, which may or may not be reachable in your holding time. The <a href="../../tools/risk-reward-calculator/">risk-reward calculator</a> lets you compare the two quickly.</p>
+
+<h2>ATR trailing stops</h2>
+<p>An ATR stop can also follow price. A common version, often called a chandelier stop, places the stop a set number of ATRs below the highest high since entry for a buy (or above the lowest low for a sell), and only ever moves it in the trade's favour.</p>
+<div class="callout"><strong>Example.</strong> After the buy above, the highest high reaches 4,230.00 while ATR is still 8.0. A 2× ATR trail sits at 4,230.00 − 16.0 = 4,214.00. If price makes a new high, the stop moves up; if price falls back, the stop stays where it is.</div>
+<p>Indicator-based trails follow the same idea. Supertrend is built directly from ATR, and the Ichimoku Kijun line is a slower, range-based trail. The <a href="../../ea/supertrend-rider/">Supertrend Rider EA</a> and the <a href="../../ea/ichimoku-cloud/">Ichimoku Cloud EA</a> are Expert Advisors that automate these trailing rules.</p>
+
+<h2>Common mistakes</h2>
+<ul>
+<li><strong>Using the wrong timeframe's ATR.</strong> An M5 ATR on an H4 trade gives a stop that is far too tight.</li>
+<li><strong>Moving the stop further away once in a trade.</strong> This changes your risk after the decision was made.</li>
+<li><strong>Ignoring news spikes.</strong> ATR reflects the past; a scheduled release can produce a bar several times the current ATR.</li>
+<li><strong>Forgetting the spread on sell stops.</strong> A stop placed exactly on the visible high is effectively tighter than it looks.</li>
+</ul>
+<div class="callout warn">A stop loss limits loss in normal conditions, but it is not a guarantee. In fast markets or over weekend gaps, the fill can be worse than the stop price.</div>
+
+<h2>Key takeaways</h2>
+<ul class="takeaways">
+<li>ATR(14) measures recent volatility in price units, so it adapts the stop to current conditions.</li>
+<li>Start with 1.5× to 2× ATR on short timeframes and 1× to 1.5× on H4 and D1, then test.</li>
+<li>Place the stop beyond a structural level plus an ATR buffer, and add the spread for sell stops.</li>
+<li>Size the position from the stop distance so the money at risk stays fixed, and round down.</li>
+<li>An ATR trail lets the stop follow price without moving against the trade.</li>
+</ul>
+
+<section class="faq">
+<h2>FAQ</h2>
+<h3>What ATR setting is best for gold?</h3>
+<p>The default 14-period ATR is the most common choice and a reasonable start. Use the ATR from the same timeframe you trade on.</p>
+<h3>Is 1.5 times ATR a good stop for XAUUSD?</h3>
+<p>It is a common starting point on H1, but no multiplier suits every strategy. Test it on your own rules and adjust for your timeframe.</p>
+<h3>Should my stop loss be a fixed dollar amount?</h3>
+<p>Your money risk can be fixed, but the stop distance should usually adapt to volatility. Keep the dollar risk constant by changing the lot size instead.</p>
+<h3>Does a stop loss always close at my exact price?</h3>
+<p>No. During fast moves or gaps the order can be filled at a worse price, which is called slippage.</p>
+</section>
+
+<p class="note-small">For education only, not investment advice. Trading gold and CFDs is high risk and you can lose your capital.</p>
+
+    </article>
+    <nav class="pager"><a class="next" href="../../learn/best-timeframe-gold-trading/"><small>Next guide</small><b>Best Timeframe for Gold Trading: Pros and Cons</b></a></nav>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../learn/gold-stop-loss-atr/" aria-current="page">English</a> <a href="../../th/">ไทย</a> <a href="../../vi/">Tiếng Việt</a> <a href="../../id/">Bahasa Indonesia</a> <a href="../../es/">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <nav class="popular"><a href="../../tools/gold-lot-size-calculator/">XAUUSD lot size calculator</a><a href="../../tools/xauusd-pip-value-calculator/">Pip value calculator</a><a href="../../tools/margin-calculator/">Margin calculator</a><a href="../../tools/risk-reward-calculator/">Risk reward calculator</a><a href="../../ea/">MT5 gold EAs</a><a href="../../learn/">Gold trading guides</a><a href="../../#method">Our method</a><a href="../../#risk">Risk</a></nav>
+    <nav class="legal"><a href="../../buy/">Buy</a><a href="../../contact/">Contact</a><a href="../../terms/">Terms</a><a href="../../refund/">Refunds</a><a href="../../privacy/">Privacy</a></nav>
+    <p>GoldLab provides educational content only and is not a licensed investment adviser. Market data may be delayed or inaccurate.</p>
+    <p>© 2026 GoldLab. All rights reserved.</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+</body>
+</html>

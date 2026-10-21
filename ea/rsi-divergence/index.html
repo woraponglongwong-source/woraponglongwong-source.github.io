@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RSI Divergence EA for MT5 (XAUUSD) · GoldLab</title>
+<meta name="description" content="RSI divergence EA for MT5: regular bullish/bearish divergence on closed bars, confirmation candle, stop beyond the swing. $99 one-time.">
+<meta property="og:title" content="RSI Divergence EA for MT5 (XAUUSD) · GoldLab">
+<meta property="og:description" content="RSI divergence EA for MT5: regular bullish/bearish divergence on closed bars, confirmation candle, stop beyond the swing. $99 one-time.">
+<meta property="og:image" content="https://goldlab.trade/assets/ea-rsi-divergence-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://goldlab.trade/ea/rsi-divergence/">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="GoldLab">
+<meta property="product:price:amount" content="99.00">
+<meta property="product:price:currency" content="USD">
+<link rel="canonical" href="https://goldlab.trade/ea/rsi-divergence/">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Product", "name": "GoldLab RSI Divergence", "description": "RSI divergence EA for MT5: regular bullish/bearish divergence on closed bars, confirmation candle, stop beyond the swing. $99 one-time.", "image": ["https://goldlab.trade/assets/ea-rsi-divergence-1.jpg", "https://goldlab.trade/assets/ea-rsi-divergence-2.webp"], "brand": {"@type": "Brand", "name": "GoldLab"}, "category": "Trading software / MetaTrader 5 Expert Advisor", "sku": "goldlab-rsi-divergence", "url": "https://goldlab.trade/ea/rsi-divergence/", "offers": {"@type": "Offer", "price": "99.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.mql5.com/en/market/product/202811", "seller": {"@type": "Organization", "name": "GoldLab"}}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is RSI divergence?", "acceptedAnswer": {"@type": "Answer", "text": "Bullish divergence is a lower low in price with a higher low in the RSI; bearish divergence is a higher high in price with a lower high in the RSI. It shows momentum fading, but it is not a guarantee of a reversal, so every trade has a stop-loss."}}, {"@type": "Question", "name": "Is there a free demo?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every MQL5 Market product has a free demo that runs in the MetaTrader 5 Strategy Tester, so you can test it on your broker's own data before buying."}}, {"@type": "Question", "name": "Does it use martingale, grid or averaging down?", "acceptedAnswer": {"@type": "Answer", "text": "No. Every position is opened with a stop-loss, the lot size comes from your risk % (or a fixed lot), and there is a daily loss limit."}}, {"@type": "Question", "name": "Which broker and account do I need?", "acceptedAnswer": {"@type": "Answer", "text": "Any MetaTrader 5 broker that offers XAUUSD, on a hedging or netting account. A low-spread account and a VPS for 24/5 operation are recommended."}}, {"@type": "Question", "name": "Can this EA guarantee profits?", "acceptedAnswer": {"@type": "Answer", "text": "No. No trading system wins every trade, and backtest or past results do not guarantee future results. Start on a demo account with the default risk."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GoldLab", "item": "https://goldlab.trade/"}, {"@type": "ListItem", "position": 2, "name": "EAs", "item": "https://goldlab.trade/ea/"}, {"@type": "ListItem", "position": 3, "name": "GoldLab RSI Divergence", "item": "https://goldlab.trade/ea/rsi-divergence/"}]}]</script>
+<meta name="theme-color" content="#070d1a">
+<meta name="google-site-verification" content="AoyS69iYM0KUBS375ShKPWs4FY5b3LdPtCelTJK63AM" />
+<link rel="alternate" hreflang="en" href="https://goldlab.trade/ea/rsi-divergence/">
+<link rel="alternate" hreflang="x-default" href="https://goldlab.trade/ea/rsi-divergence/">
+<link rel="icon" href="../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt="GoldLab logo" width="40" height="40"><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../#levels">Today's levels</a>
+      <a href="../../#lessons">Lessons</a>
+      <a href="../../tools/">Tools</a>
+      <a href="../../ea/" class="nav-ea">EAs</a>
+      <a href="../../learn/">Learn</a>
+      <a href="../../buy/" class="nav-ea">Buy</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../ea/rsi-divergence/" selected>English</option><option value="../../th/">ไทย</option><option value="../../vi/">Tiếng Việt</option><option value="../../id/">Bahasa Indonesia</option><option value="../../es/">Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../">GoldLab</a> <span>/</span> <a href="../../ea/">EAs</a> <span>/</span> <span>GoldLab RSI Divergence</span></nav>
+    <header class="article-head">
+      <div class="kicker">MetaTrader 5 · XAUUSD · Mean-reversion &amp; reversal EAs</div>
+      <h1>RSI Divergence EA for MT5</h1>
+      <p class="lead">GoldLab RSI Divergence is an RSI divergence EA for MetaTrader 5. It finds regular bullish and bearish divergences between price swings and the RSI on closed bars, waits for a confirmation candle and places the stop beyond the swing.</p>
+    </header>
+    <picture><source srcset="../../assets/ea-rsi-divergence-1.webp" type="image/webp"><img class="ea-hero" src="../../assets/ea-rsi-divergence-1.jpg" alt="GoldLab RSI Divergence - rsi divergence ea" width="1200" height="675" fetchpriority="high"></picture>
+    <div class="ea-buybox panel">
+      <img src="../../assets/ea-rsi-divergence.webp" alt="GoldLab RSI Divergence logo" width="88" height="88" loading="lazy">
+      <div class="grow"><div class="ea-price"><b>$99</b><span>One-time purchase · no subscription · free demo on MQL5</span></div></div>
+      <a class="btn btn-gold" href="https://www.mql5.com/en/market/product/202811" target="_blank" rel="noopener">Buy on MQL5 Market →</a>
+    </div>
+    <ul class="ea-facts">
+      <li><b>MetaTrader 5</b>Expert Advisor (.ex5)</li>
+      <li><b>H1 recommended (M15 to H4)</b>Recommended timeframe</li>
+      <li><b>Mean-reversion &amp; reversal EAs</b>Trading style</li>
+      <li><b>Stop-loss on every trade</b>No martingale, no grid</li>
+    </ul>
+    <article class="article">
+<p>GoldLab RSI Divergence is a fully automated Expert Advisor for MetaTrader 5. It is designed for XAUUSD (gold) and also runs on other symbols such as EURUSD.</p>
+<h2>How it trades</h2>
+<ol><li><strong>Swing detection</strong> - swing lows and highs are found on closed bars with a configurable strength (default 3 bars on each side). Nothing repaints: a swing only counts once the bars after it have closed.</li><li><strong>Regular bullish divergence</strong> - price makes a <em>lower low</em> while RSI makes a <em>higher low</em>, and RSI at the second low is below the set level (default 50).</li><li><strong>Regular bearish divergence</strong> - price makes a <em>higher high</em> while RSI makes a <em>lower high</em>, with RSI at the second high above the set level.</li><li><strong>Confirmation candle</strong> - within a few bars of the swing, a candle must close in the trade direction (by default also beyond the previous bar's high / low) before any order is placed.</li><li><strong>Stop-loss</strong> beyond the swing low / high plus an ATR buffer (with a minimum ATR distance). <strong>Take-profit</strong> at a fixed R-multiple (default 2R) or at the opposite swing between the two pivots (falls back to R if that swing is closer than 1R).</li><li>Each divergence is traded only once. Optional break-even, and an opposite divergence can close the open trade.</li></ol>
+<h2>Risk management (built in)</h2>
+<ul><li>Every trade is opened with a stop-loss. There is no martingale, no grid and no averaging down.</li><li>Position size from <strong>risk % of balance</strong> (default 1%) or a <strong>fixed lot</strong>; lots are normalised to the broker's min / max / step and reduced if free margin is not enough.</li><li><strong>Daily loss limit</strong>: no new trades for the rest of the day once equity is down the set % from the day-start balance.</li><li><strong>Max spread filter</strong>, optional <strong>trading-hours filter</strong>, and no orders while the market is closed or trading on the symbol is disabled.</li><li>Stop-loss / take-profit are always placed outside the broker's stops and freeze levels.</li><li>Works on hedging and netting accounts (on netting accounts it opens only when the symbol has no position).</li></ul>
+<h2>Inputs and default settings</h2>
+<div class="table-wrap"><table><thead><tr><th>Input</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td>Signal timeframe</td><td>Current</td><td>Timeframe for swings and RSI</td></tr><tr><td>RSI period</td><td>14</td><td>RSI length</td></tr><tr><td>Swing strength</td><td>3</td><td>Bars on each side that define a swing</td></tr><tr><td>Look back (bars)</td><td>60</td><td>How far back to look for the previous swing</td></tr><tr><td>Min bars between swings</td><td>5</td><td>Minimum distance between the two swings</td></tr><tr><td>Bullish RSI max / Bearish RSI min</td><td>50 / 50</td><td>RSI zone for the 2nd swing</td></tr><tr><td>Confirmation bars</td><td>3</td><td>Bars allowed for the confirmation candle</td></tr><tr><td>Require break of previous bar</td><td>true</td><td>Confirmation must close beyond the previous bar's high / low</td></tr><tr><td>ATR period</td><td>14</td><td>ATR for stop buffer</td></tr><tr><td>Stop buffer / min stop (x ATR)</td><td>0.2 / 0.5</td><td>Stop placement beyond the swing</td></tr><tr><td>Take-profit mode</td><td>R-multiple</td><td>Or opposite swing</td></tr><tr><td>Take-profit (R)</td><td>2.0</td><td>Target as a multiple of the stop distance</td></tr><tr><td>Break-even at (R)</td><td>1.0</td><td>Move stop to entry at this profit (0 = off)</td></tr><tr><td>Close on opposite divergence</td><td>true</td><td>Exit when the opposite signal appears</td></tr><tr><td>Risk per trade (%)</td><td>1.0</td><td>Risk as % of balance, used when Fixed lot = 0</td></tr><tr><td>Fixed lot</td><td>0.0</td><td>Fixed lot size (0 = use Risk %)</td></tr><tr><td>Maximum lot</td><td>10.0</td><td>Upper cap per trade</td></tr><tr><td>Use minimum lot if risk lot is too small</td><td>true</td><td>On small accounts trade the broker minimum instead of skipping</td></tr><tr><td>Magic number</td><td>20271003</td><td>Change it to run several copies on one account</td></tr><tr><td>Daily loss limit (%)</td><td>3.0</td><td>Stop opening trades for the day at this loss (0 = off)</td></tr><tr><td>Max spread (points)</td><td>60</td><td>2-digit gold / 4-digit FX scale (100 = 1.00 USD on gold); 0 = off</td></tr><tr><td>Restrict to trading hours</td><td>false</td><td>Optional start / end hour (server time) for new entries</td></tr><tr><td>Max slippage (points)</td><td>30</td><td>Same scale as spread</td></tr><tr><td>Show info panel</td><td>false</td><td>Optional status panel on the chart</td></tr></tbody></table></div>
+<h2>Recommended setup</h2>
+<ul><li><strong>Symbol / timeframe:</strong> XAUUSD H1 (designed for gold); also works on FX majors. Any timeframe from M15 to H4.</li><li><strong>Account:</strong> any (hedging or netting), any deposit that allows the broker's minimum lot with a sensible risk %.</li><li><strong>VPS:</strong> recommended for uninterrupted operation.</li></ul>
+<h2>Honest notes</h2>
+<ul><li>No trading system can guarantee profit. Past performance, in the tester or live, does not guarantee future results.</li><li>Always test the EA in the MetaTrader 5 Strategy Tester and then on a <strong>demo account</strong> before using real money, with your broker's own data and spread.</li><li>Session hours are in your broker's <strong>server time</strong> - check your broker's time zone and adjust the hour inputs if needed.</li><li>Start with a low risk % and use money you can afford to lose.</li></ul>
+      <figure><img src="../../assets/ea-rsi-divergence-2.webp" alt="How GoldLab RSI Divergence trades - illustration" width="1200" height="675" loading="lazy" decoding="async"><figcaption>How it trades (illustration, not real trading results).</figcaption></figure>
+      <figure><img src="../../assets/ea-rsi-divergence-3.webp" alt="GoldLab RSI Divergence risk management features" width="1200" height="675" loading="lazy" decoding="async"><figcaption>Built-in risk management.</figcaption></figure>
+      <h2>Plan your risk before you run it</h2>
+      <ul>
+        <li>Check the lot the EA will use for your balance and stop with the <a href="../../tools/gold-lot-size-calculator/">XAUUSD lot size calculator</a> and the <a href="../../tools/margin-calculator/">margin calculator</a>.</li>
+        <li>Compare targets and stops with the <a href="../../tools/risk-reward-calculator/">risk reward calculator</a>.</li>
+        <li><a href="../../learn/gold-stop-loss-atr/">How to Set a Stop Loss on Gold (ATR Method)</a></li><li><a href="../../learn/one-percent-rule-gold/">Risk Per Trade: the 1% Rule with Gold Examples</a></li>
+      </ul>
+      <div class="callout"><strong>Similar mean-reversion &amp; reversal eas:</strong> <a href="../../ea/keltner-reversion/">GoldLab Keltner Reversion</a> · <a href="../../ea/">all 13 GoldLab EAs</a></div>
+      <section class="faq">
+        <h2>FAQ</h2>
+        <h3>What is RSI divergence?</h3>
+        <p>Bullish divergence is a lower low in price with a higher low in the RSI; bearish divergence is a higher high in price with a lower high in the RSI. It shows momentum fading, but it is not a guarantee of a reversal, so every trade has a stop-loss.</p>
+        <h3>Is there a free demo?</h3>
+        <p>Yes. Every MQL5 Market product has a free demo that runs in the MetaTrader 5 Strategy Tester, so you can test it on your broker&#x27;s own data before buying.</p>
+        <h3>Does it use martingale, grid or averaging down?</h3>
+        <p>No. Every position is opened with a stop-loss, the lot size comes from your risk % (or a fixed lot), and there is a daily loss limit.</p>
+        <h3>Which broker and account do I need?</h3>
+        <p>Any MetaTrader 5 broker that offers XAUUSD, on a hedging or netting account. A low-spread account and a VPS for 24/5 operation are recommended.</p>
+        <h3>Can this EA guarantee profits?</h3>
+        <p>No. No trading system wins every trade, and backtest or past results do not guarantee future results. Start on a demo account with the default risk.</p>
+      </section>
+      <p class="note-small">Trading gold, forex and CFDs is high risk and you can lose your capital. This page is for information only and is not investment advice. Illustrations are not trading results.</p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../ea/rsi-divergence/" aria-current="page">English</a> <a href="../../th/">ไทย</a> <a href="../../vi/">Tiếng Việt</a> <a href="../../id/">Bahasa Indonesia</a> <a href="../../es/">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <nav class="popular"><a href="../../tools/gold-lot-size-calculator/">XAUUSD lot size calculator</a><a href="../../tools/xauusd-pip-value-calculator/">Pip value calculator</a><a href="../../tools/margin-calculator/">Margin calculator</a><a href="../../tools/risk-reward-calculator/">Risk reward calculator</a><a href="../../ea/">MT5 gold EAs</a><a href="../../learn/">Gold trading guides</a><a href="../../#method">Our method</a><a href="../../#risk">Risk</a></nav>
+    <nav class="legal"><a href="../../buy/">Buy</a><a href="../../contact/">Contact</a><a href="../../terms/">Terms</a><a href="../../refund/">Refunds</a><a href="../../privacy/">Privacy</a></nav>
+    <p>GoldLab provides educational content only and is not a licensed investment adviser. Market data may be delayed or inaccurate.</p>
+    <p>© 2026 GoldLab. All rights reserved.</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+</body>
+</html>

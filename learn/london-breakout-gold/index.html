@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>London Breakout Strategy for Gold, Explained · GoldLab</title>
+<meta name="description" content="London breakout strategy for gold explained: Asian range, breakout buffer, stop, R-multiple target, range filter and a worked XAUUSD example.">
+<meta property="og:title" content="London Breakout Strategy for Gold, Explained · GoldLab">
+<meta property="og:description" content="London breakout strategy for gold explained: Asian range, breakout buffer, stop, R-multiple target, range filter and a worked XAUUSD example.">
+<meta property="og:image" content="https://goldlab.trade/assets/og/learn-london-breakout-gold.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://goldlab.trade/learn/london-breakout-gold/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GoldLab">
+<link rel="canonical" href="https://goldlab.trade/learn/london-breakout-gold/">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "London Breakout Strategy for Gold, Explained", "description": "London breakout strategy for gold explained: Asian range, breakout buffer, stop, R-multiple target, range filter and a worked XAUUSD example.", "inLanguage": "en", "url": "https://goldlab.trade/learn/london-breakout-gold/", "image": "https://goldlab.trade/assets/og/learn-london-breakout-gold.jpg", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "mainEntityOfPage": "https://goldlab.trade/learn/london-breakout-gold/", "author": {"@type": "Organization", "name": "GoldLab", "url": "https://goldlab.trade/"}, "publisher": {"@type": "Organization", "name": "GoldLab", "logo": {"@type": "ImageObject", "url": "https://goldlab.trade/assets/logo.png"}}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What time is the Asian range for a London breakout on gold?", "acceptedAnswer": {"@type": "Answer", "text": "A common choice is 00:00 to 07:00 server time, but the correct window depends on your broker's time zone and on daylight saving. Check your MT5 server clock and confirm when London actually opens in that clock before using any window."}}, {"@type": "Question", "name": "Where should the stop loss go on a London breakout?", "acceptedAnswer": {"@type": "Answer", "text": "Many traders place it at the opposite side of the Asian range, while others use a multiple of ATR to keep risk more consistent. Either way, the lot size should be calculated from that stop distance so the money at risk stays within your limit."}}, {"@type": "Question", "name": "Does the London breakout work every day?", "acceptedAnswer": {"@type": "Answer", "text": "No. Some days produce false breakouts, some produce no breakout at all, and news days can be erratic. That is why range-size filters, one trade per side and a session-end exit are part of the rules."}}, {"@type": "Question", "name": "Should I trade the breakout on news days?", "acceptedAnswer": {"@type": "Answer", "text": "Many traders skip it or reduce size on days with major US releases, because spreads widen and price can spike both ways. Decide your news rule in advance and apply it consistently."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GoldLab", "item": "https://goldlab.trade/"}, {"@type": "ListItem", "position": 2, "name": "Learn", "item": "https://goldlab.trade/learn/"}, {"@type": "ListItem", "position": 3, "name": "London Breakout Strategy for Gold, Explained", "item": "https://goldlab.trade/learn/london-breakout-gold/"}]}]</script>
+<meta name="theme-color" content="#070d1a">
+<meta name="google-site-verification" content="AoyS69iYM0KUBS375ShKPWs4FY5b3LdPtCelTJK63AM" />
+<link rel="alternate" hreflang="en" href="https://goldlab.trade/learn/london-breakout-gold/">
+<link rel="alternate" hreflang="x-default" href="https://goldlab.trade/learn/london-breakout-gold/">
+<link rel="icon" href="../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt="GoldLab logo" width="40" height="40"><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../#levels">Today's levels</a>
+      <a href="../../#lessons">Lessons</a>
+      <a href="../../tools/">Tools</a>
+      <a href="../../ea/" class="nav-ea">EAs</a>
+      <a href="../../learn/">Learn</a>
+      <a href="../../buy/" class="nav-ea">Buy</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../learn/london-breakout-gold/" selected>English</option><option value="../../th/">ไทย</option><option value="../../vi/">Tiếng Việt</option><option value="../../id/">Bahasa Indonesia</option><option value="../../es/">Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../">GoldLab</a> <span>/</span> <a href="../../learn/">Learn</a></nav>
+    <header class="article-head">
+      <div class="kicker">Guide · 8 min read · Updated 2026-10-21</div>
+      <h1>London Breakout Strategy for Gold, Explained</h1>
+      <p class="lead">London breakout strategy for gold explained: Asian range, breakout buffer, stop, R-multiple target, range filter and a worked XAUUSD example.</p>
+    </header>
+    <article class="article">
+<p class="intro">A London breakout strategy for gold is one of the simplest session-based approaches you can test on XAUUSD. The idea is that gold often drifts in a fairly tight range during the quiet Asian hours, and that the arrival of European traders at the London open can push price out of that range with some momentum. This guide explains how the London breakout on XAUUSD is usually built, step by step, with a worked example and the filters that matter most. It describes a rule set, not a signal, and nothing here suggests the method will be profitable for you.</p>
+
+<h2>The basic idea</h2>
+<p>Gold trades almost around the clock, but activity is uneven. During the Asian session volume is usually lower, so price often moves sideways inside a band. When London opens, liquidity rises, institutions start working orders and price frequently leaves that band. A breakout strategy simply places orders just outside the Asian range and lets the market decide the direction. If price breaks up, you are long. If it breaks down, you are short. If it does neither, there is no trade.</p>
+<h2>Step 1: define the Asian range</h2>
+<p>The range is the highest high and lowest low printed between two fixed times. A common choice is 00:00 to 07:00 <strong>server time</strong>. That phrase matters: the clock on your MT5 chart is your broker's server time, not your local time and not London time. Many brokers use GMT+2 in winter and GMT+3 in summer, but not all, and European and US daylight saving changes happen on different dates.</p>
+<p>Before you use any time window, open the chart, check what server time the broker uses, and confirm when the London session actually starts in that clock.</p>
+
+<h2>Step 2: entries just beyond the range</h2>
+<p>Once the range window closes, place a buy stop slightly above the range high and a sell stop slightly below the range low. The small extra distance is a <strong>buffer</strong>. It exists because price often touches the exact high or low and reverses. A buffer of a few tenths of a dollar on gold, or a small fraction of the range, helps filter some of those touches. Remember to include the spread: a buy stop triggers on the ask price, so a very small buffer may be eaten by spread alone.</p>
+<p>Most rule sets allow entries only during a window, for example until midday server time. If price has not broken out by then, pending orders are cancelled.</p>
+
+<h2>Step 3: stop loss and target</h2>
+<p>There are two common ways to set the stop:</p>
+<ul>
+<li><strong>Opposite side of the range.</strong> A long trade's stop goes at the range low, a short trade's stop at the range high.</li>
+<li><strong>ATR-based.</strong> The stop is a multiple of the Average True Range. This keeps risk more consistent when the range is unusually wide. See <a href="../../learn/gold-stop-loss-atr/">how to set a gold stop loss with ATR</a> for the details.</li>
+</ul>
+<p>The target is usually written as an R-multiple, where 1R is the distance from entry to stop. A 2R target means the profit target is twice the risk distance. Moving the stop to break-even at 1R is a common option, but it is a trade-off: it removes some losses and also cuts short some trades that would have reached target.</p>
+
+<pre class="formula">Risk distance (R) = entry price − stop price
+Target (2R) = entry + 2 × R   (long)  |  entry − 2 × R   (short)
+Lot size = (balance × risk %) ÷ (R × 100)</pre>
+
+<h2>Worked example</h2>
+<div class="callout"><strong>Example.</strong> These numbers are illustrative only. Suppose gold traded between 4,188.00 and 4,206.00 from 00:00 to 07:00 server time. The range is 4,206.00 − 4,188.00 = 18.00. With a 0.50 buffer, the buy stop goes at 4,206.50 and the sell stop at 4,187.50. For the long side, the stop sits at the range low of 4,188.00, so R = 4,206.50 − 4,188.00 = 18.50. A 2R target is 4,206.50 + 37.00 = 4,243.50. For the short side, R is also 18.50 (4,206.00 − 4,187.50) and the 2R target is 4,187.50 − 37.00 = 4,150.50.</div>
+
+<p>Now the position size. On a standard XAUUSD contract of 100 ounces, a $1 move equals $100 per 1.00 lot. With a $5,000 account risking 1%, the money at risk is $50.</p>
+
+<pre class="formula">Lot = 50 ÷ (18.50 × 100) = 50 ÷ 1,850 = 0.027 → round down to 0.02 lot
+Actual risk at 0.02 lot = 18.50 × 100 × 0.02 = $37</pre>
+
+<p>Rounding down keeps the risk at or below your limit. Rounding up to 0.03 would risk $55.50, which is above 1%. You can check these numbers with the <a href="../../tools/gold-lot-size-calculator/">XAUUSD lot size calculator</a> and the <a href="../../tools/risk-reward-calculator/">risk-reward calculator</a>. Confirm your broker's contract size first, because some use different specifications.</p>
+
+<h2>Step 4: filter the range size</h2>
+<p>Not every Asian range is worth trading. A very narrow range triggers on small pushes and produces many false breaks; a very wide range means a large stop and a target that may be unrealistic. A practical filter compares the range with the daily ATR.</p>
+
+<table><thead><tr><th>Range vs daily ATR</th><th>Example (daily ATR = 45)</th><th>Typical handling</th></tr></thead><tbody>
+<tr><td>Below 0.10 × ATR</td><td>Range under 4.50</td><td>Skip: too narrow, noise can trigger it</td></tr>
+<tr><td>0.10 to 1.50 × ATR</td><td>4.50 to 67.50</td><td>Tradeable under the rules</td></tr>
+<tr><td>Above 1.50 × ATR</td><td>Over 67.50</td><td>Skip: the day's move may already be spent</td></tr>
+</tbody></table>
+<p>In the example above, an 18.00 range with a daily ATR of 45 is 0.40 × ATR, well inside the band. The exact thresholds are choices you should test, not fixed truths.</p>
+
+<h2>Step 5: limits and exits</h2>
+<p><strong>One trade per side per day.</strong> If the long is stopped out, you do not keep re-entering long.</p>
+<p><strong>Session-end exit.</strong> If neither stop nor target is hit, close the position at a fixed time, such as late in the US session.</p>
+
+<div class="callout warn"><strong>False breakouts and news.</strong> The biggest weakness of any breakout method is the fake move: price clears the range, triggers your order, then reverses through the whole box. Buffers and range filters reduce this but cannot remove it. High-impact releases such as US CPI, NFP or a Fed decision can create sharp spikes in both directions and wide spreads. Many traders skip breakout trades on those days or close positions before the release. Slippage in fast markets can make a loss larger than planned.</div>
+
+<h2>Testing and automating the rules</h2>
+<p>Because every step is defined, the London breakout is easy to backtest and to run as an Expert Advisor. The <a href="../../ea/london-breakout/">GoldLab London Breakout EA</a> automates this rule set. Its defaults build the range from 00:00 to 07:00 server time on M15, allow entries until 12:00, close open trades at 20:00, target 2R, move the stop to break-even at 1R and only trade when the range is between 0.10 and 1.50 times the daily ATR. Like all GoldLab EAs it uses a stop loss on every trade, risk-percent sizing, a daily loss limit, and no martingale or grid. If you prefer the US session, the <a href="../../ea/ny-opening-range/">NY Opening Range EA</a> applies the same idea to the New York open. Test either on a demo account first, with your broker's own spreads and server time.</p>
+<p>If you are still deciding which chart to use for the entry logic, read <a href="../../learn/best-timeframe-gold-trading/">the best timeframe for gold trading</a>.</p>
+
+<h2>Key takeaways</h2>
+<ul class="takeaways">
+<li>The London breakout trades a move out of the Asian range at the London open, in whichever direction price breaks.</li>
+<li>Always define the range in your broker's server time and recheck it when daylight saving changes.</li>
+<li>Use a buffer beyond the range and account for spread on stop orders.</li>
+<li>Set the stop at the other side of the range or by ATR, express the target in R, and size the lot from the risk distance.</li>
+<li>Filter ranges that are too narrow or too wide relative to daily ATR, trade once per side, and exit at session end.</li>
+<li>False breakouts and news spikes are normal; plan for them rather than hoping they will not happen.</li>
+</ul>
+
+<section class="faq">
+<h2>FAQ</h2>
+<h3>What time is the Asian range for a London breakout on gold?</h3>
+<p>A common choice is 00:00 to 07:00 server time, but the correct window depends on your broker's time zone and on daylight saving. Check your MT5 server clock and confirm when London actually opens in that clock before using any window.</p>
+<h3>Where should the stop loss go on a London breakout?</h3>
+<p>Many traders place it at the opposite side of the Asian range, while others use a multiple of ATR to keep risk more consistent. Either way, the lot size should be calculated from that stop distance so the money at risk stays within your limit.</p>
+<h3>Does the London breakout work every day?</h3>
+<p>No. Some days produce false breakouts, some produce no breakout at all, and news days can be erratic. That is why range-size filters, one trade per side and a session-end exit are part of the rules.</p>
+<h3>Should I trade the breakout on news days?</h3>
+<p>Many traders skip it or reduce size on days with major US releases, because spreads widen and price can spike both ways. Decide your news rule in advance and apply it consistently.</p>
+</section>
+
+<p class="note-small">For education only, not investment advice. Trading gold and CFDs is high risk and you can lose your capital.</p>
+
+    </article>
+    <nav class="pager"><a class="next" href="../../learn/margin-for-1-lot-gold/"><small>Next guide</small><b>How Much Margin Do You Need for 1 Lot of Gold?</b></a></nav>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../learn/london-breakout-gold/" aria-current="page">English</a> <a href="../../th/">ไทย</a> <a href="../../vi/">Tiếng Việt</a> <a href="../../id/">Bahasa Indonesia</a> <a href="../../es/">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <nav class="popular"><a href="../../tools/gold-lot-size-calculator/">XAUUSD lot size calculator</a><a href="../../tools/xauusd-pip-value-calculator/">Pip value calculator</a><a href="../../tools/margin-calculator/">Margin calculator</a><a href="../../tools/risk-reward-calculator/">Risk reward calculator</a><a href="../../ea/">MT5 gold EAs</a><a href="../../learn/">Gold trading guides</a><a href="../../#method">Our method</a><a href="../../#risk">Risk</a></nav>
+    <nav class="legal"><a href="../../buy/">Buy</a><a href="../../contact/">Contact</a><a href="../../terms/">Terms</a><a href="../../refund/">Refunds</a><a href="../../privacy/">Privacy</a></nav>
+    <p>GoldLab provides educational content only and is not a licensed investment adviser. Market data may be delayed or inaccurate.</p>
+    <p>© 2026 GoldLab. All rights reserved.</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+</body>
+</html>

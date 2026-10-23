@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Install an EA in MT5 (Step by Step) · GoldLab</title>
+<meta name="description" content="How to install an EA in MT5: MQL5 Market or .ex5 file, the Data Folder, Algo Trading button, XAUUSD lot checks and fixes for common EA errors.">
+<meta property="og:title" content="How to Install an EA in MT5 (Step by Step) · GoldLab">
+<meta property="og:description" content="How to install an EA in MT5: MQL5 Market or .ex5 file, the Data Folder, Algo Trading button, XAUUSD lot checks and fixes for common EA errors.">
+<meta property="og:image" content="https://goldlab.trade/assets/og/learn-how-to-install-ea-mt5.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://goldlab.trade/learn/how-to-install-ea-mt5/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GoldLab">
+<link rel="canonical" href="https://goldlab.trade/learn/how-to-install-ea-mt5/">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "How to Install an EA in MT5, Step by Step", "description": "How to install an EA in MT5: MQL5 Market or .ex5 file, the Data Folder, Algo Trading button, XAUUSD lot checks and fixes for common EA errors.", "inLanguage": "en", "url": "https://goldlab.trade/learn/how-to-install-ea-mt5/", "image": "https://goldlab.trade/assets/og/learn-how-to-install-ea-mt5.jpg", "datePublished": "2026-10-23", "dateModified": "2026-10-23", "mainEntityOfPage": "https://goldlab.trade/learn/how-to-install-ea-mt5/", "author": {"@type": "Organization", "name": "GoldLab", "url": "https://goldlab.trade/"}, "publisher": {"@type": "Organization", "name": "GoldLab", "logo": {"@type": "ImageObject", "url": "https://goldlab.trade/assets/logo.png"}}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Where do I put an EA file in MT5?", "acceptedAnswer": {"@type": "Answer", "text": "Click File → Open Data Folder in MT5, then open MQL5 → Experts and paste the .ex5 file there. Refresh the Navigator or restart MT5 and it appears under Expert Advisors."}}, {"@type": "Question", "name": "Can I install an MT4 EA in MT5?", "acceptedAnswer": {"@type": "Answer", "text": "No. MT4 files (.ex4 and .mq4) do not run in MT5. You need a version written for MT5, or the source code rewritten in MQL5."}}, {"@type": "Question", "name": "Why is my EA attached but not trading?", "acceptedAnswer": {"@type": "Answer", "text": "Check that the Algo Trading button is green, that Allow Algo Trading is ticked in the EA properties, and read the Experts tab. Wrong symbol suffix, wrong timeframe, too small a lot or simply no valid setup are the usual causes."}}, {"@type": "Question", "name": "Can I run an EA on the MT5 mobile app?", "acceptedAnswer": {"@type": "Answer", "text": "No. The mobile apps can show trades opened by an EA, but the EA itself must run in the desktop terminal or on a VPS."}}, {"@type": "Question", "name": "Do I need a VPS for an EA?", "acceptedAnswer": {"@type": "Answer", "text": "Not to install it, but an EA stops when your computer sleeps or disconnects, so a VPS is the usual choice for running it around the clock during the trading week."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GoldLab", "item": "https://goldlab.trade/"}, {"@type": "ListItem", "position": 2, "name": "Learn", "item": "https://goldlab.trade/learn/"}, {"@type": "ListItem", "position": 3, "name": "How to Install an EA in MT5, Step by Step", "item": "https://goldlab.trade/learn/how-to-install-ea-mt5/"}]}]</script>
+<meta name="theme-color" content="#070d1a">
+<meta name="google-site-verification" content="AoyS69iYM0KUBS375ShKPWs4FY5b3LdPtCelTJK63AM" />
+<link rel="alternate" hreflang="en" href="https://goldlab.trade/learn/how-to-install-ea-mt5/">
+<link rel="alternate" hreflang="x-default" href="https://goldlab.trade/learn/how-to-install-ea-mt5/">
+<link rel="icon" href="../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt="GoldLab logo" width="40" height="40"><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../#levels">Today's levels</a>
+      <a href="../../#lessons">Lessons</a>
+      <a href="../../tools/">Tools</a>
+      <a href="../../ea/" class="nav-ea">EAs</a>
+      <a href="../../learn/">Learn</a>
+      <a href="../../buy/" class="nav-ea">Buy</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../learn/how-to-install-ea-mt5/" selected>English</option><option value="../../th/">ไทย</option><option value="../../vi/">Tiếng Việt</option><option value="../../id/">Bahasa Indonesia</option><option value="../../es/">Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../">GoldLab</a> <span>/</span> <a href="../../learn/">Learn</a></nav>
+    <header class="article-head">
+      <div class="kicker">Guide · 8 min read · Updated 2026-10-23</div>
+      <h1>How to Install an EA in MT5, Step by Step</h1>
+      <p class="lead">How to install an EA in MT5: MQL5 Market or .ex5 file, the Data Folder, Algo Trading button, XAUUSD lot checks and fixes for common EA errors.</p>
+    </header>
+    <article class="article">
+<p class="intro">An Expert Advisor (EA) is a program that runs inside MetaTrader 5 and can open, manage and close trades by its own rules. Installing one takes minutes, but small details decide whether it actually trades. This guide walks through both installation routes, the MQL5 Market and a downloaded .ex5 file, then covers the settings to check and the most common errors on XAUUSD.</p>
+
+<h2>Before you start: what you need</h2>
+<ul>
+<li><strong>The MetaTrader 5 desktop terminal</strong> on Windows (or a Windows VPS). EAs do not run on the MT5 mobile apps or in the web terminal.</li>
+<li><strong>A trading account logged in</strong>, ideally a demo account first. Every EA should be tested on demo before it touches real money.</li>
+<li><strong>The EA file</strong>: an <code>.ex5</code> file (compiled, ready to run) or an <code>.mq5</code> file (source code that must be compiled first). A product bought on the MQL5 Market installs itself and you never handle a file.</li>
+</ul>
+<p>MT4 EAs (<code>.ex4</code>/<code>.mq4</code>) do not run in MT5.</p>
+
+<h2>Method 1: install an EA from the MQL5 Market</h2>
+<ol>
+<li>In MT5, open <strong>Tools → Options → Community</strong> and log in with your MQL5.com account. Purchases are tied to this account.</li>
+<li>Open the Market tab in the Toolbox (or buy on the MQL5 website while logged in to the same account).</li>
+<li>Find the product and click <strong>Buy</strong>, <strong>Rent</strong> or <strong>Free Demo</strong>. MT5 downloads and installs it automatically.</li>
+<li>Open the <strong>Navigator</strong> (Ctrl+N). The EA appears under <strong>Expert Advisors → Market</strong>.</li>
+</ol>
+<p>Each Market purchase comes with a limited number of activations set by the seller. An activation is used each time the product is installed on a new computer or after major hardware or Windows changes, so install it on the machine or VPS where it will actually run. The free demo version only works in the Strategy Tester, which is the right place to try it first.</p>
+
+<h2>Method 2: install an .ex5 or .mq5 file manually</h2>
+<ol>
+<li>In MT5 click <strong>File → Open Data Folder</strong>. Do not search Program Files: MT5 keeps your files in a separate data folder, and copying into the wrong place is the most common reason an EA "does not show up".</li>
+<li>Open <strong>MQL5 → Experts</strong> and paste the <code>.ex5</code> file there. If the seller included a library or include file, put it in <strong>MQL5 → Libraries</strong> or <strong>MQL5 → Include</strong> as instructed.</li>
+<li>Back in MT5, right-click <strong>Expert Advisors</strong> in the Navigator and choose <strong>Refresh</strong>, or restart the terminal.</li>
+<li>For an <code>.mq5</code> source file: double-click it in the Navigator to open MetaEditor, press <strong>F7</strong> (Compile) and check that the log shows 0 errors. MetaEditor creates the <code>.ex5</code> next to it.</li>
+</ol>
+
+<h2>Attach the EA to a chart</h2>
+<ol>
+<li>Open the chart the EA was designed for, for example XAUUSD on the timeframe stated in its manual. An EA reads the chart it sits on, so the wrong timeframe changes its behaviour.</li>
+<li>Drag the EA from the Navigator onto the chart, or double-click it.</li>
+<li>On the <strong>Common</strong> tab, tick <strong>Allow Algo Trading</strong>. Only tick "Allow DLL imports" if the documentation says it is needed and you trust the source.</li>
+<li>On the <strong>Inputs</strong> tab, set risk, lot mode, magic number and any filters, then click OK.</li>
+<li>Make sure the <strong>Algo Trading</strong> button on the main toolbar is green. In older builds it was called AutoTrading.</li>
+</ol>
+<p>When it is running, the EA name shows in the top-right corner of the chart with an active (blue) icon. A grey icon means algorithmic trading is disabled somewhere: on the toolbar, in the EA's Common tab, or in Tools → Options → Expert Advisors.</p>
+
+<h2>Check the settings before going live</h2>
+<p>Most EAs size positions either with a fixed lot or with a risk percentage of the balance. On gold the dollar value of a move is large, so check what the inputs mean in money terms. On a standard XAUUSD contract of 100 ounces per lot, a 1-dollar move is worth 100 USD per 1.00 lot, or 1 USD per 0.01 lot.</p>
+
+<table><thead><tr><th>Balance</th><th>Risk input</th><th>Money at risk</th><th>EA stop distance</th><th>Lot the EA should use</th></tr></thead><tbody>
+<tr><td>1,000 USD</td><td>1%</td><td>10 USD</td><td>$10</td><td>0.01</td></tr>
+<tr><td>1,000 USD</td><td>1%</td><td>10 USD</td><td>$20</td><td>0.005 → below 0.01, trade should be skipped</td></tr>
+<tr><td>5,000 USD</td><td>1%</td><td>50 USD</td><td>$12.50</td><td>0.04</td></tr>
+<tr><td>10,000 USD</td><td>0.5%</td><td>50 USD</td><td>$10</td><td>0.05</td></tr>
+</tbody></table>
+
+<div class="callout"><strong>Worked example.</strong> A 5,000 USD demo account, risk input 1%, and the EA places its stop 12.50 dollars from entry. Money at risk is 50 USD. Lot = 50 ÷ (12.50 × 100) = 0.04 lot. If the first trade on demo opens at 0.40 instead, the input is probably being read as a fixed lot or the contract size differs, and you have found the problem before it cost anything. The <a href="../../tools/gold-lot-size-calculator/">XAUUSD lot size calculator</a> gives the same figure, and the <a href="../../tools/margin-calculator/">margin calculator</a> shows how much free margin that position needs.</div>
+
+<p>Contract sizes, minimum lots and lot steps differ between brokers and account types. Right-click the symbol in Market Watch, choose <strong>Specification</strong>, and compare contract size, volume min and volume step with what the EA expects. If the 1% sizing problem on small accounts is new to you, read <a href="../../learn/one-percent-rule-gold/">the 1% risk rule with gold examples</a>.</p>
+
+<h2>Common errors and what they mean</h2>
+<p>Open the Toolbox (Ctrl+T) and read the <strong>Experts</strong> and <strong>Journal</strong> tabs. Almost every problem leaves a message there.</p>
+<table><thead><tr><th>Message or symptom</th><th>Likely cause</th><th>Fix</th></tr></thead><tbody>
+<tr><td>"algo trading is disabled"</td><td>Toolbar button off or Common tab unticked</td><td>Turn on Algo Trading and re-open the EA properties</td></tr>
+<tr><td>EA not in the Navigator</td><td>File copied to the wrong folder, or it is an MT4 file</td><td>Use File → Open Data Folder → MQL5 → Experts, then Refresh</td></tr>
+<tr><td>"invalid volume"</td><td>Lot below the minimum or not a multiple of the lot step</td><td>Check the symbol specification and the EA's lot inputs</td></tr>
+<tr><td>"not enough money"</td><td>Free margin too low for the lot</td><td>Lower risk or lot size; check leverage</td></tr>
+<tr><td>"invalid stops"</td><td>Stop or target closer than the broker's stops level</td><td>Wider stop, or a broker with a lower stops level</td></tr>
+<tr><td>"market closed"</td><td>Weekend, holiday or daily break on gold</td><td>Nothing to fix; check the session times</td></tr>
+<tr><td>No trades, no errors</td><td>Symbol suffix (XAUUSDm, XAUUSD.r), wrong timeframe, or entry conditions simply not met</td><td>Attach to the broker's exact gold symbol and the documented timeframe; wait</td></tr>
+</tbody></table>
+<p>"No trades yet" is often normal. A breakout EA such as the <a href="../../ea/london-breakout/">London Breakout EA</a> may trade once a day or not at all on a quiet day, and a trend system like the <a href="../../ea/turtle-channel/">Turtle Channel EA</a> can wait days for a valid setup.</p>
+
+<h2>Keep it running</h2>
+<p>An EA only works while the terminal is open and connected. If you close MT5, shut down the computer or lose internet, it stops managing positions, including trailing stops and time exits; only stop loss and take profit orders already sent to the broker stay in place. That is why many traders run EAs on a VPS near their broker's server. After any restart, check the chart corner icon and the Journal tab to confirm the EA reloaded.</p>
+
+<div class="callout warn"><strong>Honest risk note.</strong> Installing an EA correctly does not make it profitable. Test on a demo account for at least a few weeks, start live with the smallest size, use a stop loss on every trade, and avoid systems that rely on martingale or grids to recover losses. Past and backtested results do not guarantee future results.</div>
+
+<p>Looking for an EA to practise this with? The <a href="../../ea/">GoldLab XAUUSD EA list</a> groups each system by strategy, and every one uses a stop loss on every trade with risk-percent sizing.</p>
+
+<h2>Key takeaways</h2>
+<ul class="takeaways">
+<li>Market products install automatically; files go in File → Open Data Folder → MQL5 → Experts.</li>
+<li>The EA trades only when Algo Trading is on in the toolbar and "Allow Algo Trading" is ticked for that chart.</li>
+<li>On XAUUSD, 1.00 lot = 100 USD per 1-dollar move on a 100-ounce contract; check the EA's lot output on demo first.</li>
+<li>The Experts and Journal tabs explain almost every "EA not trading" problem.</li>
+</ul>
+
+<section class="faq">
+<h2>FAQ</h2>
+<h3>Where do I put an EA file in MT5?</h3>
+<p>Click File → Open Data Folder in MT5, then open MQL5 → Experts and paste the .ex5 file there. Refresh the Navigator or restart MT5 and it appears under Expert Advisors.</p>
+<h3>Can I install an MT4 EA in MT5?</h3>
+<p>No. MT4 files (.ex4 and .mq4) do not run in MT5. You need a version written for MT5, or the source code rewritten in MQL5.</p>
+<h3>Why is my EA attached but not trading?</h3>
+<p>Check that the Algo Trading button is green, that Allow Algo Trading is ticked in the EA properties, and read the Experts tab. Wrong symbol suffix, wrong timeframe, too small a lot or simply no valid setup are the usual causes.</p>
+<h3>Can I run an EA on the MT5 mobile app?</h3>
+<p>No. The mobile apps can show trades opened by an EA, but the EA itself must run in the desktop terminal or on a VPS.</p>
+<h3>Do I need a VPS for an EA?</h3>
+<p>Not to install it, but an EA stops when your computer sleeps or disconnects, so a VPS is the usual choice for running it around the clock during the trading week.</p>
+</section>
+
+<p class="note-small">For education only, not investment advice. Trading gold and CFDs is high risk and you can lose your capital.</p>
+
+    </article>
+    <nav class="pager"><a class="next" href="../../learn/xauusd-pip-value/"><small>Next guide</small><b>XAUUSD Pip Value Explained</b></a></nav>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../learn/how-to-install-ea-mt5/" aria-current="page">English</a> <a href="../../th/">ไทย</a> <a href="../../vi/">Tiếng Việt</a> <a href="../../id/">Bahasa Indonesia</a> <a href="../../es/">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <nav class="popular"><a href="../../tools/gold-lot-size-calculator/">XAUUSD lot size calculator</a><a href="../../tools/xauusd-pip-value-calculator/">Pip value calculator</a><a href="../../tools/margin-calculator/">Margin calculator</a><a href="../../tools/risk-reward-calculator/">Risk reward calculator</a><a href="../../ea/">MT5 gold EAs</a><a href="../../learn/">Gold trading guides</a><a href="../../#method">Our method</a><a href="../../#risk">Risk</a></nav>
+    <nav class="legal"><a href="../../buy/">Buy</a><a href="../../contact/">Contact</a><a href="../../terms/">Terms</a><a href="../../refund/">Refunds</a><a href="../../privacy/">Privacy</a></nav>
+    <p>GoldLab provides educational content only and is not a licensed investment adviser. Market data may be delayed or inaccurate.</p>
+    <p>© 2026 GoldLab. All rights reserved.</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>คำนวณ Lot ทองคำ (XAUUSD) ฟรี + คำนวณ Stop Loss · GoldLab</title>
+<meta name="description" content="เครื่องคิดเลข lot ทองคำฟรี: ใส่ทุน % ความเสี่ยง และ stop loss แล้วได้ขนาด lot XAUUSD ทันที 1 lot = 100 ออนซ์ พร้อมคำนวณขาดทุนเป็น USD">
+<meta property="og:title" content="คำนวณ Lot ทองคำ (XAUUSD) ฟรี + คำนวณ Stop Loss · GoldLab">
+<meta property="og:description" content="เครื่องคิดเลข lot ทองคำฟรี: ใส่ทุน % ความเสี่ยง และ stop loss แล้วได้ขนาด lot XAUUSD ทันที 1 lot = 100 ออนซ์ พร้อมคำนวณขาดทุนเป็น USD">
+<meta property="og:image" content="https://goldlab.trade/assets/og/tool-gold-lot-size-calculator.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://goldlab.trade/th/tools/gold-lot-size-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GoldLab">
+<link rel="canonical" href="https://goldlab.trade/th/tools/gold-lot-size-calculator/">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "คำนวณ Lot ทองคำ (XAUUSD) ฟรี + คำนวณ Stop Loss", "url": "https://goldlab.trade/th/tools/gold-lot-size-calculator/", "description": "เครื่องคิดเลข lot ทองคำฟรี: ใส่ทุน % ความเสี่ยง และ stop loss แล้วได้ขนาด lot XAUUSD ทันที 1 lot = 100 ออนซ์ พร้อมคำนวณขาดทุนเป็น USD", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "GoldLab", "url": "https://goldlab.trade/"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "1 lot ทองคำ เท่ากับกี่ออนซ์ และมีมูลค่าเท่าไร?", "acceptedAnswer": {"@type": "Answer", "text": "ในโบรกเกอร์ส่วนใหญ่ 1 lot ของ XAUUSD เท่ากับทองคำ 100 troy ounce ดังนั้นทุกครั้งที่ราคาขยับ 1.00 USD จะมีมูลค่า 100 USD ต่อ lot ที่ราคา 4,200 คิดเป็นทองคำมูลค่าประมาณ 420,000 USD"}}, {"@type": "Question", "name": "คำนวณ lot ทองคำอย่างไร?", "acceptedAnswer": {"@type": "Answer", "text": "นำเงินที่ยอมเสียได้ หารด้วยระยะ stop loss คูณ contract size ตัวอย่างเช่น 10 USD ÷ (10.00 × 100) = 0.01 lot"}}, {"@type": "Question", "name": "คำนวณ stop loss ทองคำ XAUUSD เป็นเงินดอลลาร์อย่างไร?", "acceptedAnswer": {"@type": "Answer", "text": "นำขนาด lot × contract size × ระยะ stop loss มาคูณกัน เช่นเทรด 0.10 lot ด้วย stop loss 10.00 บนสัญญา 100 oz จะขาดทุน 0.10 × 100 × 10 = 100 USD เมื่อโดน stop loss"}}, {"@type": "Question", "name": "พอร์ตทอง 1,000 USD ควรเทรดกี่ lot?", "acceptedAnswer": {"@type": "Answer", "text": "ที่ความเสี่ยง 1% คุณเสี่ยง 10 USD ดังนั้นด้วย stop loss 10.00 ขนาด lot คือ 0.01 ถ้า stop loss กว้างกว่านี้จะต้องใช้ lot ต่ำกว่าขั้นต่ำ ซึ่งหมายถึงต้องข้ามไม้ หรือเลือก stop loss ที่ใกล้ขึ้นแต่ยังสมเหตุสมผล"}}, {"@type": "Question", "name": "1 pip ทองคำ คือ 0.01 หรือ 0.10?", "acceptedAnswer": {"@type": "Answer", "text": "ขึ้นอยู่กับแหล่งที่มา ใน MetaTrader ขั้นราคาที่เล็กที่สุด (point) มักเป็น 0.01 ขณะที่เทรดเดอร์จำนวนมากเรียก 0.10 ว่า 1 pip เครื่องคำนวณนี้ทำงานด้วยระยะราคา จึงถูกต้องไม่ว่าจะใช้นิยามแบบไหน"}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GoldLab", "item": "https://goldlab.trade/th/"}, {"@type": "ListItem", "position": 2, "name": "เครื่องมือ", "item": "https://goldlab.trade/th/tools/"}, {"@type": "ListItem", "position": 3, "name": "คำนวณ lot ทองคำ", "item": "https://goldlab.trade/th/tools/gold-lot-size-calculator/"}]}]</script>
+<meta name="theme-color" content="#070d1a">
+<meta name="google-site-verification" content="AoyS69iYM0KUBS375ShKPWs4FY5b3LdPtCelTJK63AM" />
+<link rel="alternate" hreflang="en" href="https://goldlab.trade/tools/gold-lot-size-calculator/">
+<link rel="alternate" hreflang="th" href="https://goldlab.trade/th/tools/gold-lot-size-calculator/">
+<link rel="alternate" hreflang="x-default" href="https://goldlab.trade/tools/gold-lot-size-calculator/">
+<link rel="icon" href="../../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../../th/"><img src="../../../assets/logo-256.png" alt="GoldLab logo" width="40" height="40"><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../../th/#levels">ระดับราคาวันนี้</a>
+      <a href="../../../th/#lessons">บทเรียน</a>
+      <a href="../../../th/tools/">เครื่องมือ</a>
+      <a href="../../../ea/" class="nav-ea">EA ทั้งหมด</a>
+      <a href="../../../learn/">บทความ</a>
+      <a href="../../../buy/" class="nav-ea">ซื้อ EA</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../../tools/gold-lot-size-calculator/">English</option><option value="../../../th/tools/gold-lot-size-calculator/" selected>ไทย</option><option value="../../../vi/">Tiếng Việt</option><option value="../../../id/">Bahasa Indonesia</option><option value="../../../es/">Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../../th/">GoldLab</a> <span>/</span> <a href="../../../th/tools/">เครื่องมือ</a> <span>/</span> <span>เครื่องคำนวณ lot ทองคำ</span></nav>
+    <div class="article-head">
+      <div class="kicker">เครื่องมือฟรี · XAUUSD · MT4 / MT5</div>
+      <h1>คำนวณ lot ทองคำ XAUUSD</h1>
+      <p class="lead">คำนวณ lot ทองคำที่เหมาะสมจากเงินในพอร์ต เปอร์เซ็นต์ความเสี่ยง และ stop loss ใช้เป็นเครื่องมือคำนวณ stop loss ทองคำ (XAUUSD) ได้ด้วย: ดูว่า stop loss ทำให้ขาดทุนกี่ดอลลาร์ หรือ stop loss ไกลได้สูงสุดเท่าไรสำหรับยอดขาดทุนที่คุณรับได้ ทำงานในเบราว์เซอร์ของคุณ ไม่มีการส่งข้อมูลออกไปที่ใด</p>
+    </div>
+
+    <div class="calc panel">
+      <div class="calc-grid">
+        <label>เงินในพอร์ต (USD)<input id="bal" type="number" min="0" step="any" value="1000"></label>
+        <label>ความเสี่ยงต่อไม้ (%)<input id="risk" type="number" min="0" step="0.1" value="1"></label>
+        <label>ราคาเข้า<input id="entry" type="number" min="0" step="any" value="4200.00"></label>
+        <label>ราคา stop loss<input id="sl" type="number" min="0" step="any" value="4190.00"></label>
+        <label>Contract size (ออนซ์ต่อ 1.00 lot)<input id="cs" type="number" min="1" step="1" value="100"></label>
+        <label>Lot step<input id="step" type="number" min="0.001" step="0.001" value="0.01"></label>
+      </div>
+      <div class="calc-out">
+        <div><small>ขนาด lot</small><b id="o_lot">-</b></div>
+        <div><small>เงินที่เสี่ยง</small><b id="o_risk">-</b></div>
+        <div><small>ระยะ stop loss</small><b id="o_dist">-</b></div>
+        <div><small>มูลค่าเมื่อราคาขยับ 1 USD</small><b id="o_move">-</b></div>
+      </div>
+      <p class="calc-warn" id="o_warn"></p>
+    </div>
+
+    <h2 class="calc-h">คำนวณ stop loss ทองคำ XAUUSD</h2>
+    <div class="calc panel">
+      <div class="calc-grid">
+        <label>ขนาด lot<input id="s_lot" type="number" min="0" step="0.01" value="0.10"></label>
+        <label>ระยะ stop loss (ราคาขยับกี่ USD)<input id="s_dist" type="number" min="0" step="any" value="10"></label>
+        <label>ขาดทุนสูงสุดที่รับได้ (USD)<input id="s_max" type="number" min="0" step="any" value="50"></label>
+        <label>Contract size (ออนซ์ต่อ 1.00 lot)<input id="s_cs" type="number" min="1" step="1" value="100"></label>
+      </div>
+      <div class="calc-out">
+        <div><small>ขาดทุนเมื่อโดน stop loss</small><b id="s_loss">-</b></div>
+        <div><small>ระยะ stop loss สูงสุดสำหรับยอดขาดทุนนั้น</small><b id="s_maxd">-</b></div>
+        <div><small>stop loss เท่ากันนี้ในหน่วย point (0.01)</small><b id="s_pts">-</b></div>
+        <div><small>stop loss เท่ากันนี้ในหน่วย pip (0.10)</small><b id="s_pips">-</b></div>
+      </div>
+    </div>
+
+    <article class="article">
+      <h2>1 lot ทองคำ เท่ากับเท่าไร?</h2>
+      <p>ในโบรกเกอร์ส่วนใหญ่ <strong>1 standard lot ของ XAUUSD = ทองคำ 100 troy ounce</strong> ดังนั้นเมื่อราคาทองขยับ 1.00 USD มูลค่าของสถานะ 1.00 lot จะเปลี่ยนไป 100 USD ที่ราคาทอง 4,200 หนึ่ง lot ควบคุมทองคำมูลค่าประมาณ 420,000 USD (notional value) คุณวาง margin เพียงเศษเสี้ยวของจำนวนนี้ แต่กำไรขาดทุนคิดจากทองคำเต็ม 100 oz</p>
+      <table>
+        <thead><tr><th>ขนาด lot</th><th>จำนวนออนซ์</th><th>ราคาขยับ 0.01</th><th>ราคาขยับ 0.10 ("pip")</th><th>ราคาขยับ 1.00</th></tr></thead>
+        <tbody>
+          <tr><td>1.00</td><td>100 oz</td><td>$1.00</td><td>$10.00</td><td>$100.00</td></tr>
+          <tr><td>0.10</td><td>10 oz</td><td>$0.10</td><td>$1.00</td><td>$10.00</td></tr>
+          <tr><td>0.01</td><td>1 oz</td><td>$0.01</td><td>$0.10</td><td>$1.00</td></tr>
+        </tbody>
+      </table>
+      <p>บางโบรกเกอร์ใช้สัญญาที่ต่างออกไป (เช่น 10 oz หรือ 1 oz ต่อ lot) ให้ตรวจสอบของโบรกเกอร์คุณใน MetaTrader: คลิกขวาที่ XAUUSD ใน Market Watch → <em>Specification</em> → <em>Contract size</em> แล้วนำตัวเลขมาใส่ในเครื่องคำนวณด้านบน หากต้องการอ่านเรื่อง pip และ point แบบละเอียด ดู <a href="../../../learn/xauusd-pip-value/">XAUUSD pip value explained</a> (ภาษาอังกฤษ) หรือใช้ <a href="../../../th/tools/xauusd-pip-value-calculator/">เครื่องคำนวณ pip XAUUSD</a></p>
+
+      <h2>สูตรคำนวณ lot ทองคำทำงานอย่างไร</h2>
+      <pre class="formula">Lot size = (Balance × Risk %) ÷ (Stop distance × Contract size)</pre>
+      <ol>
+        <li><b>เงินที่เสี่ยง</b> = เงินในพอร์ต × เปอร์เซ็นต์ความเสี่ยง ถ้ามี 1,000 USD เสี่ยง 1% หมายถึงคุณยอมเสีย 10 USD เมื่อโดน stop loss</li>
+        <li><b>ขาดทุนต่อ 1.00 lot</b> = ระยะ stop loss × contract size เช่น stop loss 10 USD กับ 100 oz = 1,000 USD ต่อ lot</li>
+        <li><b>ขนาด lot</b> = เงินที่เสี่ยง ÷ ขาดทุนต่อ lot ปัด<em>ลง</em>ตาม lot step ของโบรกเกอร์: 10 ÷ 1,000 = 0.01 lot</li>
+      </ol>
+
+      <h2>ตัวอย่างการคำนวณ</h2>
+      <div class="callout"><strong>ตัวอย่างที่ 1 - พอร์ตเล็ก</strong> เงินในพอร์ต 1,000 USD เสี่ยง 1% = 10 USD ซื้อที่ 4,200.00 วาง stop loss ที่ 4,190.00 (ระยะ 10.00) ขาดทุนต่อ lot = 10 × 100 = 1,000 USD ขนาด lot = 10 ÷ 1,000 = <strong>0.01 lot</strong></div>
+      <div class="callout"><strong>ตัวอย่างที่ 2 - พอร์ตขนาดกลาง</strong> เงินในพอร์ต 5,000 USD เสี่ยง 1% = 50 USD ขายที่ 4,215.50 วาง stop loss ที่ 4,227.50 (ระยะ 12.00) ขาดทุนต่อ lot = 1,200 USD 50 ÷ 1,200 = 0.0417 → ปัดลงเป็น <strong>0.04 lot</strong> ความเสี่ยงจริง 48 USD</div>
+      <div class="callout"><strong>ตัวอย่างที่ 3 - stop loss เป็นเงินดอลลาร์</strong> คุณเทรด 0.10 lot ด้วย stop loss 10.00 ขาดทุนถ้าโดน = 0.10 × 100 × 10 = <strong>100 USD</strong> ถ้ารับได้เพียง 50 USD stop loss ต้องห่างไม่เกิน 50 ÷ (0.10 × 100) = 5.00 หรือคง stop loss เดิมแล้วลดเป็น 0.05 lot</div>
+      <div class="callout warn"><strong>ผลลัพธ์ต่ำกว่า lot ขั้นต่ำ?</strong> ถ้าผลลัพธ์ต่ำกว่า 0.01 แปลว่าแม้เปิดสถานะเล็กที่สุดก็ยังเสี่ยงเกินที่คุณตั้งไว้ ให้ขยับ stop loss เข้ามาใกล้ขึ้นเฉพาะเมื่อแผนเทรดของคุณรองรับ ไม่เช่นนั้นให้ข้ามไม้นั้นไป อ่านเพิ่มที่ <a href="../../../learn/one-percent-rule-gold/">the 1% rule with gold examples</a> (ภาษาอังกฤษ)</div>
+
+      <h2>เคล็ดลับการคำนวณขนาดสถานะทองคำ</h2>
+      <ul>
+        <li>วาง stop loss ก่อน ณ จุดที่ไอเดียของคุณผิดพลาด แล้วค่อยคำนวณขนาดสถานะ ดู <a href="../../../learn/gold-stop-loss-atr/">How to set a stop loss on gold with ATR</a> (ภาษาอังกฤษ)</li>
+        <li>spread และ slippage ทำให้ขาดทุนจริงมากกว่าที่คำนวณ โดยเฉพาะช่วงข่าว ควรเผื่อไว้</li>
+        <li>ตรวจสอบ margin ที่ไม้นี้ต้องใช้ด้วย <a href="../../../th/tools/margin-calculator/">เครื่องคำนวณ margin</a> และตรวจสอบเป้าหมายด้วย <a href="../../../th/tools/risk-reward-calculator/">เครื่องคำนวณ risk reward</a></li>
+        <li>เทรดเดอร์จำนวนมากเสี่ยง 0.5–2% ต่อไม้ ดูบทเรียนของเราเรื่อง <a href="../../../lessons/risk-position-size/">risk and position size</a> (ภาษาอังกฤษ)</li>
+      </ul>
+      <div class="callout">
+        <b>อยากให้คำนวณให้อัตโนมัติ?</b> <a href="../../../ea/">GoldLab EA</a> ทุกตัว เช่น <a href="../../../ea/london-breakout/">London Breakout EA</a> หรือ <a href="../../../ea/supertrend-rider/">Supertrend EA</a> (ภาษาอังกฤษ) คำนวณขนาดของแต่ละไม้จากเปอร์เซ็นต์ความเสี่ยงและ stop loss จริงของไม้นั้น
+      </div>
+
+      <section class="faq">
+        <h2>คำถามที่พบบ่อย (FAQ)</h2>
+        <h3>1 lot ทองคำ เท่ากับกี่ออนซ์ และมีมูลค่าเท่าไร?</h3>
+        <p>ในโบรกเกอร์ส่วนใหญ่ 1 lot ของ XAUUSD เท่ากับทองคำ 100 troy ounce ดังนั้นทุกครั้งที่ราคาขยับ 1.00 USD จะมีมูลค่า 100 USD ต่อ lot ที่ราคา 4,200 คิดเป็นทองคำมูลค่าประมาณ 420,000 USD</p>
+        <h3>คำนวณ lot ทองคำอย่างไร?</h3>
+        <p>นำเงินที่ยอมเสียได้ หารด้วยระยะ stop loss คูณ contract size ตัวอย่างเช่น 10 USD ÷ (10.00 × 100) = 0.01 lot</p>
+        <h3>คำนวณ stop loss ทองคำ XAUUSD เป็นเงินดอลลาร์อย่างไร?</h3>
+        <p>นำขนาด lot × contract size × ระยะ stop loss มาคูณกัน เช่นเทรด 0.10 lot ด้วย stop loss 10.00 บนสัญญา 100 oz จะขาดทุน 0.10 × 100 × 10 = 100 USD เมื่อโดน stop loss</p>
+        <h3>พอร์ตทอง 1,000 USD ควรเทรดกี่ lot?</h3>
+        <p>ที่ความเสี่ยง 1% คุณเสี่ยง 10 USD ดังนั้นด้วย stop loss 10.00 ขนาด lot คือ 0.01 ถ้า stop loss กว้างกว่านี้จะต้องใช้ lot ต่ำกว่าขั้นต่ำ ซึ่งหมายถึงต้องข้ามไม้ หรือเลือก stop loss ที่ใกล้ขึ้นแต่ยังสมเหตุสมผล</p>
+        <h3>1 pip ทองคำ คือ 0.01 หรือ 0.10?</h3>
+        <p>ขึ้นอยู่กับแหล่งที่มา ใน MetaTrader ขั้นราคาที่เล็กที่สุด (point) มักเป็น 0.01 ขณะที่เทรดเดอร์จำนวนมากเรียก 0.10 ว่า 1 pip เครื่องคำนวณนี้ทำงานด้วยระยะราคา จึงถูกต้องไม่ว่าจะใช้นิยามแบบไหน</p>
+      </section>
+      <p class="note-small">เพื่อการศึกษาเท่านั้น ไม่ใช่คำแนะนำในการลงทุน การเทรดทองคำและ CFD มีความเสี่ยงสูง คุณอาจสูญเสียเงินทุนได้</p>
+    </article>
+  </div>
+</main>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var f = function (n, d) { return n.toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d }); };
+  function calc() {
+    var bal = +$("bal").value, risk = +$("risk").value, e = +$("entry").value, s = +$("sl").value,
+        cs = +$("cs").value, step = +$("step").value || 0.01;
+    var dist = Math.abs(e - s), riskMoney = bal * risk / 100, perLot = dist * cs, warn = "";
+    if (!(bal > 0 && risk > 0 && dist > 0 && cs > 0)) {
+      ["o_lot", "o_risk", "o_dist", "o_move"].forEach(function (k) { $(k).textContent = "-"; });
+      $("o_warn").textContent = "กรอกเงินในพอร์ต เปอร์เซ็นต์ความเสี่ยง และราคาสองค่าที่ต่างกัน";
+      return;
+    }
+    var raw = riskMoney / perLot, lot = Math.floor(raw / step + 1e-9) * step;
+    var dec = step < 0.01 ? 3 : 2;
+    if (lot < step) { warn = "ความเสี่ยงน้อยเกินไปสำหรับ " + f(step, dec) + " lot ด้วย stop loss นี้ ให้ขยับ stop loss เข้ามาใกล้ขึ้น เพิ่มเปอร์เซ็นต์ความเสี่ยง หรือข้ามไม้นี้"; lot = 0; }
+    $("o_lot").textContent = f(lot, dec) + " lot";
+    $("o_risk").textContent = f(lot * perLot, 2) + " USD" + (lot ? " (เป้าหมาย " + f(riskMoney, 2) + ")" : "");
+    $("o_dist").textContent = f(dist, 2) + " USD";
+    $("o_move").textContent = f(lot * cs, 2) + " USD";
+    $("o_warn").textContent = warn;
+  }
+  function stop() {
+    var lot = +$("s_lot").value, d = +$("s_dist").value, mx = +$("s_max").value, cs = +$("s_cs").value;
+    var ok = lot > 0 && cs > 0;
+    $("s_loss").textContent = ok && d > 0 ? f(lot * cs * d, 2) + " USD" : "-";
+    $("s_maxd").textContent = ok && mx > 0 ? f(mx / (lot * cs), 2) + " USD" : "-";
+    $("s_pts").textContent = d > 0 ? f(Math.round(d / 0.01), 0) + " point" : "-";
+    $("s_pips").textContent = d > 0 ? f(d / 0.1, 1) + " pip" : "-";
+  }
+  ["bal", "risk", "entry", "sl", "cs", "step"].forEach(function (k) { $(k).addEventListener("input", calc); });
+  ["s_lot", "s_dist", "s_max", "s_cs"].forEach(function (k) { $(k).addEventListener("input", stop); });
+  calc(); stop();
+})();
+</script>
+
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../../th/"><img src="../../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../../tools/gold-lot-size-calculator/">English</a> <a href="../../../th/tools/gold-lot-size-calculator/" aria-current="page">ไทย</a> <a href="../../../vi/">Tiếng Việt</a> <a href="../../../id/">Bahasa Indonesia</a> <a href="../../../es/">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <nav class="popular"><a href="../../../th/tools/gold-lot-size-calculator/">คำนวณ lot ทองคำ</a><a href="../../../th/tools/xauusd-pip-value-calculator/">คำนวณ pip ทองคำ</a><a href="../../../th/tools/margin-calculator/">คำนวณ margin</a><a href="../../../th/tools/risk-reward-calculator/">คำนวณ risk reward</a><a href="../../../ea/">MT5 gold EAs</a><a href="../../../learn/">Gold trading guides</a><a href="../../../th/#method">วิธีของเรา</a><a href="../../../th/#risk">ความเสี่ยง</a></nav>
+    <nav class="legal"><a href="../../../buy/">Buy</a><a href="../../../contact/">Contact</a><a href="../../../terms/">Terms</a><a href="../../../refund/">Refunds</a><a href="../../../privacy/">Privacy</a></nav>
+    <p>GoldLab ให้ข้อมูลเพื่อการศึกษาเท่านั้น และไม่ใช่ที่ปรึกษาการลงทุนที่ได้รับใบอนุญาต ข้อมูลตลาดอาจล่าช้าหรือคลาดเคลื่อน</p>
+    <p>© 2026 GoldLab. สงวนลิขสิทธิ์</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+</body>
+</html>

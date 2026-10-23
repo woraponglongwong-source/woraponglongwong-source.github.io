@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>คำนวณ Margin ทองคำ: เทรด 1 Lot ใช้เงินเท่าไหร่ · GoldLab</title>
+<meta name="description" content="คำนวณ margin ทองคำ XAUUSD และ forex ฟรี: เงินที่ต้องใช้เปิดออเดอร์ มูลค่าสัญญา และ margin level สำหรับทุกขนาด lot และ leverage">
+<meta property="og:title" content="คำนวณ Margin ทองคำ: เทรด 1 Lot ใช้เงินเท่าไหร่ · GoldLab">
+<meta property="og:description" content="คำนวณ margin ทองคำ XAUUSD และ forex ฟรี: เงินที่ต้องใช้เปิดออเดอร์ มูลค่าสัญญา และ margin level สำหรับทุกขนาด lot และ leverage">
+<meta property="og:image" content="https://goldlab.trade/assets/og/tool-margin-calculator.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://goldlab.trade/th/tools/margin-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GoldLab">
+<link rel="canonical" href="https://goldlab.trade/th/tools/margin-calculator/">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "คำนวณ Margin ทองคำ: เทรด 1 Lot ใช้เงินเท่าไหร่", "url": "https://goldlab.trade/th/tools/margin-calculator/", "description": "คำนวณ margin ทองคำ XAUUSD และ forex ฟรี: เงินที่ต้องใช้เปิดออเดอร์ มูลค่าสัญญา และ margin level สำหรับทุกขนาด lot และ leverage", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "GoldLab", "url": "https://goldlab.trade/"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "เทรดทอง 1 lot ใช้เงินเท่าไหร่?", "acceptedAnswer": {"@type": "Answer", "text": "Lots × 100 ออนซ์ × ราคา ÷ leverage ที่ราคา 4,200 จะใช้ 4,200 USD ถ้า leverage 1:100, 840 USD ถ้า 1:500 และ 21,000 USD ถ้า 1:20"}}, {"@type": "Question", "name": "XAUUSD 0.01 lot ใช้ margin เท่าไหร่?", "acceptedAnswer": {"@type": "Answer", "text": "ที่ราคา 4,200 ออเดอร์ 0.01 lot มีมูลค่า 4,200 USD จึงใช้ margin 42 USD ที่ 1:100 หรือ 8.40 USD ที่ 1:500"}}, {"@type": "Question", "name": "Leverage สูงทำให้ความเสี่ยงเพิ่มขึ้นหรือไม่?", "acceptedAnswer": {"@type": "Answer", "text": "Leverage เปลี่ยนแค่จำนวน margin ที่ถูกกันไว้ เงินที่เสียได้ขึ้นกับขนาด lot และระยะ stop loss แต่ leverage สูงทำให้เปิดออเดอร์ใหญ่เกินตัวได้ง่าย"}}, {"@type": "Question", "name": "ทำไม margin ทองคำของโบรกเกอร์ผมไม่ตรงกับที่คำนวณ?", "acceptedAnswer": {"@type": "Answer", "text": "โบรกเกอร์หลายแห่งใช้ leverage แยกสำหรับโลหะ หรือกำหนด margin คงที่ต่อ lot หรือ margin ที่เปลี่ยนตามขนาดออเดอร์ ช่วงสุดสัปดาห์ และช่วงข่าว ให้ตรวจ specification ของสัญลักษณ์ในแพลตฟอร์ม (MT5)"}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GoldLab", "item": "https://goldlab.trade/th/"}, {"@type": "ListItem", "position": 2, "name": "เครื่องมือ", "item": "https://goldlab.trade/th/tools/"}, {"@type": "ListItem", "position": 3, "name": "คำนวณ margin", "item": "https://goldlab.trade/th/tools/margin-calculator/"}]}]</script>
+<meta name="theme-color" content="#070d1a">
+<meta name="google-site-verification" content="AoyS69iYM0KUBS375ShKPWs4FY5b3LdPtCelTJK63AM" />
+<link rel="alternate" hreflang="en" href="https://goldlab.trade/tools/margin-calculator/">
+<link rel="alternate" hreflang="th" href="https://goldlab.trade/th/tools/margin-calculator/">
+<link rel="alternate" hreflang="x-default" href="https://goldlab.trade/tools/margin-calculator/">
+<link rel="icon" href="../../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../../th/"><img src="../../../assets/logo-256.png" alt="GoldLab logo" width="40" height="40"><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../../th/#levels">ระดับราคาวันนี้</a>
+      <a href="../../../th/#lessons">บทเรียน</a>
+      <a href="../../../th/tools/">เครื่องมือ</a>
+      <a href="../../../ea/" class="nav-ea">EA ทั้งหมด</a>
+      <a href="../../../learn/">บทความ</a>
+      <a href="../../../buy/" class="nav-ea">ซื้อ EA</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../../tools/margin-calculator/">English</option><option value="../../../th/tools/margin-calculator/" selected>ไทย</option><option value="../../../vi/">Tiếng Việt</option><option value="../../../id/">Bahasa Indonesia</option><option value="../../../es/">Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../../th/">GoldLab</a> <span>/</span> <a href="../../../th/tools/">เครื่องมือ</a> <span>/</span> <span>เครื่องคำนวณ margin</span></nav>
+    <div class="article-head">
+      <div class="kicker">เครื่องมือฟรี · XAUUSD · Forex</div>
+      <h1>คำนวณ margin ทองคำและ Forex</h1>
+      <p class="lead">เทรดทอง 1 lot ใช้เงินเท่าไหร่? ใส่สินค้าที่เทรด ขนาด lot และ leverage เพื่อดู margin ที่ต้องใช้เป็นดอลลาร์ (USD) มูลค่าสัญญาของออเดอร์ และ margin level หลังเปิดออเดอร์ ใช้ได้กับ XAUUSD และคู่เงินหลัก</p>
+    </div>
+
+    <div class="calc panel">
+      <div class="calc-grid">
+        <label>สินค้าที่เทรด<select id="sym">
+          <option value="XAUUSD">XAUUSD (ทองคำ)</option>
+          <option value="XAGUSD">XAGUSD (เงิน)</option>
+          <option value="EURUSD">EURUSD</option>
+          <option value="GBPUSD">GBPUSD</option>
+          <option value="USDJPY">USDJPY</option>
+          <option value="USDCHF">USDCHF</option>
+          <option value="EURJPY">EURJPY</option>
+          <option value="custom">กำหนดเอง</option>
+        </select></label>
+        <label>ขนาด lot<input id="lot" type="number" min="0" step="0.01" value="1"></label>
+        <label>ราคา<input id="price" type="number" min="0" step="any" value="4200"></label>
+        <label>Contract size (จำนวนหน่วยต่อ 1.00 lot)<input id="cs" type="number" min="0" step="any" value="100"></label>
+        <label>Leverage (1 : X)<input id="lev" type="number" min="1" step="1" value="100"></label>
+        <label><span id="convLabel">มูลค่าเป็น USD ของสกุลหลัก 1 หน่วย</span><input id="conv" type="number" min="0" step="any" value="4200"></label>
+        <label>Equity ของบัญชี (USD, ไม่ใส่ก็ได้)<input id="eq" type="number" min="0" step="any" value="10000"></label>
+      </div>
+      <div class="calc-out">
+        <div><small>Margin ที่ต้องใช้</small><b id="o_m">-</b></div>
+        <div><small>มูลค่าสัญญา (Notional)</small><b id="o_n">-</b></div>
+        <div><small>Margin level หลังเปิดออเดอร์</small><b id="o_ml">-</b></div>
+        <div><small>Free margin คงเหลือ</small><b id="o_fm">-</b></div>
+      </div>
+      <p class="calc-warn" id="o_warn"></p>
+    </div>
+
+    <article class="article">
+      <h2>วิธีคำนวณ margin ทองคำ</h2>
+      <pre class="formula">Margin = Lots × Contract size × ราคา (เป็น USD) ÷ Leverage</pre>
+      <p>ทองคำมักมี contract size 100 ออนซ์ ที่ราคา 4,200 ออเดอร์ 1 lot จึงมีมูลค่า 420,000 USD (เรียกว่า <em>notional value</em>) ถ้า leverage 1:100 โบรกเกอร์จะกันเงินไว้เป็น margin 420,000 ÷ 100 = <strong>4,200 USD</strong> สำหรับคู่เงินที่ USD เป็นสกุลหลัก (USDJPY, USDCHF) มูลค่าสัญญาคือ lots × 100,000 USD ตรง ๆ จึงไม่ขึ้นกับราคา</p>
+      <table>
+        <thead><tr><th>XAUUSD ที่ราคา 4,200</th><th>1:20</th><th>1:100</th><th>1:500</th></tr></thead>
+        <tbody>
+          <tr><td>1.00 lot</td><td>$21,000</td><td>$4,200</td><td>$840</td></tr>
+          <tr><td>0.10 lot</td><td>$2,100</td><td>$420</td><td>$84</td></tr>
+          <tr><td>0.01 lot</td><td>$210</td><td>$42</td><td>$8.40</td></tr>
+        </tbody>
+      </table>
+      <p>โบรกเกอร์มักกำหนด leverage สูงสุดของโลหะต่างจาก Forex (ส่วนใหญ่ต่ำกว่า) และหน่วยงานกำกับดูแลบางภูมิภาคจำกัด leverage ของลูกค้ารายย่อย (เช่น 1:20 สำหรับทองคำในสหภาพยุโรป) ให้ใช้ leverage ที่โบรกเกอร์แสดงสำหรับสัญลักษณ์ XAUUSD ไม่ใช่ leverage ของบัญชีเพียงอย่างเดียว รายละเอียดเพิ่มเติม: <a href="../../../learn/margin-for-1-lot-gold/">เทรดทอง 1 lot ใช้ margin เท่าไหร่</a> (ภาษาอังกฤษ)</p>
+
+      <h2>Margin level คือ อะไร? และ margin call กับ stop out</h2>
+      <pre class="formula">Margin level % = Equity ÷ Margin ที่ใช้ × 100</pre>
+      <p>margin level คือ อัตราส่วนระหว่าง equity กับ margin ที่ถูกใช้ไป ถ้า equity 10,000 USD และออเดอร์ใช้ margin 4,200 USD margin level จะเป็น 238% เมื่อขาดทุนจนระดับนี้ลดลงถึงระดับ margin call ของโบรกเกอร์ (มักอยู่ที่ 100%) จะเปิดออเดอร์ใหม่ไม่ได้ และเมื่อถึงระดับ stop out (มักอยู่ที่ 20–50%) ระบบจะปิดออเดอร์ให้อัตโนมัติ ระดับเหล่านี้ต่างกันไปตามโบรกเกอร์</p>
+
+      <h2>ตัวอย่างการคำนวณ</h2>
+      <div class="callout"><strong>ทองคำ พอร์ตเล็ก</strong> XAUUSD 0.05 lot ที่ราคา 4,200 leverage 1:200: 0.05 × 100 × 4,200 ÷ 200 = <strong>105 USD</strong> เป็น margin</div>
+      <div class="callout"><strong>EURUSD</strong> 1 lot ที่ราคา 1.0800 leverage 1:30: 100,000 × 1.08 ÷ 30 = <strong>3,600 USD</strong></div>
+      <div class="callout"><strong>USDJPY</strong> 0.50 lot leverage 1:100: 0.5 × 100,000 ÷ 100 = <strong>500 USD</strong> (USD เป็นสกุลหลัก)</div>
+      <div class="callout warn"><strong>Margin ไม่ใช่ความเสี่ยง</strong> margin ต่ำแปลว่าโบรกเกอร์ให้เปิดออเดอร์ใหญ่ได้เท่านั้น ส่วนที่คุณเสียได้จริงขึ้นกับขนาด lot × ระยะ stop loss ให้คำนวณขนาดออเดอร์ด้วย<a href="../../../th/tools/gold-lot-size-calculator/">เครื่องคำนวณ lot XAUUSD</a> และดูมูลค่าเป็นดอลลาร์ด้วย<a href="../../../th/tools/xauusd-pip-value-calculator/">เครื่องคำนวณ pip value</a></div>
+      <p><a href="../../../ea/">EA ของ GoldLab</a> ทุกตัวจะตรวจ free margin ก่อนส่งออเดอร์ทุกครั้ง และลด lot ลงถ้า margin ไม่พอ ดูตัวอย่างได้ที่ <a href="../../../ea/turtle-channel/">Turtle trading EA</a> (ภาษาอังกฤษ) ซึ่งคำนวณขนาดแต่ละ unit จาก ATR</p>
+
+      <section class="faq">
+        <h2>คำถามที่พบบ่อย</h2>
+        <h3>เทรดทอง 1 lot ใช้เงินเท่าไหร่?</h3>
+        <p>Lots × 100 ออนซ์ × ราคา ÷ leverage ที่ราคา 4,200 จะใช้ 4,200 USD ถ้า leverage 1:100, 840 USD ถ้า 1:500 และ 21,000 USD ถ้า 1:20</p>
+        <h3>XAUUSD 0.01 lot ใช้ margin เท่าไหร่?</h3>
+        <p>ที่ราคา 4,200 ออเดอร์ 0.01 lot มีมูลค่า 4,200 USD จึงใช้ margin 42 USD ที่ 1:100 หรือ 8.40 USD ที่ 1:500</p>
+        <h3>Leverage สูงทำให้ความเสี่ยงเพิ่มขึ้นหรือไม่?</h3>
+        <p>Leverage เปลี่ยนแค่จำนวน margin ที่ถูกกันไว้ เงินที่เสียได้ขึ้นกับขนาด lot และระยะ stop loss แต่ leverage สูงทำให้เปิดออเดอร์ใหญ่เกินตัวได้ง่าย</p>
+        <h3>ทำไม margin ทองคำของโบรกเกอร์ผมไม่ตรงกับที่คำนวณ?</h3>
+        <p>โบรกเกอร์หลายแห่งใช้ leverage แยกสำหรับโลหะ หรือกำหนด margin คงที่ต่อ lot หรือ margin ที่เปลี่ยนตามขนาดออเดอร์ ช่วงสุดสัปดาห์ และช่วงข่าว ให้ตรวจ specification ของสัญลักษณ์ในแพลตฟอร์ม (MT5)</p>
+      </section>
+      <p class="note-small">เพื่อการศึกษาเท่านั้น ไม่ใช่คำแนะนำการลงทุน กฎเรื่อง margin ต่างกันไปตามโบรกเกอร์และหน่วยงานกำกับ การเทรดทองคำและ CFD มีความเสี่ยงสูง คุณอาจสูญเสียเงินทุนทั้งหมด</p>
+    </article>
+  </div>
+</main>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var f = function (n, d) { return n.toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d }); };
+  // [contract, price, mode, label, rate]; mode q = quote USD (base value = price), b = base USD (base value = 1), x = cross (base value = user rate)
+  var P = { XAUUSD: [100, 4200, "q"], XAGUSD: [5000, 50, "q"], EURUSD: [100000, 1.08, "q"], GBPUSD: [100000, 1.27, "q"],
+            USDJPY: [100000, 150, "b"], USDCHF: [100000, 0.88, "b"], EURJPY: [100000, 162, "x", "อัตรา EURUSD (มูลค่าเป็น USD ของ 1 EUR)", 1.08] };
+  var mode = "q";
+  function preset() {
+    var p = P[$("sym").value];
+    if (!p) { mode = "x"; $("convLabel").textContent = "มูลค่าเป็น USD ของสกุลหลัก 1 หน่วย"; $("conv").disabled = false; calc(); return; }
+    $("cs").value = p[0]; $("price").value = p[1]; mode = p[2];
+    if (mode === "x") { $("convLabel").textContent = p[3]; $("conv").value = p[4]; $("conv").disabled = false; }
+    else { $("convLabel").textContent = "มูลค่าเป็น USD ของสกุลหลัก 1 หน่วย (คำนวณอัตโนมัติ)"; $("conv").disabled = true; }
+    calc();
+  }
+  function calc() {
+    var lot = +$("lot").value, price = +$("price").value, cs = +$("cs").value, lev = +$("lev").value, eq = +$("eq").value;
+    var base = mode === "q" ? price : mode === "b" ? 1 : +$("conv").value;
+    if (mode !== "x") $("conv").value = base;
+    if (!(lot > 0 && cs > 0 && lev > 0 && base > 0)) {
+      ["o_m", "o_n", "o_ml", "o_fm"].forEach(function (k) { $(k).textContent = "-"; });
+      $("o_warn").textContent = "กรอกขนาด lot, ราคา, contract size และ leverage";
+      return;
+    }
+    var notional = lot * cs * base, m = notional / lev;
+    $("o_m").textContent = f(m, 2) + " USD";
+    $("o_n").textContent = f(notional, 2) + " USD";
+    $("o_ml").textContent = eq > 0 ? f(eq / m * 100, 0) + "%" : "-";
+    $("o_fm").textContent = eq > 0 ? f(eq - m, 2) + " USD" : "-";
+    $("o_warn").textContent = eq > 0 && m > eq ? "Equity ไม่พอ: ออเดอร์นี้ต้องใช้ margin มากกว่าเงินในบัญชี" : "";
+  }
+  $("sym").addEventListener("change", preset);
+  ["lot", "price", "cs", "lev", "conv", "eq"].forEach(function (k) { $(k).addEventListener("input", calc); });
+  preset();
+})();
+</script>
+
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../../th/"><img src="../../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../../tools/margin-calculator/">English</a> <a href="../../../th/tools/margin-calculator/" aria-current="page">ไทย</a> <a href="../../../vi/">Tiếng Việt</a> <a href="../../../id/">Bahasa Indonesia</a> <a href="../../../es/">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <nav class="popular"><a href="../../../th/tools/gold-lot-size-calculator/">คำนวณ lot ทองคำ</a><a href="../../../th/tools/xauusd-pip-value-calculator/">คำนวณ pip ทองคำ</a><a href="../../../th/tools/margin-calculator/">คำนวณ margin</a><a href="../../../th/tools/risk-reward-calculator/">คำนวณ risk reward</a><a href="../../../ea/">MT5 gold EAs</a><a href="../../../learn/">Gold trading guides</a><a href="../../../th/#method">วิธีของเรา</a><a href="../../../th/#risk">ความเสี่ยง</a></nav>
+    <nav class="legal"><a href="../../../buy/">Buy</a><a href="../../../contact/">Contact</a><a href="../../../terms/">Terms</a><a href="../../../refund/">Refunds</a><a href="../../../privacy/">Privacy</a></nav>
+    <p>GoldLab ให้ข้อมูลเพื่อการศึกษาเท่านั้น และไม่ใช่ที่ปรึกษาการลงทุนที่ได้รับใบอนุญาต ข้อมูลตลาดอาจล่าช้าหรือคลาดเคลื่อน</p>
+    <p>© 2026 GoldLab. สงวนลิขสิทธิ์</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+</body>
+</html>

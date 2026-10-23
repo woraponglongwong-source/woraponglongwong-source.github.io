@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>คำนวณ Risk Reward (RR) ทองคำและ Forex ฟรี · GoldLab</title>
+<meta name="description" content="คำนวณ risk reward ฟรี: อัตราส่วน RR เงินที่เสี่ยง กำไรที่เป็นไปได้ และ win rate ขั้นต่ำที่คุ้มทุน จากราคาเข้า stop loss และ take profit">
+<meta property="og:title" content="คำนวณ Risk Reward (RR) ทองคำและ Forex ฟรี · GoldLab">
+<meta property="og:description" content="คำนวณ risk reward ฟรี: อัตราส่วน RR เงินที่เสี่ยง กำไรที่เป็นไปได้ และ win rate ขั้นต่ำที่คุ้มทุน จากราคาเข้า stop loss และ take profit">
+<meta property="og:image" content="https://goldlab.trade/assets/og/tool-risk-reward-calculator.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://goldlab.trade/th/tools/risk-reward-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GoldLab">
+<link rel="canonical" href="https://goldlab.trade/th/tools/risk-reward-calculator/">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "คำนวณ Risk Reward (RR) ทองคำและ Forex ฟรี", "url": "https://goldlab.trade/th/tools/risk-reward-calculator/", "description": "คำนวณ risk reward ฟรี: อัตราส่วน RR เงินที่เสี่ยง กำไรที่เป็นไปได้ และ win rate ขั้นต่ำที่คุ้มทุน จากราคาเข้า stop loss และ take profit", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "GoldLab", "url": "https://goldlab.trade/"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "risk reward ที่ดีสำหรับทองคำคือเท่าไหร่?", "acceptedAnswer": {"@type": "Answer", "text": "เทรดเดอร์หลายคนมองหาอย่างน้อย 1 : 1.5 ถึง 1 : 2 แต่ไม่มีอัตราส่วนไหนดีโดยลำพัง ต้องสอดคล้องกับความถี่ที่กลยุทธ์ของคุณไปถึงเป้า รวมทั้ง spread และค่าคอมมิชชัน"}}, {"@type": "Question", "name": "คำนวณ risk reward อย่างไร?", "acceptedAnswer": {"@type": "Answer", "text": "นำระยะจากราคาเข้าถึง take profit หารด้วยระยะจากราคาเข้าถึง stop loss เป้า 24.00 และ stop 12.00 ได้ 2 เขียนเป็น 1 : 2"}}, {"@type": "Question", "name": "RR ratio 1:2 ต้องมี win rate เท่าไหร่?", "acceptedAnswer": {"@type": "Answer", "text": "มากกว่า 33.3% เล็กน้อยก็เสมอตัว (ก่อนหักต้นทุน) เพราะออเดอร์ชนะ 1 ครั้งที่ได้ 2R ชดเชยออเดอร์แพ้ 2 ครั้งที่เสีย 1R ได้"}}, {"@type": "Question", "name": "เครื่องคำนวณนี้ใช้กับออเดอร์ขายได้ไหม?", "acceptedAnswer": {"@type": "Answer", "text": "ได้ ระบบดูทิศทางจากราคาเอง ถ้า stop อยู่เหนือราคาเข้าและเป้าอยู่ต่ำกว่า จะถือเป็นออเดอร์ขาย"}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GoldLab", "item": "https://goldlab.trade/th/"}, {"@type": "ListItem", "position": 2, "name": "เครื่องมือ", "item": "https://goldlab.trade/th/tools/"}, {"@type": "ListItem", "position": 3, "name": "คำนวณ risk reward", "item": "https://goldlab.trade/th/tools/risk-reward-calculator/"}]}]</script>
+<meta name="theme-color" content="#070d1a">
+<meta name="google-site-verification" content="AoyS69iYM0KUBS375ShKPWs4FY5b3LdPtCelTJK63AM" />
+<link rel="alternate" hreflang="en" href="https://goldlab.trade/tools/risk-reward-calculator/">
+<link rel="alternate" hreflang="th" href="https://goldlab.trade/th/tools/risk-reward-calculator/">
+<link rel="alternate" hreflang="x-default" href="https://goldlab.trade/tools/risk-reward-calculator/">
+<link rel="icon" href="../../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../../th/"><img src="../../../assets/logo-256.png" alt="GoldLab logo" width="40" height="40"><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../../th/#levels">ระดับราคาวันนี้</a>
+      <a href="../../../th/#lessons">บทเรียน</a>
+      <a href="../../../th/tools/">เครื่องมือ</a>
+      <a href="../../../ea/" class="nav-ea">EA ทั้งหมด</a>
+      <a href="../../../learn/">บทความ</a>
+      <a href="../../../buy/" class="nav-ea">ซื้อ EA</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../../tools/risk-reward-calculator/">English</option><option value="../../../th/tools/risk-reward-calculator/" selected>ไทย</option><option value="../../../vi/">Tiếng Việt</option><option value="../../../id/">Bahasa Indonesia</option><option value="../../../es/">Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../../th/">GoldLab</a> <span>/</span> <a href="../../../th/tools/">เครื่องมือ</a> <span>/</span> <span>เครื่องคำนวณ risk reward</span></nav>
+    <div class="article-head">
+      <div class="kicker">เครื่องมือฟรี · XAUUSD · Forex</div>
+      <h1>คำนวณ Risk Reward (RR ratio)</h1>
+      <p class="lead">risk reward คือ อัตราส่วนระหว่างสิ่งที่คุณหวังจะได้กับสิ่งที่ยอมเสีย ใส่ราคาเข้า stop loss และ take profit เพื่อคำนวณ risk reward ได้ทันที พร้อมเงินที่เสี่ยง เงินที่ลุ้นได้ และ win rate ขั้นต่ำที่ต้องมีเพื่อเสมอตัว ใช้ได้กับทองคำ (XAUUSD) และตลาดอื่นทุกประเภท</p>
+    </div>
+
+    <div class="calc panel">
+      <div class="calc-grid">
+        <label>ราคาเข้า (Entry)<input id="e" type="number" min="0" step="any" value="4200"></label>
+        <label>ราคา Stop loss<input id="s" type="number" min="0" step="any" value="4188"></label>
+        <label>ราคา Take profit<input id="t" type="number" min="0" step="any" value="4224"></label>
+        <label>ขนาด lot<input id="lot" type="number" min="0" step="0.01" value="0.05"></label>
+        <label>Contract size (100 = ทองคำ, 100000 = Forex)<input id="cs" type="number" min="0" step="any" value="100"></label>
+        <label>ต้นทุนต่อออเดอร์ (USD, ไม่ใส่ก็ได้)<input id="c" type="number" min="0" step="any" value="0"></label>
+      </div>
+      <div class="calc-out">
+        <div><small>Risk : reward</small><b id="o_rr">-</b></div>
+        <div><small>เงินที่เสี่ยง</small><b id="o_r">-</b></div>
+        <div><small>กำไรที่ลุ้นได้</small><b id="o_w">-</b></div>
+        <div><small>Win rate ขั้นต่ำที่เสมอตัว</small><b id="o_be">-</b></div>
+      </div>
+      <p class="calc-warn" id="o_warn"></p>
+      <p class="note-small" id="o_targets"></p>
+    </div>
+
+    <article class="article">
+      <h2>risk reward คือ อะไร และคำนวณอย่างไร</h2>
+      <pre class="formula">R:R = |Take profit − Entry| ÷ |Entry − Stop loss|
+Win rate ที่เสมอตัว = 1 ÷ (1 + R)</pre>
+      <p>RR ratio เปรียบเทียบสิ่งที่คุณตั้งใจจะได้กับสิ่งที่ยอมเสีย ออเดอร์ที่ตั้ง stop 12.00 และเป้า 24.00 คือ <strong>1 : 2</strong> ที่ 1 : 2 คุณแค่ต้องถูกมากกว่า 1 ใน 3 ออเดอร์ก็เสมอตัว (ก่อนหักต้นทุน) ส่วนที่ 1 : 1 ต้องถูกมากกว่าครึ่ง</p>
+      <table>
+        <thead><tr><th>R:R</th><th>Win rate ที่เสมอตัว</th></tr></thead>
+        <tbody>
+          <tr><td>1 : 0.5</td><td>66.7%</td></tr>
+          <tr><td>1 : 1</td><td>50.0%</td></tr>
+          <tr><td>1 : 1.5</td><td>40.0%</td></tr>
+          <tr><td>1 : 2</td><td>33.3%</td></tr>
+          <tr><td>1 : 3</td><td>25.0%</td></tr>
+        </tbody>
+      </table>
+      <p>อัตราส่วนที่สูงกว่าไม่ได้ดีกว่าเสมอไป เพราะเป้าที่ไกลมักถูกแตะน้อยกว่า สิ่งสำคัญคืออัตราส่วนควบคู่กับความถี่ที่วิธีเทรดของคุณไปถึงเป้าจริง ซึ่งต้องทดสอบจึงจะรู้</p>
+
+      <h2>ตัวอย่างการคำนวณ risk reward</h2>
+      <div class="callout"><strong>ทองคำ ฝั่งซื้อ</strong> Entry 4,200, stop 4,188 (12.00), เป้า 4,224 (24.00), 0.05 lot ความเสี่ยง = 0.05 × 100 × 12 = <strong>60 USD</strong>, กำไรที่ลุ้น = 0.05 × 100 × 24 = <strong>120 USD</strong>, R:R 1 : 2, win rate ที่เสมอตัว 33.3%</div>
+      <div class="callout"><strong>ทองคำ ฝั่งขาย</strong> Entry 4,215, stop 4,223 (8.00), เป้า 4,203 (12.00), 0.10 lot เสี่ยง 80 USD, กำไรที่ลุ้น 120 USD, R:R 1 : 1.5, เสมอตัวที่ 40%</div>
+      <div class="callout"><strong>เมื่อรวมต้นทุน</strong> ถ้า spread และค่าคอมมิชชันรวม 5 USD ในตัวอย่างแรก กำไรจริงจะเป็น 115 และความเสี่ยงจริง 65 USD ทำให้ R:R ลดเหลือ 1 : 1.77 และ win rate ที่เสมอตัวเพิ่มเป็นประมาณ 36%</div>
+
+      <h2>ใช้ร่วมกับเครื่องมืออื่น</h2>
+      <ul>
+        <li>เลือกจุด stop ก่อน (<a href="../../../learn/gold-stop-loss-atr/">วิธีตั้ง stop ด้วย ATR</a> (ภาษาอังกฤษ)) แล้วคำนวณขนาดออเดอร์ด้วย<a href="../../../th/tools/gold-lot-size-calculator/">เครื่องคำนวณ lot XAUUSD</a></li>
+        <li>ดูมูลค่าต่อ pip เป็นดอลลาร์ด้วย<a href="../../../th/tools/xauusd-pip-value-calculator/">เครื่องคำนวณ pip value</a> และดู margin ด้วย<a href="../../../th/tools/margin-calculator/">เครื่องคำนวณ margin</a></li>
+        <li>EA ของ GoldLab หลายตัวตั้งเป้าเป็นจำนวนเท่าของ stop (R-multiple) เช่น <a href="../../../ea/london-breakout/">London Breakout EA</a> (ค่าเริ่มต้น 2R) และ <a href="../../../ea/fibo-pullback/">Fibonacci pullback EA</a> (ภาษาอังกฤษ)</li>
+      </ul>
+
+      <section class="faq">
+        <h2>คำถามที่พบบ่อย</h2>
+        <h3>risk reward ที่ดีสำหรับทองคำคือเท่าไหร่?</h3>
+        <p>เทรดเดอร์หลายคนมองหาอย่างน้อย 1 : 1.5 ถึง 1 : 2 แต่ไม่มีอัตราส่วนไหนดีโดยลำพัง ต้องสอดคล้องกับความถี่ที่กลยุทธ์ของคุณไปถึงเป้า รวมทั้ง spread และค่าคอมมิชชัน</p>
+        <h3>คำนวณ risk reward อย่างไร?</h3>
+        <p>นำระยะจากราคาเข้าถึง take profit หารด้วยระยะจากราคาเข้าถึง stop loss เป้า 24.00 และ stop 12.00 ได้ 2 เขียนเป็น 1 : 2</p>
+        <h3>RR ratio 1:2 ต้องมี win rate เท่าไหร่?</h3>
+        <p>มากกว่า 33.3% เล็กน้อยก็เสมอตัว (ก่อนหักต้นทุน) เพราะออเดอร์ชนะ 1 ครั้งที่ได้ 2R ชดเชยออเดอร์แพ้ 2 ครั้งที่เสีย 1R ได้</p>
+        <h3>เครื่องคำนวณนี้ใช้กับออเดอร์ขายได้ไหม?</h3>
+        <p>ได้ ระบบดูทิศทางจากราคาเอง ถ้า stop อยู่เหนือราคาเข้าและเป้าอยู่ต่ำกว่า จะถือเป็นออเดอร์ขาย</p>
+      </section>
+      <p class="note-small">เพื่อการศึกษาเท่านั้น ไม่ใช่คำแนะนำการลงทุน การเทรดทองคำและ CFD มีความเสี่ยงสูง คุณอาจสูญเสียเงินทุนทั้งหมด</p>
+    </article>
+  </div>
+</main>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var f = function (n, d) { return n.toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d }); };
+  function calc() {
+    var e = +$("e").value, s = +$("s").value, t = +$("t").value, lot = +$("lot").value, cs = +$("cs").value, c = +$("c").value || 0;
+    var out = ["o_rr", "o_r", "o_w", "o_be"];
+    var dir = s < e ? 1 : -1, risk = Math.abs(e - s), rew = (t - e) * dir;
+    if (!(e > 0 && s > 0 && t > 0 && risk > 0)) {
+      out.forEach(function (k) { $(k).textContent = "-"; }); $("o_targets").textContent = "";
+      $("o_warn").textContent = "กรอกราคาเข้า, stop loss และ take profit (stop ต้องไม่เท่ากับราคาเข้า)";
+      return;
+    }
+    if (rew <= 0) {
+      out.forEach(function (k) { $(k).textContent = "-"; }); $("o_targets").textContent = "";
+      $("o_warn").textContent = "Take profit ต้องอยู่คนละฝั่งของราคาเข้ากับ stop loss";
+      return;
+    }
+    var size = lot > 0 && cs > 0 ? lot * cs : 0;
+    var rMoney = risk * size + c, wMoney = rew * size - c;
+    var R = size ? wMoney / rMoney : rew / risk;
+    $("o_rr").textContent = "1 : " + f(R, 2) + (dir > 0 ? " (ซื้อ)" : " (ขาย)");
+    $("o_r").textContent = size ? f(rMoney, 2) + " USD" : f(risk, 2) + " ราคา";
+    $("o_w").textContent = size ? f(wMoney, 2) + " USD" : f(rew, 2) + " ราคา";
+    $("o_be").textContent = R > 0 ? f(100 / (1 + R), 1) + "%" : "-";
+    $("o_warn").textContent = R <= 0 ? "ต้นทุนมากกว่ากำไรที่ลุ้นได้" : "";
+    var d = e < 100 ? 5 : 2;
+    $("o_targets").textContent = "เป้าหมายสำหรับ stop นี้: 1R = " + f(e + dir * risk, d) + " · 2R = " + f(e + dir * 2 * risk, d) + " · 3R = " + f(e + dir * 3 * risk, d);
+  }
+  ["e", "s", "t", "lot", "cs", "c"].forEach(function (k) { $(k).addEventListener("input", calc); });
+  calc();
+})();
+</script>
+
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../../th/"><img src="../../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../../tools/risk-reward-calculator/">English</a> <a href="../../../th/tools/risk-reward-calculator/" aria-current="page">ไทย</a> <a href="../../../vi/">Tiếng Việt</a> <a href="../../../id/">Bahasa Indonesia</a> <a href="../../../es/">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <nav class="popular"><a href="../../../th/tools/gold-lot-size-calculator/">คำนวณ lot ทองคำ</a><a href="../../../th/tools/xauusd-pip-value-calculator/">คำนวณ pip ทองคำ</a><a href="../../../th/tools/margin-calculator/">คำนวณ margin</a><a href="../../../th/tools/risk-reward-calculator/">คำนวณ risk reward</a><a href="../../../ea/">MT5 gold EAs</a><a href="../../../learn/">Gold trading guides</a><a href="../../../th/#method">วิธีของเรา</a><a href="../../../th/#risk">ความเสี่ยง</a></nav>
+    <nav class="legal"><a href="../../../buy/">Buy</a><a href="../../../contact/">Contact</a><a href="../../../terms/">Terms</a><a href="../../../refund/">Refunds</a><a href="../../../privacy/">Privacy</a></nav>
+    <p>GoldLab ให้ข้อมูลเพื่อการศึกษาเท่านั้น และไม่ใช่ที่ปรึกษาการลงทุนที่ได้รับใบอนุญาต ข้อมูลตลาดอาจล่าช้าหรือคลาดเคลื่อน</p>
+    <p>© 2026 GoldLab. สงวนลิขสิทธิ์</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XAUUSD Profit Calculator: Gold Pips to USD · GoldLab</title>
+<meta name="description" content="Free XAUUSD profit calculator: profit or loss of a gold trade from lot size, open and close price in USD and pips. Plus pips-to-dollars.">
+<meta property="og:title" content="XAUUSD Profit Calculator: Gold Pips to USD · GoldLab">
+<meta property="og:description" content="Free XAUUSD profit calculator: profit or loss of a gold trade from lot size, open and close price in USD and pips. Plus pips-to-dollars.">
+<meta property="og:image" content="https://goldlab.trade/assets/og/tool-xauusd-profit-calculator.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://goldlab.trade/tools/xauusd-profit-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GoldLab">
+<link rel="canonical" href="https://goldlab.trade/tools/xauusd-profit-calculator/">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "XAUUSD Profit Calculator: Gold Pips to USD", "url": "https://goldlab.trade/tools/xauusd-profit-calculator/", "description": "Free XAUUSD profit calculator: profit or loss of a gold trade from lot size, open and close price in USD and pips. Plus pips-to-dollars.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any (web browser)", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "GoldLab", "url": "https://goldlab.trade/"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I calculate profit on gold?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply the price move by the lot size and the contract size. With 100 oz per lot, a 15.50 move on 0.10 lot is 15.50 × 0.10 × 100 = 155 USD. For a sell, the move counts as profit when the price falls."}}, {"@type": "Question", "name": "How much profit is 100 pips on XAUUSD?", "acceptedAnswer": {"@type": "Answer", "text": "With 1 pip = 0.10, 100 pips is a 10.00 price move: 1,000 USD on 1.00 lot, 100 USD on 0.10 lot and 10 USD on 0.01 lot."}}, {"@type": "Question", "name": "How much is a 1 dollar move in gold worth?", "acceptedAnswer": {"@type": "Answer", "text": "A 1.00 USD move is worth 100 USD on 1 standard lot (100 oz), 10 USD on 0.10 lot and 1 USD on 0.01 lot."}}, {"@type": "Question", "name": "Does the calculator include spread?", "acceptedAnswer": {"@type": "Answer", "text": "Use real fill prices: a buy opens at the ask and closes at the bid, so the spread is already inside the open and close prices you enter. Add commission and swap in the cost field."}}, {"@type": "Question", "name": "Why is my broker's profit slightly different?", "acceptedAnswer": {"@type": "Answer", "text": "Usually because of a different contract size, swap, commission, or an account in a currency other than USD - the broker converts the USD result at its own rate."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GoldLab", "item": "https://goldlab.trade/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://goldlab.trade/tools/"}, {"@type": "ListItem", "position": 3, "name": "XAUUSD profit calculator", "item": "https://goldlab.trade/tools/xauusd-profit-calculator/"}]}]</script>
+<meta name="theme-color" content="#070d1a">
+<meta name="google-site-verification" content="AoyS69iYM0KUBS375ShKPWs4FY5b3LdPtCelTJK63AM" />
+<link rel="alternate" hreflang="en" href="https://goldlab.trade/tools/xauusd-profit-calculator/">
+<link rel="alternate" hreflang="x-default" href="https://goldlab.trade/tools/xauusd-profit-calculator/">
+<link rel="icon" href="../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt="GoldLab logo" width="40" height="40"><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../#levels">Today's levels</a>
+      <a href="../../#lessons">Lessons</a>
+      <a href="../../tools/">Tools</a>
+      <a href="../../ea/" class="nav-ea">EAs</a>
+      <a href="../../learn/">Learn</a>
+      <a href="../../buy/" class="nav-ea">Buy</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../tools/xauusd-profit-calculator/" selected>English</option><option value="../../th/">ไทย</option><option value="../../vi/">Tiếng Việt</option><option value="../../id/">Bahasa Indonesia</option><option value="../../es/">Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../">GoldLab</a> <span>/</span> <a href="../../tools/">Tools</a> <span>/</span> <span>Profit calculator</span></nav>
+    <div class="article-head">
+      <div class="kicker">Free tool · XAUUSD · Forex</div>
+      <h1>XAUUSD Profit Calculator</h1>
+      <p class="lead">Work out the profit or loss of a gold trade from lot size, open and close price - buy or sell - in USD, pips and points. A second calculator turns pips into dollars and tells you how many pips a profit target needs. Runs in your browser.</p>
+    </div>
+
+    <div class="calc panel">
+      <div class="calc-grid">
+        <label>Instrument<select id="sym">
+          <option value="XAUUSD">XAUUSD (gold)</option>
+          <option value="XAGUSD">XAGUSD (silver)</option>
+          <option value="EURUSD">EURUSD</option>
+          <option value="GBPUSD">GBPUSD</option>
+          <option value="USDJPY">USDJPY</option>
+          <option value="custom">Custom (quote in USD)</option>
+        </select></label>
+        <label>Direction<select id="dir">
+          <option value="buy">Buy (long)</option>
+          <option value="sell">Sell (short)</option>
+        </select></label>
+        <label>Lot size<input id="lot" type="number" min="0" step="0.01" value="0.10"></label>
+        <label>Open price<input id="open" type="number" min="0" step="any" value="4200.00"></label>
+        <label>Close price<input id="close" type="number" min="0" step="any" value="4215.50"></label>
+        <label>Contract size (units per 1.00 lot)<input id="cs" type="number" min="0" step="any" value="100"></label>
+        <label>Pip size (price step)<input id="pip" type="number" min="0" step="any" value="0.1"></label>
+        <label>Commission + swap (USD, cost)<input id="cost" type="number" min="0" step="any" value="0"></label>
+      </div>
+      <div class="calc-out">
+        <div><small>Net profit / loss</small><b id="o_net">-</b></div>
+        <div><small>Gross before costs</small><b id="o_gross">-</b></div>
+        <div><small>Price move</small><b id="o_move">-</b></div>
+        <div><small>Pips / points</small><b id="o_pips">-</b></div>
+      </div>
+      <p class="calc-warn" id="o_warn"></p>
+    </div>
+
+    <h2 class="calc-h">XAUUSD pips profit calculator</h2>
+    <div class="calc panel">
+      <div class="calc-grid">
+        <label>Lot size<input id="p_lot" type="number" min="0" step="0.01" value="1"></label>
+        <label>Pips gained or lost<input id="p_pips" type="number" step="any" value="50"></label>
+        <label>Profit target (USD)<input id="p_target" type="number" min="0" step="any" value="100"></label>
+        <label>Contract size (oz per 1.00 lot)<input id="p_cs" type="number" min="0" step="any" value="100"></label>
+        <label>Pip size (gold, usually 0.10)<input id="p_pip" type="number" min="0" step="any" value="0.1"></label>
+      </div>
+      <div class="calc-out">
+        <div><small>Profit for those pips</small><b id="p_out">-</b></div>
+        <div><small>Value of 1 pip</small><b id="p_one">-</b></div>
+        <div><small>Pips needed for the target</small><b id="p_need">-</b></div>
+        <div><small>Price move for the target</small><b id="p_dist">-</b></div>
+      </div>
+    </div>
+
+    <article class="article">
+      <h2>How to calculate profit on XAUUSD</h2>
+      <p>Gold is quoted in US dollars, so the profit of an XAUUSD trade is simply the price move multiplied by the ounces you hold. With the standard contract of <strong>100 oz per 1.00 lot</strong>:</p>
+      <pre class="formula">Profit (USD) = (Close − Open) × Lots × Contract size      for a buy
+Profit (USD) = (Open − Close) × Lots × Contract size      for a sell</pre>
+      <p>So every 1.00 USD the gold price moves is worth 100 USD on 1 lot, 10 USD on 0.10 lot and 1 USD on 0.01 lot. Subtract commission and swap to get the net result. Your broker may use a different contract size - check it in MetaTrader under XAUUSD → <em>Specification</em> → <em>Contract size</em>.</p>
+
+      <h2>Worked examples</h2>
+      <div class="callout"><strong>Buy, winning.</strong> 0.10 lot bought at 4,200.00, closed at 4,215.50. Move = +15.50. Profit = 15.50 × 0.10 × 100 = <strong>+155.00 USD</strong> (155 pips of 0.10, 1,550 points of 0.01).</div>
+      <div class="callout"><strong>Sell, winning.</strong> 0.50 lot sold at 4,230.00, closed at 4,218.00. Price fell 12.00, which is in your favour on a sell. Profit = 12.00 × 0.50 × 100 = <strong>+600.00 USD</strong>.</div>
+      <div class="callout"><strong>Buy, losing.</strong> 0.05 lot bought at 4,200.00, stopped out at 4,188.00. Move = −12.00. Result = −12.00 × 0.05 × 100 = <strong>−60.00 USD</strong>, before costs.</div>
+
+      <h2>Gold pips to dollars</h2>
+      <p>With 1 pip = 0.10 in price, one pip is worth <strong>10 USD per 1.00 lot</strong>. That makes pip maths quick:</p>
+      <table>
+        <thead><tr><th>Lot</th><th>10 pips</th><th>50 pips</th><th>100 pips</th><th>500 pips</th></tr></thead>
+        <tbody>
+          <tr><td>0.01</td><td>$1</td><td>$5</td><td>$10</td><td>$50</td></tr>
+          <tr><td>0.10</td><td>$10</td><td>$50</td><td>$100</td><td>$500</td></tr>
+          <tr><td>0.50</td><td>$50</td><td>$250</td><td>$500</td><td>$2,500</td></tr>
+          <tr><td>1.00</td><td>$100</td><td>$500</td><td>$1,000</td><td>$5,000</td></tr>
+        </tbody>
+      </table>
+      <p>Some traders and websites call 0.01 a pip, which makes every number ten times bigger. If a figure looks off, compare price distance instead: 4,200.00 → 4,210.00 is a 10.00 move, worth 1,000 USD on 1 lot whatever the unit is called. More detail: <a href="../../learn/xauusd-pip-value/">XAUUSD pip value explained</a> and the <a href="../../tools/xauusd-pip-value-calculator/">pip value calculator</a>.</p>
+
+      <h2>Silver and forex</h2>
+      <ul>
+        <li><b>XAGUSD:</b> usually 5,000 oz per lot. A move from 50.00 to 50.40 on 1 lot = 0.40 × 5,000 = <strong>2,000 USD</strong>.</li>
+        <li><b>EURUSD / GBPUSD:</b> 100,000 units per lot, so 1.0800 → 1.0850 on 1 lot = 0.0050 × 100,000 = <strong>500 USD</strong> (50 pips).</li>
+        <li><b>USDJPY:</b> profit is in yen first, then converted at the close price. 0.50 lot from 150.00 to 150.80 = 0.80 × 50,000 = 40,000 JPY ÷ 150.80 = <strong>265.25 USD</strong>.</li>
+      </ul>
+
+      <p>Plan the trade before you take it: size it with the <a href="../../tools/gold-lot-size-calculator/">XAUUSD lot size calculator</a>, check the <a href="../../tools/risk-reward-calculator/">risk reward</a> and make sure the account holds it with the <a href="../../tools/margin-calculator/">margin calculator</a>. GoldLab <a href="../../ea/">Expert Advisors</a> do this maths on every order.</p>
+
+      <section class="faq">
+        <h2>FAQ</h2>
+        <h3>How do I calculate profit on gold?</h3>
+        <p>Multiply the price move by the lot size and the contract size. With 100 oz per lot, a 15.50 move on 0.10 lot is 15.50 × 0.10 × 100 = 155 USD. For a sell, the move counts as profit when the price falls.</p>
+        <h3>How much profit is 100 pips on XAUUSD?</h3>
+        <p>With 1 pip = 0.10, 100 pips is a 10.00 price move: 1,000 USD on 1.00 lot, 100 USD on 0.10 lot and 10 USD on 0.01 lot.</p>
+        <h3>How much is a 1 dollar move in gold worth?</h3>
+        <p>A 1.00 USD move is worth 100 USD on 1 standard lot (100 oz), 10 USD on 0.10 lot and 1 USD on 0.01 lot.</p>
+        <h3>Does the calculator include spread?</h3>
+        <p>Use real fill prices: a buy opens at the ask and closes at the bid, so the spread is already inside the open and close prices you enter. Add commission and swap in the cost field.</p>
+        <h3>Why is my broker's profit slightly different?</h3>
+        <p>Usually because of a different contract size, swap, commission, or an account in a currency other than USD - the broker converts the USD result at its own rate.</p>
+      </section>
+      <p class="note-small">For education only, not investment advice. Results are estimates; contract sizes, costs and conversions vary by broker. Trading gold and CFDs is high risk and you can lose more than you expect.</p>
+    </article>
+  </div>
+</main>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var f = function (n, d) { return n.toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d }); };
+  var sgn = function (n) { return (n > 0 ? "+" : n < 0 ? "−" : "") + f(Math.abs(n), 2) + " USD"; };
+  // contract size, pip size, open, close, mode (q = quote is USD, b = USD is base: convert at close)
+  var P = { XAUUSD: [100, 0.1, 4200, 4215.5, "q"], XAGUSD: [5000, 0.01, 50, 50.4, "q"], EURUSD: [100000, 0.0001, 1.08, 1.085, "q"],
+            GBPUSD: [100000, 0.0001, 1.27, 1.275, "q"], USDJPY: [100000, 0.01, 150, 150.8, "b"] };
+  var mode = "q";
+  function preset() {
+    var p = P[$("sym").value];
+    mode = p ? p[4] : "q";
+    if (p) { $("cs").value = p[0]; $("pip").value = p[1]; $("open").value = p[2]; $("close").value = p[3]; }
+    calc();
+  }
+  function calc() {
+    var lot = +$("lot").value, op = +$("open").value, cl = +$("close").value, cs = +$("cs").value, pip = +$("pip").value, cost = +$("cost").value || 0;
+    if (!(lot > 0 && op > 0 && cl > 0 && cs > 0 && pip > 0)) {
+      ["o_net", "o_gross", "o_move", "o_pips"].forEach(function (x) { $(x).textContent = "-"; });
+      $("o_warn").textContent = "Enter a lot size, open and close price, contract size and pip size.";
+      return;
+    }
+    var move = $("dir").value === "buy" ? cl - op : op - cl; // in price, positive = in your favour
+    var gross = move * lot * cs;
+    if (mode === "b") gross = gross / cl; // quote currency (e.g. JPY) -> USD at the close price
+    var net = gross - cost;
+    var dec = pip < 0.001 ? 5 : pip < 0.1 ? 3 : 2;
+    $("o_net").textContent = sgn(net);
+    $("o_gross").textContent = sgn(gross);
+    $("o_move").textContent = (move > 0 ? "+" : move < 0 ? "−" : "") + f(Math.abs(move), dec);
+    var neg = move < 0 ? "−" : "";
+    $("o_pips").textContent = neg + f(Math.abs(move / pip), 1) + " pips / " + neg + f(Math.abs(move / pip * 10), 0) + " points";
+    $("o_warn").textContent = cost > 0 && gross > 0 && net < 0 ? "Costs are larger than the gross profit on this trade." : "";
+  }
+  function pcalc() {
+    var lot = +$("p_lot").value, pips = +$("p_pips").value, target = +$("p_target").value, cs = +$("p_cs").value, pip = +$("p_pip").value;
+    if (!(lot > 0 && cs > 0 && pip > 0)) { ["p_out", "p_one", "p_need", "p_dist"].forEach(function (x) { $(x).textContent = "-"; }); return; }
+    var one = lot * cs * pip;
+    $("p_out").textContent = sgn(one * (pips || 0));
+    $("p_one").textContent = f(one, 2) + " USD";
+    $("p_need").textContent = target > 0 ? f(target / one, 1) + " pips" : "-";
+    $("p_dist").textContent = target > 0 ? f(target / one * pip, 2) : "-";
+  }
+  $("sym").addEventListener("change", preset);
+  ["dir"].forEach(function (k) { $(k).addEventListener("change", calc); });
+  ["lot", "open", "close", "cs", "pip", "cost"].forEach(function (k) { $(k).addEventListener("input", calc); });
+  ["p_lot", "p_pips", "p_target", "p_cs", "p_pip"].forEach(function (k) { $(k).addEventListener("input", pcalc); });
+  preset();
+  pcalc();
+})();
+</script>
+
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../tools/xauusd-profit-calculator/" aria-current="page">English</a> <a href="../../th/">ไทย</a> <a href="../../vi/">Tiếng Việt</a> <a href="../../id/">Bahasa Indonesia</a> <a href="../../es/">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <nav class="popular"><a href="../../tools/gold-lot-size-calculator/">XAUUSD lot size calculator</a><a href="../../tools/xauusd-pip-value-calculator/">Pip value calculator</a><a href="../../tools/margin-calculator/">Margin calculator</a><a href="../../tools/risk-reward-calculator/">Risk reward calculator</a><a href="../../ea/">MT5 gold EAs</a><a href="../../learn/">Gold trading guides</a><a href="../../#method">Our method</a><a href="../../#risk">Risk</a></nav>
+    <nav class="legal"><a href="../../buy/">Buy</a><a href="../../contact/">Contact</a><a href="../../terms/">Terms</a><a href="../../refund/">Refunds</a><a href="../../privacy/">Privacy</a></nav>
+    <p>GoldLab provides educational content only and is not a licensed investment adviser. Market data may be delayed or inaccurate.</p>
+    <p>© 2026 GoldLab. All rights reserved.</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+</body>
+</html>

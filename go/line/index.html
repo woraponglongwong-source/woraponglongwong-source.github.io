@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>GoldLab</title>
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<noscript><meta http-equiv="refresh" content="0;url=/"></noscript>
+<script>
+(function () {
+  var u = new URL(new URLSearchParams(location.search).get("to") || "/", location.href);
+  if (u.origin !== location.origin) u = new URL("/", location.href);
+  var done = false, go = function () { if (!done) { done = true; location.replace(u.href); } };
+  addEventListener("load", function () { setTimeout(go, 300); });  // load waits for the deferred beacon
+  setTimeout(go, 1500);
+})();
+</script></head>
+<body><p><a href="/">GoldLab</a></p><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "677fc36224a84b3caab31be47f191410"}'></script>
+</body></html>

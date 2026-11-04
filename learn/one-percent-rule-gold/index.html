@@ -96,7 +96,7 @@
 <pre class="formula">Balance after n losses = (1 − risk)^n
 Gain to recover = 1 ÷ remaining balance − 1</pre>
 
-<p>The recovery column is the key. Losses and gains are not symmetrical: after losing 40% you need about 67% just to get back to the start. At 1% per trade, a ten-trade losing streak is painful but recoverable. At 5% it can change how you trade for months.</p>
+<p>The recovery column is the key. Losses and gains are not symmetrical: after losing 40% you need about 67% just to get back to the start. At 1% per trade, a ten-trade losing streak is painful but recoverable. At 5% it can change how you trade for months. EAs that double the lot after a loss skip this protection entirely - see <a href="../../learn/martingale-vs-grid-vs-stop-loss-ea/">martingale vs grid vs stop-loss EAs</a> for the numbers.</p>
 
 <h2>Daily loss limits</h2>
 <p>The 1% rule controls a single trade. A daily loss limit controls a bad day, which is when traders are most likely to break their own rules. A common approach is to stop trading for the day after losing 2% to 3% of the account, which at 1% per trade means two or three losing trades. This stops one emotional session from turning into a large drawdown. Automated systems can enforce it without discussion; every GoldLab EA, for example the <a href="../../ea/turtle-channel/">Turtle Channel EA</a>, combines a stop loss on each trade, risk-percent sizing and a daily loss limit, with no martingale or grid. If you are setting one up for the first time, see <a href="../../learn/how-to-install-ea-mt5/">how to install an EA in MT5</a>.</p>

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XAUUSD Leverage Explained: 1:100 vs 1:500 on Gold · GoldLab</title>
+<meta name="description" content="XAUUSD leverage explained: what 1:100 to 1:1000 changes on gold, why lot size sets your loss, and how to work out effective leverage with examples.">
+<meta property="og:title" content="XAUUSD Leverage Explained: 1:100 vs 1:500 on Gold · GoldLab">
+<meta property="og:description" content="XAUUSD leverage explained: what 1:100 to 1:1000 changes on gold, why lot size sets your loss, and how to work out effective leverage with examples.">
+<meta property="og:image" content="https://goldlab.trade/assets/og/learn-xauusd-leverage-explained.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://goldlab.trade/learn/xauusd-leverage-explained/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GoldLab">
+<link rel="canonical" href="https://goldlab.trade/learn/xauusd-leverage-explained/">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "XAUUSD Leverage Explained: What It Really Changes on Gold", "description": "XAUUSD leverage explained: what 1:100 to 1:1000 changes on gold, why lot size sets your loss, and how to work out effective leverage with examples.", "inLanguage": "en", "url": "https://goldlab.trade/learn/xauusd-leverage-explained/", "image": "https://goldlab.trade/assets/og/learn-xauusd-leverage-explained.jpg", "datePublished": "2026-11-06", "dateModified": "2026-11-06", "mainEntityOfPage": "https://goldlab.trade/learn/xauusd-leverage-explained/", "author": {"@type": "Organization", "name": "GoldLab", "url": "https://goldlab.trade/"}, "publisher": {"@type": "Organization", "name": "GoldLab", "logo": {"@type": "ImageObject", "url": "https://goldlab.trade/assets/logo.png"}}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What leverage does XAUUSD use?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the broker and regulator. Retail clients in the EU, UK and Australia are capped at 1:20 on gold, while offshore brokers often offer 1:100 to 1:2000 or more. Check the XAUUSD specification in MT5, because the gold limit can differ from your account leverage."}}, {"@type": "Question", "name": "What is a good leverage for gold trading?", "acceptedAnswer": {"@type": "Answer", "text": "No single number fits everyone. What matters more is the lot size. If you size each trade from a fixed risk and a real stop, the examples above show that margin at 1:100 is already low. A higher setting mainly adds room to open larger positions."}}, {"@type": "Question", "name": "Does higher leverage mean more risk on gold?", "acceptedAnswer": {"@type": "Answer", "text": "Not at the same lot size. A 0.10 lot with an 8 USD stop loses 80 USD at 1:50 and at 1:1000. Risk rises when the extra margin room is used to trade bigger lots."}}, {"@type": "Question", "name": "How many lots can I trade with 100 USD at 1:500?", "acceptedAnswer": {"@type": "Answer", "text": "At a price of 4,200, the margin limit is about 0.11 lot (100 × 500 ÷ 420,000), but that is a limit, not a target. At that size a move of about 5 USD could trigger a 50% stop out. Even 0.01 lot risks 8% of the account on an 8 USD stop."}}, {"@type": "Question", "name": "Is 1:2000 or unlimited leverage dangerous?", "acceptedAnswer": {"@type": "Answer", "text": "The setting alone does not raise the loss at a fixed lot, but it removes almost every limit on position size. Some brokers also cut it automatically during news, so do not build a position that depends on it."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GoldLab", "item": "https://goldlab.trade/"}, {"@type": "ListItem", "position": 2, "name": "Learn", "item": "https://goldlab.trade/learn/"}, {"@type": "ListItem", "position": 3, "name": "XAUUSD Leverage Explained: What It Really Changes on Gold", "item": "https://goldlab.trade/learn/xauusd-leverage-explained/"}]}]</script>
+<meta name="theme-color" content="#070d1a">
+<meta name="google-site-verification" content="AoyS69iYM0KUBS375ShKPWs4FY5b3LdPtCelTJK63AM" />
+<link rel="alternate" hreflang="en" href="https://goldlab.trade/learn/xauusd-leverage-explained/">
+<link rel="alternate" hreflang="x-default" href="https://goldlab.trade/learn/xauusd-leverage-explained/">
+<link rel="icon" href="../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt="GoldLab logo" width="40" height="40"><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../#levels">Today's levels</a>
+      <a href="../../#lessons">Lessons</a>
+      <a href="../../tools/">Tools</a>
+      <a href="../../ea/" class="nav-ea">EAs</a>
+      <a href="../../learn/">Learn</a>
+      <a href="../../buy/" class="nav-ea">Buy</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../learn/xauusd-leverage-explained/" selected>English</option><option value="../../th/">ไทย</option><option value="../../vi/">Tiếng Việt</option><option value="../../id/">Bahasa Indonesia</option><option value="../../es/">Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../">GoldLab</a> <span>/</span> <a href="../../learn/">Learn</a></nav>
+    <header class="article-head">
+      <div class="kicker">Guide · 7 min read · Updated 2026-11-06</div>
+      <h1>XAUUSD Leverage Explained: What It Really Changes on Gold</h1>
+      <p class="lead">XAUUSD leverage explained: what 1:100 to 1:1000 changes on gold, why lot size sets your loss, and how to work out effective leverage with examples.</p>
+    </header>
+    <article class="article">
+<p class="intro">Brokers advertise XAUUSD leverage of 1:500, 1:2000 or even "unlimited", and many traders assume a bigger number means more risk or more profit. Neither is quite true. Leverage decides how much margin a position locks up and how far price can move before a stop out. Your loss on a trade comes from something else: lot size and stop distance. This guide shows what leverage changes on gold, what it does not, and how to measure the number that matters, your effective leverage.</p>
+
+<h2>What leverage means on XAUUSD</h2>
+<p>Leverage is the ratio between the value of a position and the margin the broker asks you to set aside. All the examples here use the standard contract of <strong>1 lot = 100 oz</strong>, an example gold price of 4,200 and a USD account.</p>
+<ul>
+<li><strong>Notional value</strong> of 1 lot: 100 × 4,200 = 420,000 USD. For 0.10 lot it is 42,000 USD, and for 0.01 lot it is 4,200 USD.</li>
+<li><strong>Margin</strong> = notional value ÷ leverage. At 1:100, 0.10 lot needs 420 USD. At 1:500 it needs 84 USD.</li>
+</ul>
+<p>So 1:100 means you control 100 USD of gold for each 1 USD of margin. Margin is a deposit, not a cost, and it is released when the trade closes. You can check any combination in the <a href="../../tools/margin-calculator/">margin calculator</a>, and <a href="../../learn/margin-for-1-lot-gold/">how much margin 1 lot of gold needs</a> has the full table.</p>
+
+<h2>The same trade at different leverage</h2>
+<p>Take a 1,000 USD account buying 0.10 lot of XAUUSD with an 8 USD stop loss, and assume the broker stops out at a 50% margin level. Stop out levels differ by broker, so check yours.</p>
+<table><thead><tr><th>Leverage</th><th>Margin</th><th>Margin level</th><th>Gold drop to stop out</th><th>Loss at the 8 USD stop</th></tr></thead><tbody>
+<tr><td>1:20</td><td>2,100 USD</td><td colspan="3">Cannot open: margin is above the balance</td></tr>
+<tr><td>1:50</td><td>840 USD</td><td>119%</td><td>58 USD</td><td>80 USD</td></tr>
+<tr><td>1:100</td><td>420 USD</td><td>238%</td><td>79 USD</td><td>80 USD</td></tr>
+<tr><td>1:500</td><td>84 USD</td><td>1,190%</td><td>95.80 USD</td><td>80 USD</td></tr>
+<tr><td>1:1000</td><td>42 USD</td><td>2,381%</td><td>97.90 USD</td><td>80 USD</td></tr>
+</tbody></table>
+<p>The last column never changes. At 0.10 lot, each 1 USD move in gold is worth 10 USD, so an 8 USD stop costs 80 USD on every row. With the lot held constant, higher leverage actually moves the stop out further away, because less equity is tied up as margin.</p>
+<p>That 80 USD is also 8% of this account, far more than most risk rules allow. The lot size caused that, not the leverage setting.</p>
+
+<h2>Why high leverage still blows up accounts</h2>
+<p>If higher leverage is harmless at a fixed lot, why does it have a bad reputation? Because it removes the limit on how big a position you can open. Here is the largest position the same 1,000 USD account can hold, using the same 50% stop out:</p>
+<table><thead><tr><th>Leverage</th><th>Largest lot</th><th>Each 1 USD move</th><th>Gold move to stop out</th></tr></thead><tbody>
+<tr><td>1:100</td><td>0.23</td><td>23 USD</td><td>22.50 USD</td></tr>
+<tr><td>1:500</td><td>1.19</td><td>119 USD</td><td>4.20 USD</td></tr>
+<tr><td>1:1000</td><td>2.38</td><td>238 USD</td><td>2.10 USD</td></tr>
+</tbody></table>
+<p>A 2 to 4 USD move can happen within minutes on gold during a busy session. At the maximum lot, half the account can be gone before the trade has had any chance to work. High leverage does not force this, but it allows it. The <a href="../../tools/gold-lot-size-calculator/">lot size calculator</a> starts from your risk and stop instead.</p>
+
+<h2>Effective leverage: the number to watch</h2>
+<p>Account leverage is what the broker permits. <strong>Effective leverage</strong> is what you are actually using:</p>
+<p><strong>Effective leverage = notional value of open positions ÷ equity</strong></p>
+<p>The 0.10 lot trade on a 1,000 USD account has an effective leverage of 42,000 ÷ 1,000 = 42:1, whether the account is set to 1:100 or 1:1000. That is the figure that tells you how sensitive your equity is: at 42:1, a 1% move in gold changes equity by about 42%.</p>
+<p>If you size by risk, effective leverage follows from your stop distance:</p>
+<p><strong>Effective leverage = risk % × price ÷ stop distance</strong></p>
+<p>Here is a 10,000 USD account risking 1% (100 USD) per trade under the <a href="../../learn/one-percent-rule-gold/">1% risk rule</a>, with lots rounded down to the broker's 0.01 step:</p>
+<table><thead><tr><th>Stop distance</th><th>Lot</th><th>Effective leverage</th><th>Margin at 1:100</th></tr></thead><tbody>
+<tr><td>3 USD</td><td>0.33</td><td>about 14:1</td><td>1,386 USD</td></tr>
+<tr><td>8 USD</td><td>0.12</td><td>about 5:1</td><td>504 USD</td></tr>
+<tr><td>15 USD</td><td>0.06</td><td>about 2.5:1</td><td>252 USD</td></tr>
+<tr><td>30 USD</td><td>0.03</td><td>about 1.3:1</td><td>126 USD</td></tr>
+</tbody></table>
+<p>Even with a tight 3 USD stop, 1:100 leaves about 86% of the account as free margin. Risk-based sizing on gold rarely comes close to using 1:500. Tighter stops do raise effective leverage, so choose the stop first, for example with the <a href="../../learn/gold-stop-loss-atr/">ATR method</a>, and then the size.</p>
+
+<h2>Small accounts and the 0.01 lot problem</h2>
+<p>With 100 USD, the broker's minimum of 0.01 lot still controls 4,200 USD of gold, so effective leverage is already 42:1. An 8 USD stop at 0.01 lot costs 8 USD, or 8% of the account. Raising leverage from 1:100 to 1:500 cuts the margin from 42 USD to 8.40 USD, but the 8 USD loss stays exactly the same. Leverage can make a small trade possible. It cannot make it small relative to the account. If 0.01 lot is too large for your stop, the honest options are more capital, a cent or micro contract if your broker offers one, or practising on demo first.</p>
+
+<h2>Check the leverage your broker really applies to gold</h2>
+<ul>
+<li><strong>Account leverage may not apply to metals.</strong> Many brokers set a separate limit for XAUUSD. Right-click the symbol in MT5 and open Specification, then compare the margin shown in the order window with the formula above.</li>
+<li><strong>Leverage can change.</strong> Some brokers raise gold margin around major news, at weekends or as account equity grows, which can cut free margin while a trade is open.</li>
+<li><strong>Regulators set caps.</strong> Retail gold CFDs are limited to 1:20 in the EU, the UK and Australia, for example. Offshore brokers offer much more, with different client protections.</li>
+<li><strong>Stop out levels vary.</strong> Commonly they fall somewhere between 20% and 50%. Positions can also close worse than the level in a gap.</li>
+</ul>
+
+<h2>Leverage settings and EAs</h2>
+<p>An EA that sizes by risk uses the same math as above, so a higher account leverage should not change its lot unless margin was the limit. GoldLab's <a href="../../ea/london-breakout/">London Breakout EA</a> and <a href="../../ea/supertrend-rider/">Supertrend Rider EA</a>, for example, calculate lots from a risk % and a stop on every order, and reduce the lot if free margin is not enough. A fixed-lot EA is different: its risk changes with your balance, so check it against your account size. Either way, test on demo with your broker's real leverage first.</p>
+
+<div class="callout warn"><strong>Honest risk note.</strong> Leverage magnifies gains and losses on the money you put up, and a stop loss is not a guarantee. Fast markets and weekend gaps can fill beyond the stop, and not every broker offers negative balance protection. No leverage setting makes a trading method profitable, and the figures here are illustrations, not recommendations for your account.</div>
+
+<h2>Key takeaways</h2>
+<ul class="takeaways">
+<li>Leverage sets the margin; lot size and stop distance set the loss.</li>
+<li>At the same lot, higher leverage moves the stop out further away, not closer.</li>
+<li>High leverage hurts when it is used to open bigger lots: 1:1000 at the maximum lot can stop out on a 2 USD move.</li>
+<li>Track effective leverage (notional ÷ equity), not the number on the account.</li>
+</ul>
+
+<section class="faq">
+<h2>FAQ</h2>
+<h3>What leverage does XAUUSD use?</h3>
+<p>It depends on the broker and regulator. Retail clients in the EU, UK and Australia are capped at 1:20 on gold, while offshore brokers often offer 1:100 to 1:2000 or more. Check the XAUUSD specification in MT5, because the gold limit can differ from your account leverage.</p>
+<h3>What is a good leverage for gold trading?</h3>
+<p>No single number fits everyone. What matters more is the lot size. If you size each trade from a fixed risk and a real stop, the examples above show that margin at 1:100 is already low. A higher setting mainly adds room to open larger positions.</p>
+<h3>Does higher leverage mean more risk on gold?</h3>
+<p>Not at the same lot size. A 0.10 lot with an 8 USD stop loses 80 USD at 1:50 and at 1:1000. Risk rises when the extra margin room is used to trade bigger lots.</p>
+<h3>How many lots can I trade with 100 USD at 1:500?</h3>
+<p>At a price of 4,200, the margin limit is about 0.11 lot (100 × 500 ÷ 420,000), but that is a limit, not a target. At that size a move of about 5 USD could trigger a 50% stop out. Even 0.01 lot risks 8% of the account on an 8 USD stop.</p>
+<h3>Is 1:2000 or unlimited leverage dangerous?</h3>
+<p>The setting alone does not raise the loss at a fixed lot, but it removes almost every limit on position size. Some brokers also cut it automatically during news, so do not build a position that depends on it.</p>
+</section>
+
+<p class="note-small">For education only, not investment advice. Trading gold and CFDs is high risk and you can lose your capital.</p>
+
+    </article>
+    <nav class="pager"><a class="next" href="../../learn/xauusd-pip-value/"><small>Next guide</small><b>XAUUSD Pip Value Explained</b></a></nav>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../learn/xauusd-leverage-explained/" aria-current="page">English</a> <a href="../../th/">ไทย</a> <a href="../../vi/">Tiếng Việt</a> <a href="../../id/">Bahasa Indonesia</a> <a href="../../es/">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <nav class="popular"><a href="../../tools/gold-lot-size-calculator/">XAUUSD lot size calculator</a><a href="../../tools/xauusd-pip-value-calculator/">Pip value calculator</a><a href="../../tools/margin-calculator/">Margin calculator</a><a href="../../tools/risk-reward-calculator/">Risk reward calculator</a><a href="../../ea/">MT5 gold EAs</a><a href="../../learn/">Gold trading guides</a><a href="../../#method">Our method</a><a href="../../#risk">Risk</a></nav>
+    <nav class="legal"><a href="../../buy/">Buy</a><a href="../../contact/">Contact</a><a href="../../terms/">Terms</a><a href="../../refund/">Refunds</a><a href="../../privacy/">Privacy</a></nav>
+    <p>GoldLab provides educational content only and is not a licensed investment adviser. Market data may be delayed or inaccurate.</p>
+    <p>© 2026 GoldLab. All rights reserved.</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "677fc36224a84b3caab31be47f191410"}'></script>
+</body>
+</html>

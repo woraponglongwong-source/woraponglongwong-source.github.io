@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XAUUSD Spread Explained: Cost per Lot &amp; Points · GoldLab</title>
+<meta name="description" content="XAUUSD spread explained: bid vs ask, points vs pips in MT5, the dollar cost per lot, why spread hurts scalping more, and when gold spreads widen.">
+<meta property="og:title" content="XAUUSD Spread Explained: Cost per Lot &amp; Points · GoldLab">
+<meta property="og:description" content="XAUUSD spread explained: bid vs ask, points vs pips in MT5, the dollar cost per lot, why spread hurts scalping more, and when gold spreads widen.">
+<meta property="og:image" content="https://goldlab.trade/assets/og/learn-xauusd-spread-explained.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://goldlab.trade/learn/xauusd-spread-explained/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GoldLab">
+<link rel="canonical" href="https://goldlab.trade/learn/xauusd-spread-explained/">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "XAUUSD Spread Explained: What It Costs and When It Widens", "description": "XAUUSD spread explained: bid vs ask, points vs pips in MT5, the dollar cost per lot, why spread hurts scalping more, and when gold spreads widen.", "inLanguage": "en", "url": "https://goldlab.trade/learn/xauusd-spread-explained/", "image": "https://goldlab.trade/assets/og/learn-xauusd-spread-explained.jpg", "datePublished": "2026-11-10", "dateModified": "2026-11-10", "mainEntityOfPage": "https://goldlab.trade/learn/xauusd-spread-explained/", "author": {"@type": "Organization", "name": "GoldLab", "url": "https://goldlab.trade/"}, "publisher": {"@type": "Organization", "name": "GoldLab", "logo": {"@type": "ImageObject", "url": "https://goldlab.trade/assets/logo.png"}}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a normal spread on XAUUSD?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the broker, the account type and the time of day. Many retail accounts quote somewhere in the range of 0.10 to 0.40 USD in busy hours, and much more around rollover or news. Watch the Spread column in Market Watch for a few days to learn your own broker's normal range."}}, {"@type": "Question", "name": "How much is a 20-point spread on gold in dollars?", "acceptedAnswer": {"@type": "Answer", "text": "On a 2-digit quote, 20 points is 0.20 USD of price, which is 20 USD per 1 lot, 2 USD per 0.10 lot and 0.20 USD per 0.01 lot. On a 3-digit quote, 20 points is only 0.02 USD of price, so always check how many digits your broker uses."}}, {"@type": "Question", "name": "Why did my sell stop loss trigger before price reached it on the chart?", "acceptedAnswer": {"@type": "Answer", "text": "Because the chart shows the bid and a sell position closes at the ask. If the spread widened, the ask reached your stop while the bid line stayed below it. Turn on the ask line in chart properties to see this."}}, {"@type": "Question", "name": "Is a raw spread account cheaper for gold?", "acceptedAnswer": {"@type": "Answer", "text": "Often, but only if the spread saving is bigger than the commission. Add the spread in USD per lot to the round-turn commission for each account and compare the totals on the lot size you actually trade."}}, {"@type": "Question", "name": "Does the spread matter for an EA?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. An EA trades at whatever spread the broker shows when its signal fires, including rollover spikes. Look for a maximum spread setting and backtest with real ticks so the test includes realistic spreads."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GoldLab", "item": "https://goldlab.trade/"}, {"@type": "ListItem", "position": 2, "name": "Learn", "item": "https://goldlab.trade/learn/"}, {"@type": "ListItem", "position": 3, "name": "XAUUSD Spread Explained: What It Costs and When It Widens", "item": "https://goldlab.trade/learn/xauusd-spread-explained/"}]}]</script>
+<meta name="theme-color" content="#070d1a">
+<meta name="google-site-verification" content="AoyS69iYM0KUBS375ShKPWs4FY5b3LdPtCelTJK63AM" />
+<link rel="alternate" hreflang="en" href="https://goldlab.trade/learn/xauusd-spread-explained/">
+<link rel="alternate" hreflang="x-default" href="https://goldlab.trade/learn/xauusd-spread-explained/">
+<link rel="icon" href="../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt="GoldLab logo" width="40" height="40"><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../#levels">Today's levels</a>
+      <a href="../../#lessons">Lessons</a>
+      <a href="../../tools/">Tools</a>
+      <a href="../../ea/" class="nav-ea">EAs</a>
+      <a href="../../learn/">Learn</a>
+      <a href="../../buy/" class="nav-ea">Buy</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../learn/xauusd-spread-explained/" selected>English</option><option value="../../th/">ไทย</option><option value="../../vi/">Tiếng Việt</option><option value="../../id/">Bahasa Indonesia</option><option value="../../es/">Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../">GoldLab</a> <span>/</span> <a href="../../learn/">Learn</a></nav>
+    <header class="article-head">
+      <div class="kicker">Guide · 8 min read · Updated 2026-11-10</div>
+      <h1>XAUUSD Spread Explained: What It Costs and When It Widens</h1>
+      <p class="lead">XAUUSD spread explained: bid vs ask, points vs pips in MT5, the dollar cost per lot, why spread hurts scalping more, and when gold spreads widen.</p>
+    </header>
+    <article class="article">
+<p class="intro">Every gold trade starts slightly in the red. The reason is the spread: the gap between the price you can sell at and the price you can buy at. On XAUUSD it looks tiny on the quote, a few cents, but it is charged on 100 ounces per lot and on every single trade. This guide shows how to read the spread in MT5, what it costs in dollars, why it matters far more on a scalping stop than on a swing stop, and when it widens enough to trip your stop loss.</p>
+
+<h2>What the spread is on XAUUSD</h2>
+<p>A broker always shows two prices. The <strong>bid</strong> is the price you sell at and the <strong>ask</strong> is the price you buy at. The spread is simply ask minus bid. If gold shows 4,200.10 bid and 4,200.35 ask, the spread is 0.25 USD of price.</p>
+<p>Three rules follow from this, and they explain most "my order did something strange" questions:</p>
+<ul>
+<li><strong>The MT5 chart shows the bid.</strong> Candles, highs and lows are bid prices unless you change the chart settings.</li>
+<li><strong>A buy opens at the ask and closes at the bid.</strong> A sell opens at the bid and closes at the ask.</li>
+<li><strong>So a sell stop loss and a buy limit trigger on the ask</strong>, which sits above the chart line by the spread. Price can look like it never reached your level and still close the trade, or never fill an order that seems to have been touched.</li>
+</ul>
+<p>To see both prices, open the chart properties (F8) and tick <em>Show ask price line</em>.</p>
+
+<h2>Points, pips and the spread number in MT5</h2>
+<p>MT5 shows the spread in <strong>points</strong>, the smallest step of the quote. That number means different things at different brokers, which is why two traders can quote "25" and "250" for the same spread.</p>
+<table><thead><tr><th>Quote format</th><th>1 point</th><th>Spread of 0.25 USD shows as</th><th>In pips (1 pip = 0.10)</th></tr></thead><tbody>
+<tr><td>2 digits (4,200.35)</td><td>0.01</td><td>25 points</td><td>2.5 pips</td></tr>
+<tr><td>3 digits (4,200.352)</td><td>0.001</td><td>250 points</td><td>2.5 pips</td></tr>
+</tbody></table>
+<p>Converting the spread to a dollar move of price avoids the confusion. If you are unsure which convention a site uses, the <a href="../../learn/xauusd-pip-value/">XAUUSD pip value guide</a> explains points versus pips in detail. In MT5 you can show the live spread in Market Watch: right-click the list, choose <em>Columns</em> and tick <em>Spread</em>. The symbol <em>Specification</em> also says whether the spread is fixed or floating. On most accounts it floats.</p>
+
+<h2>What the spread costs in dollars</h2>
+<p>With the standard contract of 1 lot = 100 oz, each 0.01 of price is worth 1 USD per lot. The cost of the spread is therefore:</p>
+<p><strong>Spread cost = spread in USD × 100 × lots</strong></p>
+<ul>
+<li>0.25 spread, 1 lot: 0.25 × 100 × 1 = <strong>25 USD</strong></li>
+<li>0.25 spread, 0.10 lot: <strong>2.50 USD</strong></li>
+<li>0.25 spread, 0.01 lot: <strong>0.25 USD</strong></li>
+</ul>
+<p>You pay this once per round trip, because the gap is crossed when you enter and the trade is then measured from the other side. Check it against your own numbers in the <a href="../../tools/xauusd-pip-value-calculator/">XAUUSD pip value calculator</a> or the <a href="../../tools/xauusd-profit-calculator/">profit calculator</a>, entering the spread as a price move.</p>
+
+<h3>Spread-only vs raw-spread accounts</h3>
+<p>Many brokers offer a "standard" account with a wider spread and no commission, and a "raw" or "ECN" account with a tight spread plus a commission per lot. Compare the total, not the headline spread. Using illustrative numbers:</p>
+<table><thead><tr><th>Account type</th><th>Spread</th><th>Commission (round turn)</th><th>Total per 1 lot</th></tr></thead><tbody>
+<tr><td>Standard</td><td>0.25 (25 USD)</td><td>0 USD</td><td>25 USD</td></tr>
+<tr><td>Raw / ECN</td><td>0.08 (8 USD)</td><td>7 USD</td><td>15 USD</td></tr>
+</tbody></table>
+<p>These figures are examples only. Brokers change pricing, and some charge commission per side, so read your broker's contract page and test on demo before comparing.</p>
+
+<h2>Why the spread hurts scalping more than swing trading</h2>
+<p>The spread is roughly the same whatever your timeframe, but your stop is not. If you size each trade from a fixed risk, the clearest way to see the cost is as a fraction of that risk, called R. Here is a 10,000 USD account risking 1% (100 USD) per trade under the <a href="../../learn/one-percent-rule-gold/">1% risk rule</a>, with a 0.25 spread and a 1.5R target:</p>
+<table><thead><tr><th>Stop distance</th><th>Lot for 100 USD risk</th><th>Spread cost</th><th>Cost in R</th><th>Break-even win rate</th></tr></thead><tbody>
+<tr><td>2 USD (M1-M5 scalp)</td><td>0.50</td><td>12.50 USD</td><td>0.125R</td><td>45.0%</td></tr>
+<tr><td>5 USD (M15)</td><td>0.20</td><td>5.00 USD</td><td>0.05R</td><td>42.0%</td></tr>
+<tr><td>10 USD (H1)</td><td>0.10</td><td>2.50 USD</td><td>0.025R</td><td>41.0%</td></tr>
+<tr><td>25 USD (H4)</td><td>0.04</td><td>1.00 USD</td><td>0.01R</td><td>40.4%</td></tr>
+</tbody></table>
+<p>Without any costs, a 1.5R target breaks even at a 40% win rate. The break-even column uses (1 + cost in R) ÷ 2.5, which assumes the spread is lost on winners and losers alike. A 2 USD stop has to win five more trades in every hundred just to pay the spread, before commission or slippage. Over 100 such trades the spread alone costs 1,250 USD, or 12.5% of the account. The same 100 trades on H4 cost 100 USD.</p>
+<p>That does not mean scalping cannot work. It means a scalping method needs a larger edge and the tightest pricing you can get, and the <a href="../../learn/best-timeframe-gold-trading/">timeframe you choose</a> is also a choice about how much of your risk goes to costs. Plug your own stop into the <a href="../../tools/gold-lot-size-calculator/">lot size calculator</a> to see the lot, then work out the spread as a share of the stop.</p>
+
+<h2>When the gold spread widens</h2>
+<p>Floating spreads are not constant. On gold they typically widen:</p>
+<ul>
+<li><strong>Around the daily rollover</strong>, near 17:00 New York time, when liquidity is thinnest. Many MT5 servers show this near midnight server time.</li>
+<li><strong>Around major US data and central bank decisions</strong>, such as non-farm payrolls, CPI and FOMC.</li>
+<li><strong>At the weekly open</strong>, when prices can also gap away from Friday's close.</li>
+<li><strong>In quiet hours</strong>, when fewer liquidity providers are quoting.</li>
+</ul>
+<h3>Worked example: a spread spike hits a sell stop</h3>
+<div class="callout"><strong>Example.</strong> You are short XAUUSD with a stop loss 0.50 above the recent high on the bid chart. The normal spread is 0.25, so your stop sits 0.25 beyond the ask at that high. At the rollover the spread widens to 1.50. The bid never trades above the high, so on the chart nothing seems to happen, but the ask jumps 1.25 past it and your sell stop closes the trade. The fix is not a smaller spread you cannot control; it is a stop buffer that allows for the widening you have actually measured, plus avoiding new entries in that window.</div>
+<p>Stop losses are placed beyond structure plus a volatility buffer in the <a href="../../learn/gold-stop-loss-atr/">ATR stop method</a>. For sell trades, add your broker's typical wide-hour spread on top.</p>
+
+<h2>Spread and EAs</h2>
+<p>An Expert Advisor pays the same spread as a manual trader, but it trades without looking at the clock, so check three things before running one live:</p>
+<ul>
+<li><strong>Does it have a maximum spread input?</strong> If not, it may open trades during rollover spikes.</li>
+<li><strong>Was it backtested with real spreads?</strong> The MT5 tester mode "every tick based on real ticks" replays recorded spreads. See <a href="../../learn/backtest-ea-mt5-strategy-tester/">how to backtest an EA in MT5</a> for why a 20-point spread gap changes the result.</li>
+<li><strong>How short are its stops?</strong> The <a href="../../ea/ny-opening-range/">NY Opening Range EA</a> works from an M5 signal window, so the spread is a bigger share of each stop than for an H1 or H4 system such as the <a href="../../ea/london-breakout/">London Breakout EA</a>, which measures its range on M15. Test both on your own broker's data and compare the cost per trade.</li>
+</ul>
+
+<div class="callout warn"><strong>Honest risk note.</strong> Spreads, commissions and slippage are real costs that you cannot remove, only measure and manage. The figures in this guide are illustrations, not quotes from any broker. In fast markets the spread can be many times its normal size and orders can fill worse than the stop price. Nothing here is a trade recommendation.</div>
+
+<h2>Key takeaways</h2>
+<ul class="takeaways">
+<li>Spread = ask minus bid; the chart shows the bid, so sell stops and buy limits react to the hidden ask.</li>
+<li>Cost in USD = spread × 100 × lots: 0.25 is 25 USD per lot.</li>
+<li>Measure the spread as a share of your stop: 0.125R on a 2 USD stop, 0.01R on a 25 USD stop.</li>
+<li>Expect wider spreads at rollover, around news and at the weekly open, and pad sell stops for it.</li>
+</ul>
+
+<section class="faq">
+<h2>FAQ</h2>
+<h3>What is a normal spread on XAUUSD?</h3>
+<p>It depends on the broker, the account type and the time of day. Many retail accounts quote somewhere in the range of 0.10 to 0.40 USD in busy hours, and much more around rollover or news. Watch the Spread column in Market Watch for a few days to learn your own broker's normal range.</p>
+<h3>How much is a 20-point spread on gold in dollars?</h3>
+<p>On a 2-digit quote, 20 points is 0.20 USD of price, which is 20 USD per 1 lot, 2 USD per 0.10 lot and 0.20 USD per 0.01 lot. On a 3-digit quote, 20 points is only 0.02 USD of price, so always check how many digits your broker uses.</p>
+<h3>Why did my sell stop loss trigger before price reached it on the chart?</h3>
+<p>Because the chart shows the bid and a sell position closes at the ask. If the spread widened, the ask reached your stop while the bid line stayed below it. Turn on the ask line in chart properties to see this.</p>
+<h3>Is a raw spread account cheaper for gold?</h3>
+<p>Often, but only if the spread saving is bigger than the commission. Add the spread in USD per lot to the round-turn commission for each account and compare the totals on the lot size you actually trade.</p>
+<h3>Does the spread matter for an EA?</h3>
+<p>Yes. An EA trades at whatever spread the broker shows when its signal fires, including rollover spikes. Look for a maximum spread setting and backtest with real ticks so the test includes realistic spreads.</p>
+</section>
+
+<p class="note-small">For education only, not investment advice. Trading gold and CFDs is high risk and you can lose your capital.</p>
+
+    </article>
+    <nav class="pager"><a class="next" href="../../learn/xauusd-pip-value/"><small>Next guide</small><b>XAUUSD Pip Value Explained</b></a></nav>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../learn/xauusd-spread-explained/" aria-current="page">English</a> <a href="../../th/">ไทย</a> <a href="../../vi/">Tiếng Việt</a> <a href="../../id/">Bahasa Indonesia</a> <a href="../../es/">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <nav class="popular"><a href="../../tools/gold-lot-size-calculator/">XAUUSD lot size calculator</a><a href="../../tools/xauusd-pip-value-calculator/">Pip value calculator</a><a href="../../tools/margin-calculator/">Margin calculator</a><a href="../../tools/risk-reward-calculator/">Risk reward calculator</a><a href="../../ea/">MT5 gold EAs</a><a href="../../learn/">Gold trading guides</a><a href="../../#method">Our method</a><a href="../../#risk">Risk</a></nav>
+    <nav class="legal"><a href="../../buy/">Buy</a><a href="../../contact/">Contact</a><a href="../../terms/">Terms</a><a href="../../refund/">Refunds</a><a href="../../privacy/">Privacy</a></nav>
+    <p>GoldLab provides educational content only and is not a licensed investment adviser. Market data may be delayed or inaccurate.</p>
+    <p>© 2026 GoldLab. All rights reserved.</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "677fc36224a84b3caab31be47f191410"}'></script>
+</body>
+</html>

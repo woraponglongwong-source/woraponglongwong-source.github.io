@@ -117,7 +117,7 @@
 <p>"No trades yet" is often normal. A breakout EA such as the <a href="../../ea/london-breakout/">London Breakout EA</a> may trade once a day or not at all on a quiet day, and a trend system like the <a href="../../ea/turtle-channel/">Turtle Channel EA</a> can wait days for a valid setup.</p>
 
 <h2>Keep it running</h2>
-<p>An EA only works while the terminal is open and connected. If you close MT5, shut down the computer or lose internet, it stops managing positions, including trailing stops and time exits; only stop loss and take profit orders already sent to the broker stay in place. That is why many traders run EAs on a VPS near their broker's server. After any restart, check the chart corner icon and the Journal tab to confirm the EA reloaded.</p>
+<p>An EA only works while the terminal is open and connected. If you close MT5, shut down the computer or lose internet, it stops managing positions, including trailing stops and time exits; only stop loss and take profit orders already sent to the broker stay in place. That is why many traders run EAs on a VPS near their broker's server (see <a href="../../learn/vps-for-mt5-ea/">do you need a VPS for an MT5 EA</a> for the cost and latency math). After any restart, check the chart corner icon and the Journal tab to confirm the EA reloaded.</p>
 
 <div class="callout warn"><strong>Honest risk note.</strong> Installing an EA correctly does not make it profitable. Test on a demo account for at least a few weeks, start live with the smallest size, use a stop loss on every trade, and avoid systems that rely on martingale or grids to recover losses. Past and backtested results do not guarantee future results.</div>
 

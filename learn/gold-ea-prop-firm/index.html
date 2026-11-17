@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gold EA on a Prop Firm Account: Drawdown Math · GoldLab</title>
+<meta name="description" content="Using a gold EA on a prop firm challenge: daily loss and max drawdown math on XAUUSD, risk per trade, losing streak odds and EA settings that fail.">
+<meta property="og:title" content="Gold EA on a Prop Firm Account: Drawdown Math · GoldLab">
+<meta property="og:description" content="Using a gold EA on a prop firm challenge: daily loss and max drawdown math on XAUUSD, risk per trade, losing streak odds and EA settings that fail.">
+<meta property="og:image" content="https://goldlab.trade/assets/og/learn-gold-ea-prop-firm.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://goldlab.trade/learn/gold-ea-prop-firm/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GoldLab">
+<link rel="canonical" href="https://goldlab.trade/learn/gold-ea-prop-firm/">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Using a Gold EA on a Prop Firm Account: The Drawdown Math", "description": "Using a gold EA on a prop firm challenge: daily loss and max drawdown math on XAUUSD, risk per trade, losing streak odds and EA settings that fail.", "inLanguage": "en", "url": "https://goldlab.trade/learn/gold-ea-prop-firm/", "image": "https://goldlab.trade/assets/og/learn-gold-ea-prop-firm.jpg", "datePublished": "2026-11-13", "dateModified": "2026-11-13", "mainEntityOfPage": "https://goldlab.trade/learn/gold-ea-prop-firm/", "author": {"@type": "Organization", "name": "GoldLab", "url": "https://goldlab.trade/"}, "publisher": {"@type": "Organization", "name": "GoldLab", "logo": {"@type": "ImageObject", "url": "https://goldlab.trade/assets/logo.png"}}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I use an EA on a prop firm account?", "acceptedAnswer": {"@type": "Answer", "text": "Many firms allow EAs, but the rules differ. Some ban certain types such as high-frequency or tick scalping systems, and some treat many customers running the same EA as copy trading. Check the firm's trading rules page and ask support before you start."}}, {"@type": "Question", "name": "What risk per trade is safe for a gold prop challenge?", "acceptedAnswer": {"@type": "Answer", "text": "No level is safe in every case, but the math favors small risk. At 0.5% per trade, 10 losses in a row cost about 5%, which a 10% drawdown account survives. At 1%, the same streak uses the whole limit. Many traders choose 0.25% to 0.5%."}}, {"@type": "Question", "name": "Does the daily loss limit include open trades?", "acceptedAnswer": {"@type": "Answer", "text": "At most firms, yes. The check uses equity, so a floating loss counts even if the trade later recovers. Some firms also measure the day from the higher of balance and equity at the reset, which means open profit you give back counts as part of the daily loss."}}, {"@type": "Question", "name": "Why did my account fail when the EA's daily loss limit was set lower than the firm's?", "acceptedAnswer": {"@type": "Answer", "text": "A typical EA daily limit only stops new entries. A trade that was already open can still run to its stop, and slippage can add to the loss. Set the EA limit so that the limit plus the open risk plus a buffer stays below the firm's daily limit."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GoldLab", "item": "https://goldlab.trade/"}, {"@type": "ListItem", "position": 2, "name": "Learn", "item": "https://goldlab.trade/learn/"}, {"@type": "ListItem", "position": 3, "name": "Using a Gold EA on a Prop Firm Account: The Drawdown Math", "item": "https://goldlab.trade/learn/gold-ea-prop-firm/"}]}]</script>
+<meta name="theme-color" content="#070d1a">
+<meta name="google-site-verification" content="AoyS69iYM0KUBS375ShKPWs4FY5b3LdPtCelTJK63AM" />
+<link rel="alternate" hreflang="en" href="https://goldlab.trade/learn/gold-ea-prop-firm/">
+<link rel="alternate" hreflang="x-default" href="https://goldlab.trade/learn/gold-ea-prop-firm/">
+<link rel="icon" href="../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt="GoldLab logo" width="40" height="40"><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../#levels">Today's levels</a>
+      <a href="../../#lessons">Lessons</a>
+      <a href="../../tools/">Tools</a>
+      <a href="../../ea/" class="nav-ea">EAs</a>
+      <a href="../../learn/">Learn</a>
+      <a href="../../buy/" class="nav-ea">Buy</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../learn/gold-ea-prop-firm/" selected>English</option><option value="../../th/">ไทย</option><option value="../../vi/">Tiếng Việt</option><option value="../../id/">Bahasa Indonesia</option><option value="../../es/">Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../">GoldLab</a> <span>/</span> <a href="../../learn/">Learn</a></nav>
+    <header class="article-head">
+      <div class="kicker">Guide · 8 min read · Updated 2026-11-13</div>
+      <h1>Using a Gold EA on a Prop Firm Account: The Drawdown Math</h1>
+      <p class="lead">Using a gold EA on a prop firm challenge: daily loss and max drawdown math on XAUUSD, risk per trade, losing streak odds and EA settings that fail.</p>
+    </header>
+    <article class="article">
+<p class="intro">A prop firm challenge gives you a large account, but it comes with two hard lines: a daily loss limit and a maximum overall drawdown. Touch either one, even for a second, and the account is gone. This guide works through the drawdown math on XAUUSD with a 100,000 USD challenge, shows how to size an EA so a normal losing streak cannot end the account, and lists the firm rules that most often catch automated traders. There is no setting that guarantees you pass.</p>
+
+<h2>The two limits that end a prop firm account</h2>
+<p>Rules differ between firms, so read your own firm's terms. A common structure on a 100,000 USD challenge looks like this:</p>
+<table><thead><tr><th>Rule</th><th>Typical value</th><th>On 100,000 USD</th></tr></thead><tbody>
+<tr><td>Daily loss limit</td><td>5%</td><td>5,000 USD per day</td></tr>
+<tr><td>Maximum drawdown</td><td>10%</td><td>Equity must stay above 90,000 USD</td></tr>
+<tr><td>Profit target (phase 1)</td><td>8%</td><td>108,000 USD</td></tr>
+</tbody></table>
+<p>The details matter more than the headline numbers:</p>
+<ul>
+<li><strong>Equity, not balance.</strong> Most firms check floating losses on open trades, not just closed results. A trade that is down 5,200 USD and later recovers has still breached a 5,000 USD daily limit.</li>
+<li><strong>Where the day starts.</strong> Some firms start the day from the balance at the reset, others from the higher of balance and equity. Hold a trade that is up 1,500 USD at the reset and the second method puts the floor at 101,500 - 5,000 = 96,500 USD, so giving back that open profit uses 1,500 USD of the day's room.</li>
+<li><strong>Static or trailing drawdown.</strong> A static floor stays at 90,000 USD. A trailing floor follows your highest equity: after a peak of 104,000 USD it may sit at 94,000 USD. Your real room is the distance to the current floor, not 10% of the starting balance.</li>
+</ul>
+
+<h2>Turn the limits into risk per trade</h2>
+<p>The lot size formula for gold is the same on a prop account as anywhere else. With 1 lot = 100 oz:</p>
+<p><strong>Lot = risk in USD ÷ (stop distance in USD × 100)</strong></p>
+<ul>
+<li>1% risk (1,000 USD) with a 10 USD stop: 1,000 ÷ (10 × 100) = <strong>1.00 lot</strong></li>
+<li>0.5% risk (500 USD) with a 10 USD stop: <strong>0.50 lot</strong></li>
+<li>0.5% risk with a 4 USD stop: 500 ÷ 400 = <strong>1.25 lot</strong></li>
+</ul>
+<p>The <a href="../../tools/gold-lot-size-calculator/">XAUUSD lot size calculator</a> does this for any balance and stop. Then check margin, because many prop accounts give lower leverage on metals: at 4,200, 1 lot needs 4,200 USD of margin at 1:100 but 14,000 USD at 1:30. The <a href="../../tools/margin-calculator/">margin calculator</a> shows this before the EA tries a trade it cannot afford.</p>
+
+<h2>How many losses can the account survive?</h2>
+<p>Losing streaks are where prop accounts die. Here is the same 100,000 USD challenge at different risk levels, counting each loss as a fixed share of the starting balance:</p>
+<table><thead><tr><th>Risk per trade</th><th>Losses to hit 5% daily limit</th><th>Losses to hit 10% max drawdown</th></tr></thead><tbody>
+<tr><td>2%</td><td>3 (6%)</td><td>5</td></tr>
+<tr><td>1%</td><td>5</td><td>10</td></tr>
+<tr><td>0.5%</td><td>10</td><td>20</td></tr>
+<tr><td>0.25%</td><td>20</td><td>40</td></tr>
+</tbody></table>
+<p>How likely is a long streak? For a strategy that wins 40% of its trades, and assuming each trade is independent, the chance of seeing at least one run of 10 losses in a row is about <strong>21% over 100 trades</strong> and about <strong>38% over 200 trades</strong>. At 1% risk, a 10-loss streak is the whole 10% drawdown. At 0.5% it costs 5% and the account survives. Real results can be worse than this model, because losses on gold often cluster in choppy weeks rather than arriving at random.</p>
+<p>This is why many prop traders risk 0.25% to 0.5% per trade, even though a lower risk makes the profit target take longer. The <a href="../../learn/one-percent-rule-gold/">1% risk rule guide</a> covers the same streak math for personal accounts.</p>
+
+<h2>Set the EA's own daily limit below the firm's</h2>
+<p>Many EAs have a daily loss limit input. Read what it does. In GoldLab EAs such as the <a href="../../ea/london-breakout/">London Breakout EA</a>, the limit <strong>stops new trades</strong> for the rest of the day once equity is down the set % from the day-start balance. It does not close a trade that is already open. That gap is the trap:</p>
+<ul>
+<li>EA daily limit 4%, one open trade risking 1%: the EA stops at -4%, the open trade hits its stop, and the day ends at about -5%. Add slippage and the firm's 5% is breached.</li>
+<li>EA daily limit 3%, one open trade at 1%: worst planned day is about -4%, leaving 1% for slippage and spread.</li>
+</ul>
+<p>A simple rule: <strong>EA daily limit + open risk at the moment it triggers + a slippage buffer must stay under the firm's limit.</strong> Systems that add to positions need extra room. The <a href="../../ea/turtle-channel/">Turtle Channel EA</a> can hold 2 units, so its open risk can reach 2× the per-unit setting. With 1% per unit and a 3% daily limit the worst planned day is 5%, exactly on the line. Cutting to 0.5% per unit brings it to about 4%.</p>
+
+<h2>Slippage, spread and gaps on gold</h2>
+<p>A stop loss is an order, not a guarantee. On gold, price can jump several dollars through a stop on news or at the weekly open. With 1 lot, every 1 USD of slippage is 100 USD:</p>
+<ul>
+<li>10 USD stop planned (1,000 USD loss), filled 4 USD worse: <strong>1,400 USD</strong>, or 1.4% instead of 1%.</li>
+<li>Spread of 0.30 on 1 lot: 30 USD per trade. See <a href="../../learn/xauusd-spread-explained/">XAUUSD spread explained</a> for why this matters more on short stops.</li>
+</ul>
+
+<h2>Firm rules that catch EA traders</h2>
+<p>Read your firm's trading rules before you attach any EA. These catch automated traders most often:</p>
+<ul>
+<li><strong>EA permission.</strong> Some firms allow EAs, some allow only your own, some ban specific types such as high-frequency or tick scalping systems.</li>
+<li><strong>Copy trading and identical trades.</strong> Running the same EA with the same settings as many other customers can be flagged as copy trading or group trading at some firms.</li>
+<li><strong>News rules.</strong> Some accounts forbid opening or closing trades a few minutes around high-impact news. An EA without a news filter will not respect this on its own.</li>
+<li><strong>Martingale and grid.</strong> Many firms restrict them, and the math does not fit a 5% daily limit anyway. See <a href="../../learn/martingale-vs-grid-vs-stop-loss-ea/">martingale vs grid vs stop-loss EAs</a>.</li>
+</ul>
+
+<h2>A checklist before you start a challenge</h2>
+<ol>
+<li>Write down your firm's daily limit, drawdown type (static or trailing), reset time and EA rules.</li>
+<li><a href="../../learn/backtest-ea-mt5-strategy-tester/">Backtest the EA in MT5</a> on real ticks and note its largest losing streak and worst day, not just its profit.</li>
+<li>Pick a risk % that survives at least twice that worst streak inside the max drawdown.</li>
+<li>Set the EA's daily limit so that limit + open risk + buffer stays under the firm's daily limit.</li>
+<li>Run it on a demo account with the same leverage and symbol suffix for a week or two and compare fills with the backtest.</li>
+</ol>
+
+<div class="callout warn"><strong>Honest risk note.</strong> Prop firm challenges are paid products, and most traders do not pass them. An EA cannot remove the risk of losing the fee; it only follows the rules you give it. Firm terms change, and the figures here are examples, not the terms of any specific firm. Past and backtested results do not guarantee future results, and nothing in this guide is a trade recommendation.</div>
+
+<h2>Key takeaways</h2>
+<ul class="takeaways">
+<li>Prop firms usually measure equity, including open losses, against a daily and an overall floor.</li>
+<li>At 1% risk, 10 losses in a row end a 10% drawdown account; a 40% win-rate system has about a 38% chance of such a streak in 200 trades.</li>
+<li>An EA daily limit that only blocks new trades must be set below the firm's limit by the open risk plus a buffer.</li>
+</ul>
+
+<section class="faq">
+<h2>FAQ</h2>
+<h3>Can I use an EA on a prop firm account?</h3>
+<p>Many firms allow EAs, but the rules differ. Some ban certain types such as high-frequency or tick scalping systems, and some treat many customers running the same EA as copy trading. Check the firm's trading rules page and ask support before you start.</p>
+<h3>What risk per trade is safe for a gold prop challenge?</h3>
+<p>No level is safe in every case, but the math favors small risk. At 0.5% per trade, 10 losses in a row cost about 5%, which a 10% drawdown account survives. At 1%, the same streak uses the whole limit. Many traders choose 0.25% to 0.5%.</p>
+<h3>Does the daily loss limit include open trades?</h3>
+<p>At most firms, yes. The check uses equity, so a floating loss counts even if the trade later recovers. Some firms also measure the day from the higher of balance and equity at the reset, which means open profit you give back counts as part of the daily loss.</p>
+<h3>Why did my account fail when the EA's daily loss limit was set lower than the firm's?</h3>
+<p>A typical EA daily limit only stops new entries. A trade that was already open can still run to its stop, and slippage can add to the loss. Set the EA limit so that the limit plus the open risk plus a buffer stays below the firm's daily limit.</p>
+</section>
+
+<p class="note-small">For education only, not investment advice. Trading gold and CFDs is high risk and you can lose your capital.</p>
+
+    </article>
+    <nav class="pager"><a class="next" href="../../learn/vps-for-mt5-ea/"><small>Next guide</small><b>Do You Need a VPS for an MT5 EA? Uptime, Latency and Cost</b></a></nav>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../learn/gold-ea-prop-firm/" aria-current="page">English</a> <a href="../../th/">ไทย</a> <a href="../../vi/">Tiếng Việt</a> <a href="../../id/">Bahasa Indonesia</a> <a href="../../es/">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <nav class="popular"><a href="../../tools/gold-lot-size-calculator/">XAUUSD lot size calculator</a><a href="../../tools/xauusd-pip-value-calculator/">Pip value calculator</a><a href="../../tools/margin-calculator/">Margin calculator</a><a href="../../tools/risk-reward-calculator/">Risk reward calculator</a><a href="../../ea/">MT5 gold EAs</a><a href="../../learn/">Gold trading guides</a><a href="../../#method">Our method</a><a href="../../#risk">Risk</a></nav>
+    <nav class="legal"><a href="../../buy/">Buy</a><a href="../../contact/">Contact</a><a href="../../terms/">Terms</a><a href="../../refund/">Refunds</a><a href="../../privacy/">Privacy</a></nav>
+    <p>GoldLab provides educational content only and is not a licensed investment adviser. Market data may be delayed or inaccurate.</p>
+    <p>© 2026 GoldLab. All rights reserved.</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "677fc36224a84b3caab31be47f191410"}'></script>
+</body>
+</html>

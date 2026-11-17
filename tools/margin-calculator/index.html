@@ -100,6 +100,19 @@
       <p>If equity is 10,000 USD and the trade uses 4,200 USD, the margin level is 238%. When losses push it down to the broker's margin-call level (often 100%) you cannot open new trades; at the stop-out level (often 20–50%) positions are closed automatically. Levels vary by broker.</p>
 
       <h2>Worked examples</h2>
+      <h3>Margin for 1 lot of XAUUSD by leverage</h3>
+      <p>1 lot = 100 oz. At a gold price of 4,200 the position is worth 420,000 USD, so the margin is 420,000 ÷ leverage:</p>
+      <table>
+        <thead><tr><th>Leverage</th><th>Margin for 1 lot</th><th>Margin for 0.10 lot</th><th>Margin for 0.01 lot</th></tr></thead>
+        <tbody>
+          <tr><td>1:20</td><td>21,000 USD</td><td>2,100 USD</td><td>210 USD</td></tr>
+          <tr><td>1:50</td><td>8,400 USD</td><td>840 USD</td><td>84 USD</td></tr>
+          <tr><td>1:100</td><td>4,200 USD</td><td>420 USD</td><td>42 USD</td></tr>
+          <tr><td>1:200</td><td>2,100 USD</td><td>210 USD</td><td>21 USD</td></tr>
+          <tr><td>1:500</td><td>840 USD</td><td>84 USD</td><td>8.40 USD</td></tr>
+        </tbody>
+      </table>
+      <p>Margin moves with the price: at 3,900 the 1:100 figure for 1 lot is 3,900 USD. Enter the current price above for an exact number.</p>
       <div class="callout"><strong>Gold, small account.</strong> 0.05 lot XAUUSD at 4,200 with 1:200 leverage: 0.05 × 100 × 4,200 ÷ 200 = <strong>105 USD</strong> margin.</div>
       <div class="callout"><strong>EURUSD.</strong> 1 lot at 1.0800 with 1:30: 100,000 × 1.08 ÷ 30 = <strong>3,600 USD</strong>.</div>
       <div class="callout"><strong>USDJPY.</strong> 0.50 lot with 1:100: 0.5 × 100,000 ÷ 100 = <strong>500 USD</strong> (USD is the base currency).</div>

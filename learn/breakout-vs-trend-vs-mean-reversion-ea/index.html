@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Breakout vs Trend vs Mean Reversion EA for XAUUSD · GoldLab</title>
+<meta name="description" content="Breakout vs trend following vs mean reversion EA on XAUUSD: how each trades gold, break-even win rate, losing streak odds, spread cost and how to choose.">
+<meta property="og:title" content="Breakout vs Trend vs Mean Reversion EA for XAUUSD · GoldLab">
+<meta property="og:description" content="Breakout vs trend following vs mean reversion EA on XAUUSD: how each trades gold, break-even win rate, losing streak odds, spread cost and how to choose.">
+<meta property="og:image" content="https://goldlab.trade/assets/og/learn-breakout-vs-trend-vs-mean-reversion-ea.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://goldlab.trade/learn/breakout-vs-trend-vs-mean-reversion-ea/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GoldLab">
+<link rel="canonical" href="https://goldlab.trade/learn/breakout-vs-trend-vs-mean-reversion-ea/">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Breakout vs Trend Following vs Mean Reversion EA for XAUUSD", "description": "Breakout vs trend following vs mean reversion EA on XAUUSD: how each trades gold, break-even win rate, losing streak odds, spread cost and how to choose.", "inLanguage": "en", "url": "https://goldlab.trade/learn/breakout-vs-trend-vs-mean-reversion-ea/", "image": "https://goldlab.trade/assets/og/learn-breakout-vs-trend-vs-mean-reversion-ea.jpg", "datePublished": "2026-11-24", "dateModified": "2026-11-24", "mainEntityOfPage": "https://goldlab.trade/learn/breakout-vs-trend-vs-mean-reversion-ea/", "author": {"@type": "Organization", "name": "GoldLab", "url": "https://goldlab.trade/"}, "publisher": {"@type": "Organization", "name": "GoldLab", "logo": {"@type": "ImageObject", "url": "https://goldlab.trade/assets/logo.png"}}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which EA type is best for XAUUSD?", "acceptedAnswer": {"@type": "Answer", "text": "None is best in every market. Breakout EAs fit gold's session bursts, trend EAs need multi-day moves, and mean-reversion EAs need quiet ranges. Choose by the drawdown and losing streak you can accept, your spread, and how the EA behaved in the market type that hurts it."}}, {"@type": "Question", "name": "Is a higher win rate better in an EA?", "acceptedAnswer": {"@type": "Answer", "text": "Not by itself. A 60% win rate with an average win of 0.8R is close to break-even, while 35% with an average win of 3R is positive. Always read the win rate together with the average win and average loss."}}, {"@type": "Question", "name": "Why does a trend-following EA lose so many trades?", "acceptedAnswer": {"@type": "Answer", "text": "It enters every time a trend might be starting and most of those attempts fail quickly at a small loss. Its result depends on a small number of trades that run several times the risk, so a low win rate and long flat periods are part of the design."}}, {"@type": "Question", "name": "Are mean-reversion EAs dangerous on gold?", "acceptedAnswer": {"@type": "Answer", "text": "They are risky when they have no stop loss or add to losing trades, because gold can trend for days without returning to the average. A mean-reversion EA with a hard stop on every order and a range filter has limited loss per trade like any other style."}}, {"@type": "Question", "name": "Can I run a breakout EA and a mean-reversion EA together?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, on a hedging account with a different magic number for each. They tend to lose on different days, which can smooth results, but both trade the same market, so set one total risk budget and divide it between them."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GoldLab", "item": "https://goldlab.trade/"}, {"@type": "ListItem", "position": 2, "name": "Learn", "item": "https://goldlab.trade/learn/"}, {"@type": "ListItem", "position": 3, "name": "Breakout vs Trend Following vs Mean Reversion EA for XAUUSD", "item": "https://goldlab.trade/learn/breakout-vs-trend-vs-mean-reversion-ea/"}]}]</script>
+<meta name="theme-color" content="#070d1a">
+<meta name="google-site-verification" content="AoyS69iYM0KUBS375ShKPWs4FY5b3LdPtCelTJK63AM" />
+<link rel="alternate" hreflang="en" href="https://goldlab.trade/learn/breakout-vs-trend-vs-mean-reversion-ea/">
+<link rel="alternate" hreflang="x-default" href="https://goldlab.trade/learn/breakout-vs-trend-vs-mean-reversion-ea/">
+<link rel="icon" href="../../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Inter:wght@400;600;700;800&family=Noto+Sans+Thai:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt="GoldLab logo" width="40" height="40"><span><b>GOLD</b>LAB</span></a>
+    <nav class="nav-links">
+      <a href="../../#levels">Today's levels</a>
+      <a href="../../#lessons">Lessons</a>
+      <a href="../../tools/">Tools</a>
+      <a href="../../ea/" class="nav-ea">EAs</a>
+      <a href="../../learn/">Learn</a>
+      <a href="../../buy/" class="nav-ea">Buy</a>
+    </nav>
+    <label class="lang" aria-label="Language">
+      <select onchange="location.href=this.value"><option value="../../learn/breakout-vs-trend-vs-mean-reversion-ea/" selected>English</option><option value="../../th/">ไทย</option><option value="../../vi/">Tiếng Việt</option><option value="../../id/">Bahasa Indonesia</option><option value="../../es/">Español</option></select>
+    </label>
+  </div>
+</header>
+
+<main class="lesson-page">
+  <div class="wrap article-wrap">
+    <nav class="crumbs"><a href="../../">GoldLab</a> <span>/</span> <a href="../../learn/">Learn</a></nav>
+    <header class="article-head">
+      <div class="kicker">Guide · 9 min read · Updated 2026-11-24</div>
+      <h1>Breakout vs Trend Following vs Mean Reversion EA for XAUUSD</h1>
+      <p class="lead">Breakout vs trend following vs mean reversion EA on XAUUSD: how each trades gold, break-even win rate, losing streak odds, spread cost and how to choose.</p>
+    </header>
+    <article class="article">
+<p class="intro">Almost every gold Expert Advisor belongs to one of three families: breakout, trend following or mean reversion. They buy and sell at opposite moments, win at very different rates, and each has one kind of market that hurts it. This guide compares the three on XAUUSD with numbers: how each one trades, the win rate each needs to break even, how long the losing streaks can be, what spread costs each style, and how to choose one that fits your account and your patience.</p>
+
+<h2>The three styles in one table</h2>
+<table><thead><tr><th></th><th>Breakout EA</th><th>Trend-following EA</th><th>Mean-reversion EA</th></tr></thead><tbody>
+<tr><td>Idea</td><td>Price leaves a range and keeps going</td><td>An established move continues</td><td>A stretched price returns to its average</td></tr>
+<tr><td>Typical entry</td><td>Break of a session range, channel or squeeze</td><td>Indicator flip or pullback in the trend direction</td><td>Touch of an outer band with a rejection candle</td></tr>
+<tr><td>Typical exit</td><td>Fixed R target or session end</td><td>Trailing stop, no fixed target</td><td>The average (middle band, VWAP, pivot)</td></tr>
+<tr><td>Reward vs risk</td><td>Medium, about 1 to 2R</td><td>Large, 2R and more on winners</td><td>Small, often below 1R</td></tr>
+<tr><td>Win rate it tends to show</td><td>Medium</td><td>Low</td><td>High</td></tr>
+<tr><td>Market that hurts it</td><td>False breaks in a quiet range</td><td>Sideways chop</td><td>A strong one-way trend</td></tr>
+</tbody></table>
+<p>R means the amount risked on the trade. A 1.5R target on a 12 USD stop is an 18 USD move in gold.</p>
+
+<h2>How a breakout EA trades gold</h2>
+<p>A breakout EA defines a box first: the Asian session range, the first minutes after the New York open, a Donchian channel, or a period of low volatility. It then places or triggers an order when price closes outside the box. Gold suits this style because its volume arrives in bursts around the London and New York opens, so ranges formed in quiet hours often break with momentum.</p>
+<p>The weak point is the false break: price pokes 2 or 3 USD outside the range, triggers the order and returns inside. Good breakout EAs reduce this with a buffer beyond the range, a closed-bar rule, a range-size filter and a limit of one trade per side per day. The <a href="../../ea/bollinger-squeeze/">Bollinger Squeeze EA</a> is one example: it waits for the bands to contract and trades the expansion only in the direction of the EMA trend. The logic behind session ranges is explained in the <a href="../../learn/london-breakout-gold/">London breakout guide</a>.</p>
+
+<h2>How a trend-following EA trades gold</h2>
+<p>A trend EA does not try to catch the start of a move. It waits until a trend is visible (a Supertrend flip, price above the Ichimoku cloud, aligned moving averages), enters in that direction and trails the stop behind price. There is usually no fixed take profit, because the whole edge comes from a few trades that run far.</p>
+<p>That shape has a cost: most trades end as small losses or near break-even, and long flat periods are normal. When gold moves sideways for two weeks, a trend EA is stopped out again and again. The <a href="../../ea/supertrend-rider/">Supertrend Rider EA</a> shows the usual defences: it needs the higher timeframe to agree, takes part of the position off at 1R and trails the rest.</p>
+
+<h2>How a mean-reversion EA trades gold</h2>
+<p>A mean-reversion EA does the opposite of the other two. When price is stretched far from an average, it sells strength or buys weakness and targets the average itself. The target is close, so trades are short and wins are frequent.</p>
+<p>The danger is the day gold does not come back. In a strong trend the upper band keeps moving up and every short is a loss. This is why honest mean-reversion EAs use a regime filter and a hard stop. The <a href="../../ea/keltner-reversion/">Keltner Reversion EA</a> only fades the outer Keltner Channel when ADX is low (a ranging market) and the candle rejects the band. A mean-reversion EA with no stop loss, or one that adds to losers, is really a grid or martingale system; see <a href="../../learn/martingale-vs-grid-vs-stop-loss-ea/">martingale vs grid vs stop-loss EA</a>.</p>
+
+<h2>Win rate means nothing without the reward size</h2>
+<p>The break-even win rate of any system is 1 ÷ (1 + R), where R is the average win divided by the average loss. This is why a 60% win rate can lose money and a 35% win rate can make it.</p>
+<table><thead><tr><th>Style (illustrative profile)</th><th>Average win</th><th>Break-even win rate</th></tr></thead><tbody>
+<tr><td>Mean reversion</td><td>0.8R</td><td>55.6%</td></tr>
+<tr><td>Breakout</td><td>1.5R</td><td>40.0%</td></tr>
+<tr><td>Trend following</td><td>3R</td><td>25.0%</td></tr>
+</tbody></table>
+<p>These profiles are examples, not results of any EA. The point is the comparison: a mean-reversion EA that wins 55% of the time with a 0.8R average win is slightly below break-even before costs, while a trend EA winning 30% with a 3R average win is above it. When you read a backtest, check both numbers together. The <a href="../../tools/risk-reward-calculator/">risk reward calculator</a> shows the break-even win rate for any stop and target, with costs included.</p>
+
+<h2>Worked example: the same 1% on three styles</h2>
+<p>Account 10,000 USD, risk 1% = 100 USD per trade, gold near 4,200. Lot size = risk ÷ (stop distance × 100 oz), rounded down to the 0.01 lot step. A spread of 0.25 USD is assumed.</p>
+<table><thead><tr><th>Style</th><th>Stop</th><th>Lot</th><th>Risk</th><th>Target</th><th>Spread cost</th></tr></thead><tbody>
+<tr><td>Breakout</td><td>12 USD</td><td>0.08</td><td>96 USD</td><td>18 USD move = 144 USD (1.5R)</td><td>2.00 USD = 2.1% of risk</td></tr>
+<tr><td>Trend</td><td>30 USD</td><td>0.03</td><td>90 USD</td><td>No fixed target; a 90 USD move = 270 USD (3R)</td><td>0.75 USD = 0.8% of risk</td></tr>
+<tr><td>Mean reversion</td><td>6 USD</td><td>0.16</td><td>96 USD</td><td>5 USD move = 80 USD (0.83R)</td><td>4.00 USD = 4.2% of risk</td></tr>
+</tbody></table>
+<p>Three things stand out. First, the dollar risk is nearly the same, but the lot size differs by a factor of five, so never compare EAs by lot size. Second, the mean-reversion trade risks 96 USD to make 80 USD, so its break-even win rate is 1 ÷ 1.83 = 54.5% before costs. Third, the tight stop pays the most spread relative to risk: 4.2% of every trade against 0.8% for the wide trend stop. Tight-stop styles depend far more on your broker's spread and on slippage; the <a href="../../learn/xauusd-spread-explained/">XAUUSD spread guide</a> has the full cost math. You can repeat the sizing for your own account with the <a href="../../tools/gold-lot-size-calculator/">XAUUSD lot size calculator</a>.</p>
+
+<h2>Losing streaks: the part most people underestimate</h2>
+<p>A low win rate means long losing streaks even when the system is sound. The table shows the chance of seeing at least one streak of that length somewhere in 100 trades, assuming trades are independent (real trades cluster more, so treat these as a floor).</p>
+<table><thead><tr><th>Win rate</th><th>5+ losses in a row</th><th>8+ losses in a row</th><th>10+ losses in a row</th></tr></thead><tbody>
+<tr><td>35% (trend-like)</td><td>99.5%</td><td>69.0%</td><td>36.8%</td></tr>
+<tr><td>45% (breakout-like)</td><td>92.0%</td><td>30.7%</td><td>10.1%</td></tr>
+<tr><td>60% (reversion-like)</td><td>45.9%</td><td>3.6%</td><td>0.6%</td></tr>
+</tbody></table>
+<p>At 1% risk, eight losses in a row is a drawdown of about 7.7%. With a 35% win rate that is more likely than not within 100 trades, so a trend EA has to be sized for it in advance; the <a href="../../learn/one-percent-rule-gold/">1% risk rule guide</a> shows the drawdown at each risk level. Mean-reversion streaks are shorter, but each loss is bigger than each win, so two or three losses can erase a week of small gains.</p>
+
+<h2>How to tell the style from a backtest</h2>
+<ol>
+<li><strong>Average win ÷ average loss.</strong> Above 2 suggests trend following; about 1 to 2 breakout; below 1 mean reversion.</li>
+<li><strong>Win rate next to it.</strong> Compare with the break-even table above, not with 50%.</li>
+<li><strong>Largest loss vs average loss.</strong> If the largest loss is many times the average, the EA has no real stop or adds to losing positions.</li>
+<li><strong>Holding time.</strong> Minutes to hours is typical for reversion and session breakouts; days for trend EAs on H4.</li>
+<li><strong>Equity curve shape.</strong> Stairs with long flat sections is normal for trend; a smooth line with rare sharp drops is normal for reversion.</li>
+</ol>
+<p>Run the test yourself on real ticks with realistic spread before trusting any report; the steps are in <a href="../../learn/backtest-ea-mt5-strategy-tester/">how to backtest an EA in MT5</a>.</p>
+
+<h2>How to choose</h2>
+<ul>
+<li><strong>Small account or wide-spread broker:</strong> avoid tight-stop styles where spread is 4% or more of the risk; prefer H1 and higher.</li>
+<li><strong>You cannot sit through 8 to 10 losses:</strong> a pure trend EA will be hard to keep running, however good its long-term numbers look.</li>
+<li><strong>You want few trades and clear rules:</strong> a session breakout EA with one trade per side per day is the easiest to check by eye.</li>
+<li><strong>You want to combine styles:</strong> a trend EA and a reversion EA overlap less than two trend EAs, but total risk still adds up. See <a href="../../learn/multiple-eas-one-mt5-account/">running multiple EAs on one MT5 account</a>.</li>
+</ul>
+
+<div class="callout warn"><strong>Honest risk note.</strong> No EA style is safe or profitable by nature. The win rates and reward sizes in this guide are illustrative profiles for comparing the math, not performance figures of any product. Every style has losing periods that can last weeks or months, and backtested results do not guarantee future results. Test on a demo account first, keep a stop loss on every order, and risk only money you can afford to lose. Nothing here is a trade recommendation.</div>
+
+<h2>Key takeaways</h2>
+<ul class="takeaways">
+<li>Breakout EAs trade the move out of a range, trend EAs ride an existing move, mean-reversion EAs fade stretched prices back to an average.</li>
+<li>Break-even win rate = 1 ÷ (1 + R): about 56% at 0.8R, 40% at 1.5R, 25% at 3R.</li>
+<li>Low win-rate styles need room for long losing streaks; high win-rate styles need a hard stop because losses are larger than wins.</li>
+<li>Tight stops pay more spread per unit of risk, so mean-reversion and scalping styles are the most sensitive to costs.</li>
+</ul>
+
+<section class="faq">
+<h2>FAQ</h2>
+<h3>Which EA type is best for XAUUSD?</h3>
+<p>None is best in every market. Breakout EAs fit gold's session bursts, trend EAs need multi-day moves, and mean-reversion EAs need quiet ranges. Choose by the drawdown and losing streak you can accept, your spread, and how the EA behaved in the market type that hurts it.</p>
+<h3>Is a higher win rate better in an EA?</h3>
+<p>Not by itself. A 60% win rate with an average win of 0.8R is close to break-even, while 35% with an average win of 3R is positive. Always read the win rate together with the average win and average loss.</p>
+<h3>Why does a trend-following EA lose so many trades?</h3>
+<p>It enters every time a trend might be starting and most of those attempts fail quickly at a small loss. Its result depends on a small number of trades that run several times the risk, so a low win rate and long flat periods are part of the design.</p>
+<h3>Are mean-reversion EAs dangerous on gold?</h3>
+<p>They are risky when they have no stop loss or add to losing trades, because gold can trend for days without returning to the average. A mean-reversion EA with a hard stop on every order and a range filter has limited loss per trade like any other style.</p>
+<h3>Can I run a breakout EA and a mean-reversion EA together?</h3>
+<p>Yes, on a hedging account with a different magic number for each. They tend to lose on different days, which can smooth results, but both trade the same market, so set one total risk budget and divide it between them.</p>
+</section>
+
+<p class="note-small">For education only, not investment advice. Trading gold and CFDs is high risk and you can lose your capital.</p>
+
+    </article>
+    <nav class="pager"><a class="next" href="../../learn/mt5-ea-not-trading-fix/"><small>Next guide</small><b>MT5 EA Not Trading? Causes and Fixes, Step by Step</b></a></nav>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="../../"><img src="../../assets/logo-256.png" alt=""><span><b>GOLD</b>LAB</span></a>
+      <nav class="langs"><a href="../../learn/breakout-vs-trend-vs-mean-reversion-ea/" aria-current="page">English</a> <a href="../../th/">ไทย</a> <a href="../../vi/">Tiếng Việt</a> <a href="../../id/">Bahasa Indonesia</a> <a href="../../es/">Español</a></nav>
+    </div>
+    <nav class="contact"><a href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener">LINE</a><a href="https://www.facebook.com/profile.php?id=61595254621291" target="_blank" rel="noopener">Facebook</a></nav>
+    <nav class="popular"><a href="../../tools/gold-lot-size-calculator/">XAUUSD lot size calculator</a><a href="../../tools/xauusd-pip-value-calculator/">Pip value calculator</a><a href="../../tools/margin-calculator/">Margin calculator</a><a href="../../tools/risk-reward-calculator/">Risk reward calculator</a><a href="../../ea/">MT5 gold EAs</a><a href="../../learn/">Gold trading guides</a><a href="../../#method">Our method</a><a href="../../#risk">Risk</a></nav>
+    <nav class="legal"><a href="../../buy/">Buy</a><a href="../../contact/">Contact</a><a href="../../terms/">Terms</a><a href="../../refund/">Refunds</a><a href="../../privacy/">Privacy</a></nav>
+    <p>GoldLab provides educational content only and is not a licensed investment adviser. Market data may be delayed or inaccurate.</p>
+    <p>© 2026 GoldLab. All rights reserved.</p>
+  </div>
+</footer>
+<a class="line-float" href="https://line.me/R/ti/p/@065qwjtk" target="_blank" rel="noopener" aria-label="LINE"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3 0 .7 0 1l-.1.9c0 .3-.2 1 .9.5s5.8-3.4 7.9-5.9C21.4 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "677fc36224a84b3caab31be47f191410"}'></script>
+</body>
+</html>
